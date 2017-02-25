@@ -1,6 +1,7 @@
 package gobela21
 
 class Club {
+    Long clubId
     String nombre
     String lugar_entrenamiento
     String horario_entrenamiento
@@ -8,6 +9,7 @@ class Club {
     String rrss
     Date fecha_fundacion
     String logros
+
     static hasMany = [jugadores: Jugador, entrenadores: Entrenador, contactos: Contacto]
 
     static constraints = {

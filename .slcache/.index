@@ -4755,3 +4755,4 @@ n:1774:org/codehaus/groovy/control/messages/Message
 n:2316:org/codehaus/groovy/syntax/SyntaxException
 n:1134:org/codehaus/groovy/GroovyException
 n:3175:org/codehaus/groovy/tools/ErrorReporter
+n:2273:org/codehaus/groovy/grails/commons/GrailsApplication$isArtefactOfType
