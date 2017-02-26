@@ -15,6 +15,7 @@ class Solicitud {
     int numHombres
     int numResidentes
 
+    static hasOne = [valoracion: Valoracion]
 
     static constraints = {
     }
