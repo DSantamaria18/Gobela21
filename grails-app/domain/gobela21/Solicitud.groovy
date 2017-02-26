@@ -6,6 +6,15 @@ class Solicitud {
     BigDecimal importeSolicitado
     BigDecimal importeRecibido
     Boolean otrasSolicitudes
+    BigDecimal gastosEjercicioAnterior
+    BigDecimal gastosEstimados
+    BigDecimal ingresosEjercicioAnterior
+    BigDecimal ingresosEstimados
+    int numDeportistas
+    int numMujeres
+    int numHombres
+    int numResidentes
+
 
     static constraints = {
     }
