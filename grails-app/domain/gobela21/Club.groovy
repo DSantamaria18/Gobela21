@@ -13,6 +13,11 @@ class Club {
     static hasMany = [jugadores: Jugador, entrenadores: Entrenador, contactos: Contacto]
 
     static constraints = {
-
+        lugar_entrenamiento(nullable: true)
+        horario_entrenamiento(nullable: true)
+        websiteUrl(nullable: true)
+        rrss(nullable: true)
+        fecha_fundacion(nullable: true)
+        logros(nullable: true)
     }
 }

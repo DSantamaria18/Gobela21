@@ -4782,3 +4782,9 @@ n:614:org/springframework/transaction/TransactionException
 n:429:grails/web/RequestParameter
 n:603:grails/validation/Validateable
 n:566:org/codehaus/groovy/grails/validation/Validateable
+n:3103:jline/console/history/MemoryHistory$EntriesIterator
+n:1117:jline/console/history/MemoryHistory$EntryImpl
+n:264:jline/console/history/History$Entry
+n:1820:grails/util/BuildSettings$getBaseDir$4
+n:1408:java_io_File$getCanonicalPath$9
+n:1887:org/codehaus/groovy/grails/cli/interactive/InteractiveMode$getCurrent
