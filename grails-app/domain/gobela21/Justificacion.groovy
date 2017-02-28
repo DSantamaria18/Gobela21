@@ -6,7 +6,7 @@ class Justificacion {
     BigDecimal importeTotal
 
     //static hasMany = [facturas: Factura]
-    static belongsTo = [subvencion: Subvencion]
+    static belongsTo = [solicitud: Solicitud]
 
 
     static constraints = {

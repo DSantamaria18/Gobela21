@@ -4,7 +4,7 @@ class Subvencion {
     Long subvencionId
     Long club
 
-    static hasMany = [solicitudes: Solicitud, justificaciones: Justificacion]
+    static hasMany = [solicitudes: Solicitud]
 
    static constraints = {
         subvencionId(nullable: false, unique: true)

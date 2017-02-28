@@ -13,8 +13,7 @@ class Valoracion {
     int continuidad
     int actividades
 
-
-    //static belongsTo = [solicitud: Solicitud]
+    static belongsTo = [solicitud: Solicitud]
 
     static constraints = {
     }

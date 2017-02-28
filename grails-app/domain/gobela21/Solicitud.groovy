@@ -15,6 +15,8 @@ class Solicitud {
     int numResidentes
 
     static belongsTo = [subvencion: Subvencion]
+    //static hasOne = [valoracion: Valoracion]
+    static hasMany = [justificaciones: Justificacion]
 
     static constraints = {
         linea(nullable: false, inList: [1,2,3,4,5,6,7])
