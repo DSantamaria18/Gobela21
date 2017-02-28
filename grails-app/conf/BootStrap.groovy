@@ -23,6 +23,8 @@ class BootStrap {
 
         new gobela21.Subvencion(subvencionId: 1, club: 1).save()
 
+        new gobela21.Subvencion(subvencionId: 2, club: 2).save()
+
         new gobela21.Solicitud(solicitudId: 1, linea: 1, importeSolicitado: 25000,
                 importeRecibido: 15000, gastosEjercicioAnterior: 26000,
                 gastosEstimados: 28000, ingresosEjercicioAnterior: 29000, ingresosEstimados: 25000,
@@ -32,6 +34,17 @@ class BootStrap {
                 importeRecibido: 15000, gastosEjercicioAnterior: 26000,
                 gastosEstimados: 28000, ingresosEjercicioAnterior: 29000, ingresosEstimados: 25000,
                 numDeportistas: 100, numMujeres: 35, numHombres: 65, numResidentes: 92, subvencion: 1).save()
+
+        new gobela21.Solicitud(solicitudId: 3, linea: 2, importeSolicitado: 25000,
+                importeRecibido: 15000, gastosEjercicioAnterior: 26000,
+                gastosEstimados: 28000, ingresosEjercicioAnterior: 29000, ingresosEstimados: 25000,
+                numDeportistas: 100, numMujeres: 35, numHombres: 65, numResidentes: 92, subvencion: 2).save()
+
+        new gobela21.Justificacion(justificacionId: 1, linea: 1, importeTotal: 19567, subvencion: 1).save()
+
+        new gobela21.Justificacion(justificacionId: 2, linea: 4, importeTotal: 19567, subvencion: 1).save()
+
+        new gobela21.Justificacion(justificacionId: 3, linea: 2, importeTotal: 19567, subvencion: 2).save()
     }
 
 
