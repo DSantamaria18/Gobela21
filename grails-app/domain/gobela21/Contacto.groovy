@@ -1,7 +1,6 @@
 package gobela21
 
 class Contacto {
-    Long contactoId
     String nombre
     String telefono
     String email

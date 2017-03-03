@@ -1,7 +1,6 @@
 package gobela21
 
 class Entrenador {
-    Long entrenadorId
     String nombre
     String categoria
     String email
