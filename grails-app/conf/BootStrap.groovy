@@ -51,7 +51,6 @@ class BootStrap {
         new gobela21.Valoracion(valoracionId: 1, costesActividad: 7, mediosPropios: 5, dificultadFinanciacion: 3,
                 proyectoDeportivo: 4, incidenciaActividad: 7, contribucion: 2, participacionPoliticaDeportiva: 2,
                 otrasParticipaciones: 2, continuidad: 5, actividades: 6, solicitud: 1).save()
-
     }
 
     def destroy = {
