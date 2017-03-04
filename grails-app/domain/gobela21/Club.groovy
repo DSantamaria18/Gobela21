@@ -20,4 +20,6 @@ class Club {
         fechaFundacion(nullable: true)
         logros(nullable: true)
     }
+
+    String toString(){ return nombre}
 }

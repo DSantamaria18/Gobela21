@@ -4795,3 +4795,4 @@ n:1570:org/codehaus/groovy/syntax/TokenException
 n:583:groovyjarjarantlr/TokenStreamRecognitionException
 n:523:groovyjarjarantlr/TokenStreamException
 n:1487:org/apache/commons/logging/Log$debug
+n:2188:org/codehaus/groovy/grails/commons/GrailsApplication$addArtefact$0

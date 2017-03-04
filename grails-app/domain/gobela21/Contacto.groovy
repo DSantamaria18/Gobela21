@@ -15,4 +15,6 @@ class Contacto {
         telefono(nullable: false)
         cargo(nullable: true)
     }
+
+    String toString() { return nombre}
 }

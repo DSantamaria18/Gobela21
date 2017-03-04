@@ -1,14 +1,15 @@
 package gobela21
 
 class Solicitud {
+    String codigo
     String nombreSolicitante
     String solicitanteId
     String municipioSolicitante
     Long cpSolicitante
     String emailSolicitante
     String direccionSolicitante
-    Long telefonoSolicitante1
-    Long telefonoSolicitante2
+    String telefonoSolicitante1
+    String telefonoSolicitante2
     Boolean representante
     String nombreEntidad
     String entidadId
@@ -25,21 +26,18 @@ class Solicitud {
     String numCuenta
     BigDecimal importeSolicitadoOtros
     BigDecimal importeRecibidoOtros
-
-
-
     Date fechaSolicitud = new Date()
 
-
-    static hasMany = [justificacion: Justificacion, valoracion: Valoracion]
+    static hasMany = [balance: Balance,memoria: Memoria, justificacion: Justificacion, valoracion: Valoracion]
 
     static constraints = {
-        nombreSolicitante(nullable: false)
-        solicitanteId(nullable: false)
-        municipioSolicitante(nullable: false)
+        codigo(nullable: false, unique: true)
+        nombreSolicitante(blank: false)
+        solicitanteId(blank: false)
+        municipioSolicitante(blank: false)
         cpSolicitante(nullable: false)
-        emailSolicitante(nullable: true, email: true)
-        direccionSolicitante(nullable: false)
+        emailSolicitante(blank: true, email: true)
+        direccionSolicitante(blank: false)
         telefonoSolicitante1(nullable: false)
         telefonoSolicitante2(nullable: true)
         representante(nullable: false)
@@ -60,4 +58,6 @@ class Solicitud {
         importeRecibidoOtros(nullable: true)
         fechaSolicitud()
     }
+
+    String toString() {return codigo}
 }

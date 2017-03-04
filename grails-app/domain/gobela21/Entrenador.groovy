@@ -14,4 +14,6 @@ class Entrenador {
         email(nullable: false, email: true)
         telefono(nullable: true)
     }
+
+    String toString() { return nombre}
 }

@@ -18,18 +18,18 @@ class Memoria {
     static belongsTo = [solicitud: Solicitud]
 
     static constraints = {
-        situacion()
-        retos()
-        acciones()
-        mejoras()
-        sistemas()
-        tecnicos()
+        situacion(maxSize: 500)
+        retos(maxSize: 500)
+        acciones(maxSize: 500)
+        mejoras(maxSize: 500)
+        sistemas(maxSize: 500)
+        tecnicos(maxSize: 500)
         numDeportistas(nullable: false)
         numMujeres(nullable: false)
         numHombres(nullable: false)
         numResidentes(nullable: false)
-        politicaDeportiva()
-        colaboraciones()
-        contribuciones()
+        politicaDeportiva(maxSize: 500)
+        colaboraciones(maxSize: 500)
+        contribuciones(maxSize: 500)
     }
 }

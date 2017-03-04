@@ -21,7 +21,7 @@ class BootStrap {
         new gobela21.Contacto(contactoId: 2, nombre: "Paco Clavel", telefono: "651323114",
                 email: "clavelito@getxofc.com", cargo: "Delegado", club: 2).save(failOnError: true)
 
-        new gobela21.Solicitud(nombreSolicitante: "Getxo Rugby", solicitanteId: "2341123112V", municipioSolicitante: "Getxo",
+        new gobela21.Solicitud(codigo: "3b3jasdj2", nombreSolicitante: "Getxo Rugby", solicitanteId: "2341123112V", municipioSolicitante: "Getxo",
                 cpSolicitante: 48991, emailSolicitante: "jnavarro@getxorugby.com", direccionSolicitante: "Telletxe 9",
                 telefonoSolicitante1: 944676473, representante: false, tipoSolicitud: "Club", linea: 1,
                 importeSolicitado: 66000).save(failOnError: true)
