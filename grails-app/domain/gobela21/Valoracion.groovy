@@ -1,7 +1,6 @@
 package gobela21
 
 class Valoracion {
-    Long valoracionId
     int costesActividad
     int mediosPropios
     int dificultadFinanciacion

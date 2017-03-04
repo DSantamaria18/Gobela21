@@ -2,22 +2,22 @@ package gobela21
 
 class Club {
     String nombre
-    String lugar_entrenamiento
-    String horario_entrenamiento
+    String lugarEntrenamiento
+    String horarioEntrenamiento
     String websiteUrl
     String rrss
-    Date fecha_fundacion
+    Date fechaFundacion
     String logros
 
-    static hasMany = [jugadores: Jugador, entrenadores: Entrenador, contactos: Contacto]
+    static hasMany = [jugadores: Jugador, entrenadores: Entrenador, contactos: Contacto, subvenciones: Subvencion]
 
     static constraints = {
         nombre(nullable: false)
-        lugar_entrenamiento(nullable: true)
-        horario_entrenamiento(nullable: true)
-        websiteUrl(nullable: true)
+        lugarEntrenamiento(nullable: true, inList: ["Fadura", "Gobela", "Andra-Mari"])
+        horarioEntrenamiento(nullable: true)
+        websiteUrl(nullable: true, url: true)
         rrss(nullable: true)
-        fecha_fundacion(nullable: true)
+        fechaFundacion(nullable: true)
         logros(nullable: true)
     }
 }

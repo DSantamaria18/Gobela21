@@ -1,14 +1,11 @@
 package gobela21
 
 class Subvencion {
-    Long subvencionId
-    Long club
+    Date fechaActualizacion = new Date()
 
+    static belongsTo = [club: Club]
     static hasMany = [solicitudes: Solicitud]
 
    static constraints = {
-        subvencionId(nullable: false, unique: true)
-        club(nullable: false)
-        //solicitudes(nullable: true)
     }
 }
