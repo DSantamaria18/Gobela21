@@ -21,30 +21,10 @@ class BootStrap {
         new gobela21.Contacto(contactoId: 2, nombre: "Paco Clavel", telefono: "651323114",
                 email: "clavelito@getxofc.com", cargo: "Delegado", club: 2).save(failOnError: true)
 
-        new gobela21.Solicitud(solicitudId: 1, club: 1, linea: 1, importeSolicitadoGK: 25000,
-                importeRecibidoGK: 15000, gastosEjercicioAnterior: 26000,
-                gastosEstimados: 28000, ingresosEjercicioAnterior: 29000, ingresosEstimados: 25000,
-                numDeportistas: 100, numMujeres: 35, numHombres: 65, numResidentes: 92).save(failOnError: true)
-
-        new gobela21.Solicitud(solicitudId: 2, club: 1, linea: 4, importeSolicitadoGK: 25000,
-                importeRecibidoGK: 15000, gastosEjercicioAnterior: 26000,
-                gastosEstimados: 28000, ingresosEjercicioAnterior: 29000, ingresosEstimados: 25000,
-                numDeportistas: 100, numMujeres: 35, numHombres: 65, numResidentes: 92).save(failOnError: true)
-
-        new gobela21.Solicitud(solicitudId: 3, club: 2, linea: 2, importeSolicitadoGK: 25000,
-                importeRecibidoGK: 15000, gastosEjercicioAnterior: 26000,
-                gastosEstimados: 28000, ingresosEjercicioAnterior: 29000, ingresosEstimados: 25000,
-                numDeportistas: 100, numMujeres: 35, numHombres: 65, numResidentes: 92).save(failOnError: true)
-
-        new gobela21.Justificacion(justificacionId: 1, linea: 1, importeTotal: 19567, solicitud: 1).save(failOnError: true)
-
-        new gobela21.Justificacion(justificacionId: 2, linea: 4, importeTotal: 19567, solicitud: 2).save(failOnError: true)
-
-        new gobela21.Justificacion(justificacionId: 3, linea: 2, importeTotal: 19567, solicitud: 3).save(failOnError: true)
-
-        new gobela21.Valoracion(valoracionId: 1, costesActividad: 7, mediosPropios: 5, dificultadFinanciacion: 3,
-                proyectoDeportivo: 4, incidenciaActividad: 7, contribucion: 2, participacionPoliticaDeportiva: 2,
-                otrasParticipaciones: 2, continuidad: 5, actividades: 6, solicitud: 1).save(failOnError: true)
+        new gobela21.Solicitud(nombreSolicitante: "Getxo Rugby", solicitanteId: "2341123112V", municipioSolicitante: "Getxo",
+                cpSolicitante: 48991, emailSolicitante: "jnavarro@getxorugby.com", direccionSolicitante: "Telletxe 9",
+                telefonoSolicitante1: 944676473, representante: false, tipoSolicitud: "Club", linea: 1,
+                importeSolicitado: 66000).save(failOnError: true)
     }
 
     def destroy = {

@@ -19,6 +19,7 @@ class Solicitud {
     Long telefonoEntidad1
     Long telefonoEntidad2
     String representanteLegal
+    String tipoSolicitud
     int linea
     BigDecimal importeSolicitado
     String numCuenta
@@ -51,9 +52,10 @@ class Solicitud {
         telefonoEntidad1(nullable: true)
         telefonoEntidad2(nullable: true)
         representanteLegal(nullable: true)
+        tipoSolicitud(nullable: false, inList: ["Club", "Deportista", "Otros"])
         linea(nullable: false, inList: [1,2,3,4,5,6,7])
         importeSolicitado(nullable: false)
-        numCuenta()
+        numCuenta(nullable: true)
         importeSolicitadoOtros(nullable: true)
         importeRecibidoOtros(nullable: true)
         fechaSolicitud()
