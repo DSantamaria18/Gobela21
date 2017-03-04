@@ -21,26 +21,20 @@ class BootStrap {
         new gobela21.Contacto(contactoId: 2, nombre: "Paco Clavel", telefono: "651323114",
                 email: "clavelito@getxofc.com", cargo: "Delegado", club: 2).save(failOnError: true)
 
-        new gobela21.Subvencion(subvencionId: 1, club: 1).save(failOnError: true)
-
-        new gobela21.Subvencion(subvencionId: 2, club: 2).save(failOnError: true)
-
-        new gobela21.Solicitud(solicitudId: 1, linea: 1, importeSolicitado: 25000,
-                importeRecibido: 15000, gastosEjercicioAnterior: 26000,
+        new gobela21.Solicitud(solicitudId: 1, club: 1, linea: 1, importeSolicitadoGK: 25000,
+                importeRecibidoGK: 15000, gastosEjercicioAnterior: 26000,
                 gastosEstimados: 28000, ingresosEjercicioAnterior: 29000, ingresosEstimados: 25000,
-                numDeportistas: 100, numMujeres: 35, numHombres: 65, numResidentes: 92,
-                subvencion: 1).save(failOnError: true)
+                numDeportistas: 100, numMujeres: 35, numHombres: 65, numResidentes: 92).save(failOnError: true)
 
-        new gobela21.Solicitud(solicitudId: 2, linea: 4, importeSolicitado: 25000,
-                importeRecibido: 15000, gastosEjercicioAnterior: 26000,
+        new gobela21.Solicitud(solicitudId: 2, club: 1, linea: 4, importeSolicitadoGK: 25000,
+                importeRecibidoGK: 15000, gastosEjercicioAnterior: 26000,
                 gastosEstimados: 28000, ingresosEjercicioAnterior: 29000, ingresosEstimados: 25000,
-                numDeportistas: 100, numMujeres: 35, numHombres: 65, numResidentes: 92,
-                subvencion: 1).save(failOnError: true)
+                numDeportistas: 100, numMujeres: 35, numHombres: 65, numResidentes: 92).save(failOnError: true)
 
-        new gobela21.Solicitud(solicitudId: 3, linea: 2, importeSolicitado: 25000,
-                importeRecibido: 15000, gastosEjercicioAnterior: 26000,
+        new gobela21.Solicitud(solicitudId: 3, club: 2, linea: 2, importeSolicitadoGK: 25000,
+                importeRecibidoGK: 15000, gastosEjercicioAnterior: 26000,
                 gastosEstimados: 28000, ingresosEjercicioAnterior: 29000, ingresosEstimados: 25000,
-                numDeportistas: 100, numMujeres: 35, numHombres: 65, numResidentes: 92, subvencion: 2).save(failOnError: true)
+                numDeportistas: 100, numMujeres: 35, numHombres: 65, numResidentes: 92).save(failOnError: true)
 
         new gobela21.Justificacion(justificacionId: 1, linea: 1, importeTotal: 19567, solicitud: 1).save(failOnError: true)
 

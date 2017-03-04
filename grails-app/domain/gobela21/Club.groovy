@@ -9,7 +9,7 @@ class Club {
     Date fechaFundacion
     String logros
 
-    static hasMany = [jugadores: Jugador, entrenadores: Entrenador, contactos: Contacto, subvenciones: Subvencion]
+    static hasMany = [jugadores: Jugador, entrenadores: Entrenador, contactos: Contacto, solicitudes: Solicitud]
 
     static constraints = {
         nombre(nullable: false)

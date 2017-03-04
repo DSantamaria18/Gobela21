@@ -1,16 +1,13 @@
 package gobela21
 
 class Justificacion {
-    Long justificacionId
-    int linea
-    BigDecimal importeTotal
+    BigDecimal importeRecibido
+    BigDecimal importeJustificado
 
-    //static hasMany = [facturas: Factura]
     static belongsTo = [solicitud: Solicitud]
 
-
     static constraints = {
-        justificacionId(unique: true)
-        importeTotal(nullable: false)
+        importeRecibido(nullable: false)
+        importeJustificado(nullable: false)
     }
 }
