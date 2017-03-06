@@ -265,7 +265,8 @@
     <li><g:link controller="justificacion" action="show" id="${j.id}">${j?.encodeAsHTML()}</g:link></li>
 </g:each>
 <li class="add">
-<g:link controller="justificacion" action="create" params="['solicitud.id': solicitudInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'justificacion.label', default: 'Justificacion')])}</g:link>
+	<g:link controller="justificacion" action="create"
+			params="['solicitud.id': solicitudInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'justificacion.label', default: 'Justificacion')])}</g:link>
 </li>
 </ul>
 
