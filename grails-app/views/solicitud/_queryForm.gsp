@@ -8,15 +8,15 @@
 </div><br>
 <div class="fieldcontain>
     <label for="codigoSolicitante">Código Solicitante: </label>
-    <g:textField name="codigoSolicitante"></g:textField>
+    <g:textField name="codigoSolicitante" value="${params.codigoSolicitanteQ}"></g:textField>
 </div><br>
 <div class="fieldcontain>
     <label for="nombreSolicitante">Nombre Solicitante: </label>
-    <g:textField name="nombreSolicitante"></g:textField>
+    <g:textField name="nombreSolicitante" value="${params.nombreSolicitante}"></g:textField>
 </div><br>
 <div class="fieldcontain>
     <label for="municipioSolicitante">Municipio Solicitante: </label>
-    <g:textField name="municipioSolicitante"></g:textField>
+    <g:textField name="municipioSolicitante" value="${params.municipioSolicitante}"></g:textField>
 </div><br>
 <div class="fieldcontain>
     <label for="cpSolicitante">Nombre Solicitante: </label>

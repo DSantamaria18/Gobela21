@@ -37,43 +37,23 @@
     <table>
         <thead>
         <tr>
-
             <g:sortableColumn property="codigo" title="${message(code: 'solicitud.codigo.label', default: 'Codigo')}"/>
-
-            <g:sortableColumn property="nombreSolicitante"
-                              title="${message(code: 'solicitud.nombreSolicitante.label', default: 'Nombre Solicitante')}"/>
-
-            <g:sortableColumn property="solicitanteId"
-                              title="${message(code: 'solicitud.solicitanteId.label', default: 'Solicitante Id')}"/>
-
-            <g:sortableColumn property="municipioSolicitante"
-                              title="${message(code: 'solicitud.municipioSolicitante.label', default: 'Municipio Solicitante')}"/>
-
-            <g:sortableColumn property="cpSolicitante"
-                              title="${message(code: 'solicitud.cpSolicitante.label', default: 'Cp Solicitante')}"/>
-
-            <g:sortableColumn property="emailSolicitante"
-                              title="${message(code: 'solicitud.emailSolicitante.label', default: 'Email Solicitante')}"/>
-
+            <g:sortableColumn property="nombreSolicitante" title="${message(code: 'solicitud.nombreSolicitante.label', default: 'Nombre Solicitante')}"/>
+            <g:sortableColumn property="solicitanteId" title="${message(code: 'solicitud.solicitanteId.label', default: 'Solicitante Id')}"/>
+            <g:sortableColumn property="municipioSolicitante" title="${message(code: 'solicitud.municipioSolicitante.label', default: 'Municipio Solicitante')}"/>
+            <g:sortableColumn property="cpSolicitante" title="${message(code: 'solicitud.cpSolicitante.label', default: 'Cp Solicitante')}"/>
+            <g:sortableColumn property="emailSolicitante" title="${message(code: 'solicitud.emailSolicitante.label', default: 'Email Solicitante')}"/>
         </tr>
         </thead>
         <tbody>
         <g:each in="${solicitudInstanceList}" status="i" var="solicitudInstance">
             <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-
-                <td><g:link action="show"
-                            id="${solicitudInstance.id}">${fieldValue(bean: solicitudInstance, field: "codigo")}</g:link></td>
-
+                <td><g:link action="show" id="${solicitudInstance.id}">${fieldValue(bean: solicitudInstance, field: "codigo")}</g:link></td>
                 <td>${fieldValue(bean: solicitudInstance, field: "nombreSolicitante")}</td>
-
                 <td>${fieldValue(bean: solicitudInstance, field: "solicitanteId")}</td>
-
                 <td>${fieldValue(bean: solicitudInstance, field: "municipioSolicitante")}</td>
-
                 <td>${fieldValue(bean: solicitudInstance, field: "cpSolicitante")}</td>
-
                 <td>${fieldValue(bean: solicitudInstance, field: "emailSolicitante")}</td>
-
             </tr>
         </g:each>
         </tbody>
