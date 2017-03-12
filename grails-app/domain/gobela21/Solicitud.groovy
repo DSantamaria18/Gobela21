@@ -28,7 +28,7 @@ class Solicitud {
     BigDecimal importeRecibidoOtros
     Date fechaSolicitud = new Date()
 
-    static hasMany = [balance: Balance,memoria: Memoria, justificacion: Justificacion, valoracion: Valoracion]
+    static hasOne = [balance: Balance,memoria: Memoria, justificacion: Justificacion, valoracion: Valoracion]
 
     static constraints = {
         codigo(nullable: false, unique: true)
@@ -57,6 +57,10 @@ class Solicitud {
         importeSolicitadoOtros(nullable: true)
         importeRecibidoOtros(nullable: true)
         fechaSolicitud()
+        balance(nullable: true)
+        memoria(nullable: true)
+        valoracion(nullable: true)
+        justificacion(nullable: true)
     }
 
     String toString() {return codigo}

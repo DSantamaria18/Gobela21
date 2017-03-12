@@ -25,6 +25,11 @@ class BootStrap {
                 cpSolicitante: 48991, emailSolicitante: "jnavarro@getxorugby.com", direccionSolicitante: "Telletxe 9",
                 telefonoSolicitante1: 944676473, representante: false, tipoSolicitud: "Club", linea: 1,
                 importeSolicitado: 66000).save(failOnError: true)
+
+        new gobela21.Solicitud(codigo: "4r3f3f43", nombreSolicitante: "Getxo Futbol", solicitanteId: "234112234223V", municipioSolicitante: "Getxo",
+                cpSolicitante: 48991, emailSolicitante: "pacoporras@getxofutbol.com", direccionSolicitante: "Telletxe 9",
+                telefonoSolicitante1: 944676473, representante: false, tipoSolicitud: "Club", linea: 3,
+                importeSolicitado: 66666).save(failOnError: true)
     }
 
     def destroy = {

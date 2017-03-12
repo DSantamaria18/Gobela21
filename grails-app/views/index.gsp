@@ -106,8 +106,7 @@
 		</div>
 		<div id="page-body" role="main">
 			<h1>Gobela 21</h1>
-
-
+			<h2>App Version: <g:meta name="app.version"/></h2>
 			<div id="controller-list" role="navigation">
 				<h2>Controllers Disponibles:</h2>
 				<ul>
