@@ -1,12 +1,13 @@
 package gobela21
 
 class Valoracion {
+    //TODO: escoger el tipo de imput adecuado a cada campo en el formulario
     int l1costesActividad
     Integer l1mediosPropios
     Integer l1dificultadFinanciacion
 
     // Proyecto deportivo
-    BigDecimal l1proyectoDeportivoCoherencia
+    BigDecimal l1proyectoDeportivoCoherencia        //TODO: dividir en sus elementos
     Integer l1proyectoDeportivoDiversidad
     Integer l1proyectoDeportivoEuskera
     Integer l1proyectoDeportivoParticipacionFemenina
