@@ -18,14 +18,17 @@
         <li><g:link class="create" action="create"><g:message code="default.new.label"
                                                               args="[entityName]"/></g:link></li>
         <li><g:link class="create" controller="balance" action="create"
-                    params="['solicitudId': solicitudInstance?.id, 'linea': solicitudInstance.linea]">${message(code: 'default.add.label', args: [message(code: 'balance.label', default: 'Balance')])}</g:link></li>
+                    params="['solicitudId': solicitudInstance.codigo,
+                             'linea': solicitudInstance.linea]">${message(code: 'default.add.label', args: [message(code: 'balance.label', default: 'Balance')])}</g:link></li>
         <li><g:link class="create" controller="memoria" action="create"
-                    params="['solicitudId': solicitudInstance?.id, 'linea': solicitudInstance.linea]">${message(code: 'default.add.label', args: [message(code: 'memoria.label', default: 'Memoria')])}</g:link></li>
+                    params="['solicitudId': solicitudInstance.codigo,
+                             'linea': solicitudInstance.linea]">${message(code: 'default.add.label', args: [message(code: 'memoria.label', default: 'Memoria')])}</g:link></li>
         <li><g:link class="create" controller="valoracion" action="create"
-                    params="['solicitudId': solicitudInstance?.id,
+                    params="['solicitudId': solicitudInstance.codigo,
                              'linea'      : solicitudInstance.linea]">${message(code: 'default.add.label', args: [message(code: 'valoracion.label', default: 'Valoracion')])}</g:link></li>
         <li><g:link class="create" controller="justificacion" action="create"
-                    params="['solicitudId': solicitudInstance?.id, 'linea': solicitudInstance.linea]">${message(code: 'default.add.label', args: [message(code: 'justificacion.label', default: 'Justificación')])}</g:link></li>
+                    params="['solicitudId': solicitudInstance.codigo,
+                             'linea': solicitudInstance.linea]">${message(code: 'default.add.label', args: [message(code: 'justificacion.label', default: 'Justificación')])}</g:link></li>
     </ul>
 </div>
 
