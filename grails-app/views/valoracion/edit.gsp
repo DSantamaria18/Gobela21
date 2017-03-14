@@ -30,7 +30,16 @@
 			<g:form url="[resource:valoracionInstance, action:'update']" method="PUT" >
 				<g:hiddenField name="version" value="${valoracionInstance?.version}" />
 				<fieldset class="form">
-					<g:render template="form"/>
+						<g:render template="form1"/>
+				</fieldset>
+				<fieldset class="form">
+					<div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'importeConcedido', 'error')} required">
+						<label for="importeConcedido">
+							<g:message code="valoracion.importeConcedido.label" default="importeConcedido"/>
+						</label>
+						<g:field name="importeConcedido" value="${valoracionInstance.importeConcedido}"
+								 required=""/>
+					</div>
 				</fieldset>
 				<fieldset class="buttons">
 					<g:actionSubmit class="save" action="update" value="${message(code: 'default.button.update.label', default: 'Update')}" />

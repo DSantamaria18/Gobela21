@@ -25,7 +25,8 @@
 	<label for="l1proyectoDeportivoCoherencia">
 		<g:message code="valoracion.l1proyectoDeportivoCoherencia.label" default="Coherencia del Proyecto Deportivo:" />
 	</label>
-	<g:field name="l1proyectoDeportivoCoherencia" type="number" value="${valoracionInstance.l1proyectoDeportivoCoherencia}" required=""/>
+	<g:select name="l1proyectoDeportivoCoherencia" from="${valoracionInstance.constraints.l1proyectoDeportivoCoherencia.inList}" required=""
+			  value="${fieldValue(bean: valoracionInstance, field: 'l1proyectoDeportivoCoherencia')}" valueMessagePrefix="valoracion.l1proyectoDeportivoCoherencia"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l1proyectoDeportivoDiversidad', 'error')} required">
@@ -126,9 +127,9 @@
 	<g:field name="l1antiguedad" type="number" value="${valoracionInstance.l1antiguedad}" required=""/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l1paticipantes', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l1participantes', 'error')} required">
 	<label for="l1antiguedad">
-		<g:message code="valoracion.l1participantes.label" default="Antiguedad del Club:" />
+		<g:message code="valoracion.l1participantes.label" default="Participantes:" />
 	</label>
 	<g:field name="l1participantes" type="number" value="${valoracionInstance.l1participantes}" required=""/>
 </div>

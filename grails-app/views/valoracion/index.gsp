@@ -12,7 +12,7 @@
 		<div class="nav" role="navigation">
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+				%{--<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>--}%
 			</ul>
 		</div>
 		<div id="list-valoracion" class="content scaffold-list" role="main">
@@ -28,7 +28,7 @@
 					
 						<g:sortableColumn property="l1centrosEscolares" title="${message(code: 'valoracion.l1centrosEscolares.label', default: 'L1centros Escolares')}" />
 					
-						<g:sortableColumn property="l1costesActividadDe" title="${message(code: 'valoracion.l1costesActividadDe.label', default: 'L1costes Actividad De')}" />
+						<g:sortableColumn property="l1costesActividad" title="${message(code: 'valoracion.l1costesActividadDe.label', default: 'L1costes Actividad')}" />
 					
 						<g:sortableColumn property="l1deporteEscolar" title="${message(code: 'valoracion.l1deporteEscolar.label', default: 'L1deporte Escolar')}" />
 					
@@ -46,7 +46,7 @@
 					
 						<td>${fieldValue(bean: valoracionInstance, field: "l1centrosEscolares")}</td>
 					
-						<td>${fieldValue(bean: valoracionInstance, field: "l1costesActividadDe")}</td>
+						<td>${fieldValue(bean: valoracionInstance, field: "l1costesActividad")}</td>
 					
 						<td>${fieldValue(bean: valoracionInstance, field: "l1deporteEscolar")}</td>
 					

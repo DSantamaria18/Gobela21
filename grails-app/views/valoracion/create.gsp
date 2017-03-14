@@ -1,3 +1,4 @@
+<%@ page import="gobela21.Solicitud" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +19,6 @@
 </div>
 
 <div id="create-valoracion" class="content scaffold-create" role="main">
-    %{--<h1><g:message code="default.create.label" args="[entityName]"/></h1>--}%
     <h1>Valoración para línea ${params.linea}</h1>
     <g:if test="${flash.message}">
         <div class="message" role="status">${flash.message}</div>
@@ -32,11 +32,12 @@
         </ul>
     </g:hasErrors>
     <g:form url="[resource: valoracionInstance, action: 'save']">
+        <input type="hidden" name="solicitud" value="${params.solicitudId}" />
         <fieldset class="form">
-            <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'solicitud', 'error')} required">
+            <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'codigo', 'error')} required">
                 <label for="solicitud">
                     <g:message code="valoracion.solicitud.label" default="Solicitud:"/>
-                </label> ${params.solicitudId}
+                </label> ${params.token}
             </div>
         </fieldset>
         <fieldset class="form">
@@ -63,13 +64,13 @@
             </g:if>
         </fieldset>
         <fieldset class="form">
-            <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'importeConcedido', 'error')} required">
-                <label for="importeConcedido">
-                    <g:message code="valoracion.importeConcedido.label" default="importeConcedido"/>
-                </label>
-                <g:field name="importeConcedido" type="number" value="${valoracionInstance.importeConcedido}"
-                         required=""/>
-            </div>
+        <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'importeConcedido', 'error')} required">
+            <label for="importeConcedido">
+                <g:message code="valoracion.importeConcedido.label" default="importeConcedido"/>
+            </label>
+            <g:field name="importeConcedido" value="${valoracionInstance.importeConcedido}"
+                     required=""/> <span>€</span>
+        </div>
         </fieldset>
         <fieldset class="buttons">
             <g:submitButton name="create" class="save"

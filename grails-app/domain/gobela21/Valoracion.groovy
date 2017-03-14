@@ -3,142 +3,142 @@ package gobela21
 class Valoracion {
     //TODO: escoger el tipo de imput adecuado a cada campo en el formulario
     int l1costesActividad
-    Integer l1mediosPropios
-    Integer l1dificultadFinanciacion
+    int l1mediosPropios
+    int l1dificultadFinanciacion
 
     // Proyecto deportivo
-    BigDecimal l1proyectoDeportivoCoherencia        //TODO: dividir en sus elementos
-    Integer l1proyectoDeportivoDiversidad
-    Integer l1proyectoDeportivoEuskera
-    Integer l1proyectoDeportivoParticipacionFemenina
+    String l1proyectoDeportivoCoherencia        //TODO: dividir en sus elementos
+    int l1proyectoDeportivoDiversidad
+    int l1proyectoDeportivoEuskera
+    int l1proyectoDeportivoParticipacionFemenina
 
     //  Incidencia de la actividad en la promoción del deporte entre quienes residen en Getxo
-    Integer l1residentes
+    int l1residentes
 
     //Contribución a la difusión y mejora de la imagen del municipio de Getxo
-    Integer l1prensaLocal
-    Integer l1prensaComarcal
-    Integer l1prensaRegional
-    Integer l1prensaEstatalInternacional
+    int l1prensaLocal
+    int l1prensaComarcal
+    int l1prensaRegional
+    int l1prensaEstatalInternacional
 
     // Participación en la política deportiva
-    Integer l1deporteEscolar
-    Integer l1marcaGetxo
+    int l1deporteEscolar
+    int l1marcaGetxo
 
     // Participación y colaboración con otras asociaciones o centros escolares o en progrmas y/o actividades municipales
-    Integer l1getxoKirolak
-    Integer l1centrosEscolares
-    Integer l1otrosClubes
+    int l1getxoKirolak
+    int l1centrosEscolares
+    int l1otrosClubes
 
     // Continuidad y estabilidad
-    Integer l1antiguedad
-    Integer l1participantes
+    int l1antiguedad
+    int l1participantes
 
     ////////////////
     /// LINEA 2 ////
     ////////////////
 
-    Integer l2costesActividadDe
-    Integer l2mediosPropios
-    Integer l2dificultadFinanciacion
+    int l2costesActividadDe
+    int l2mediosPropios
+    int l2dificultadFinanciacion
 
     // Proyecto deportivo
-    Integer l2proyectoDeportivoCoherencia
-    Integer l2proyectoDeportivoDiversidad
-    Integer l2proyectoDeportivoEuskera
-    Integer l2proyectoDeportivoParticipacionFemenina
+    int l2proyectoDeportivoCoherencia
+    int l2proyectoDeportivoDiversidad
+    int l2proyectoDeportivoEuskera
+    int l2proyectoDeportivoParticipacionFemenina
 
     //  Incidencia de la actividad en la promoción del deporte entre quienes residen en Getxo
-    Integer l2residentes
+    int l2residentes
 
     //Contribución a la difusión y mejora de la imagen del municipio de Getxo
-    Integer l2prensaLocal
-    Integer l2prensaComarcal
-    Integer l2prensaRegional
-    Integer l2prensaEstatalInternacional
+    int l2prensaLocal
+    int l2prensaComarcal
+    int l2prensaRegional
+    int l2prensaEstatalInternacional
 
     // Participación en la política deportiva
-    Integer l2deporteEscolar
-    Integer l2marcaGetxo
+    int l2deporteEscolar
+    int l2marcaGetxo
 
     // Participación y colaboración con otras asociaciones o centros escolares o en progrmas y/o actividades municipales
-    Integer l2getxoKirolak
-    Integer l2centrosEscolares
-    Integer l2otrosClubes
+    int l2getxoKirolak
+    int l2centrosEscolares
+    int l2otrosClubes
 
     // Continuidad y estabilidad
-    Integer l2antiguedad
+    int l2antiguedad
 
     // Valoración de deportistas
-    Integer l2puestoEnTorneosInternacionales
-    Integer l2puestoEnCircuitosInternacionales
-    Integer l2puestoEnTorneosNacionales
-    Integer l2puestoEnCircuitosNacionales
-    Integer l2PrimerPuestoEnTorneosAutonomicos
-    Integer l2campeonatosEuskadi
-    Integer l2campeonatosEspaña
-    Integer l2campeonatosEuropa
-    Integer l2campeonatosMundo
+    int l2puestoEnTorneosInternacionales
+    int l2puestoEnCircuitosInternacionales
+    int l2puestoEnTorneosNacionales
+    int l2puestoEnCircuitosNacionales
+    int l2PrimerPuestoEnTorneosAutonomicos
+    int l2campeonatosEuskadi
+    int l2campeonatosEspaña
+    int l2campeonatosEuropa
+    int l2campeonatosMundo
 
     //Indice de participacion
-    BigDecimal l2indiceParticipacion
+    float l2indiceParticipacion = 0.0
 
     // Indice de corrección
-    BigDecimal l2indiceCorreccion
+    float l2indiceCorreccion = 0.0
 
     ////////////////
     /// LINEA 3 ////
     ////////////////
 
-    Integer l3categoriaFaseFinal
-    Integer l3resultadoObtenido
+    int l3categoriaFaseFinal
+    int l3resultadoObtenido
 
     ////////////////
     /// LINEA 4 ////
     ////////////////
 
     // Agentes implicados en el evento
-    Integer l4propioClub
-    Integer l4otrosClubes
-    Integer l4ampas
-    Integer l4categoriasEscolares
-    Integer l4categoriasFederadas
-    Integer l4veteranos
+    int l4propioClub
+    int l4otrosClubes
+    int l4ampas
+    int l4categoriasEscolares
+    int l4categoriasFederadas
+    int l4veteranos
 
     // Adecuación del presupuesto al anterior
-    Integer l4desviacion
+    int l4desviacion
 
     // Calidad en el diseño de la actividad
-    Integer l4participacionEstimada
-    Integer l4comunicacionAMedios
-    Integer l4usoNuevasTecnologías
+    int l4participacionEstimada
+    int l4comunicacionAMedios
+    int l4usoNuevasTecnologías
 
     // Participación femenina
-    Integer l4participacionFemeninaEvento
+    int l4participacionFemeninaEvento
 
     // Valoración del solicitante
-    Integer l4experienciaSolicitante
+    int l4experienciaSolicitante
 
     ///////////////////////////
     /// EXCLUSIVOS LINEA 5 ////
     ///////////////////////////
 
     // Impacto actividad
-    Integer l5numeroEspectadores
+    int l5numeroEspectadores
 
     // Adecuación del presupuesto
-    Integer l5recursosPropios
+    int l5recursosPropios
 
     // Calidad en el diseño de la actividad  (tb linea 5)
-    Integer l5participacionEstimada
-    Integer l5comunicacionAMedios
-    Integer l5usoNuevasTecnologías
+    int l5participacionEstimada
+    int l5comunicacionAMedios
+    int l5usoNuevasTecnologías
 
     // Participación femenina   (tb linea 5)
-    Integer l5participacionFemenina
+    int l5participacionFemenina
 
     // Valoración del solicitante  (tb linea 5)
-    Integer l5experienciaSolicitante
+    int l5experienciaSolicitante
 
 
     ////////////////
@@ -146,19 +146,19 @@ class Valoracion {
     ////////////////
 
     // Repercusión mediática
-    Integer l6prensaLocal
-    Integer l6prensaComarcal
-    Integer l6prensaRegional
-    Integer l6prensaEstatal
+    int l6prensaLocal
+    int l6prensaComarcal
+    int l6prensaRegional
+    int l6prensaEstatal
 
     // Costes
-    Integer l6costeActividad
+    int l6costeActividad
 
     //Medios propios
-    Integer l6mediosPropios
+    int l6mediosPropios
 
     // Dificultad para acudir a otros medios de financiación
-    Integer l6patrcinioPrivado
+    int l6patrcinioPrivado
 
 
     ////////////////
@@ -166,32 +166,30 @@ class Valoracion {
     ////////////////
 
     // Repercusión mediática
-    Integer l7prensaLocal
-    Integer l7prensaComarcal
-    Integer l7prensaRegional
-    Integer l7prensaEstatal
+    int l7prensaLocal
+    int l7prensaComarcal
+    int l7prensaRegional
+    int l7prensaEstatal
 
     // Costes
-    Integer l7costeActividad
+    int l7costeActividad
 
     //Medios propios
-    Integer l7mediosPropios
+    int l7mediosPropios
 
     // Dificultad para acudir a otros medios de financiación
-    Integer l7patrcinioPrivado
+    int l7patrcinioPrivado
 
     //////////////
     /// COMUN ////
     //////////////
 
-    Integer puntuacion
-    BigDecimal importeConcedido
+    int puntuacion
+    float importeConcedido
 
     static belongsTo = [solicitud: Solicitud]
 
     static constraints = {
-        l1costesActividad(inList: [1,3,6,8,10])
-        l1mediosPropios(inList: [3,6,10])
-        l1dificultadFinanciacion(inList: [1,3,4,5])
+        l1proyectoDeportivoCoherencia(inList: ["0","2,5","5"])
     }
 }

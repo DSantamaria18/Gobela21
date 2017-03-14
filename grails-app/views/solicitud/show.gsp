@@ -17,18 +17,30 @@
         <li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]"/></g:link></li>
         <li><g:link class="create" action="create"><g:message code="default.new.label"
                                                               args="[entityName]"/></g:link></li>
+        <g:if test="${!solicitudInstance?.balance}">
         <li><g:link class="create" controller="balance" action="create"
-                    params="['solicitudId': solicitudInstance.codigo,
+                    params="['solicitudId': solicitudInstance.id,
+                             'token': solicitudInstance.codigo,
                              'linea': solicitudInstance.linea]">${message(code: 'default.add.label', args: [message(code: 'balance.label', default: 'Balance')])}</g:link></li>
+        </g:if>
+        <g:if test="${!solicitudInstance?.memoria}">
         <li><g:link class="create" controller="memoria" action="create"
-                    params="['solicitudId': solicitudInstance.codigo,
+                    params="['solicitudId': solicitudInstance.id,
+                             'token': solicitudInstance.codigo,
                              'linea': solicitudInstance.linea]">${message(code: 'default.add.label', args: [message(code: 'memoria.label', default: 'Memoria')])}</g:link></li>
+        </g:if>
+        <g:if test="${!solicitudInstance?.valoracion}">
         <li><g:link class="create" controller="valoracion" action="create"
-                    params="['solicitudId': solicitudInstance.codigo,
+                    params="['solicitudId': solicitudInstance.id,
+                             'token': solicitudInstance.codigo,
                              'linea'      : solicitudInstance.linea]">${message(code: 'default.add.label', args: [message(code: 'valoracion.label', default: 'Valoracion')])}</g:link></li>
+        </g:if>
+        <g:if test="${!solicitudInstance?.justificacion}">
         <li><g:link class="create" controller="justificacion" action="create"
-                    params="['solicitudId': solicitudInstance.codigo,
+                    params="['solicitudId': solicitudInstance.id,
+                             'token': solicitudInstance.codigo,
                              'linea': solicitudInstance.linea]">${message(code: 'default.add.label', args: [message(code: 'justificacion.label', default: 'Justificación')])}</g:link></li>
+        </g:if>
     </ul>
 </div>
 
