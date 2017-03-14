@@ -21,6 +21,8 @@
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 
+			</g:if>
+			<ol class="property-list valoracion">
                 <g:if test="${valoracionInstance?.solicitud}">
                     <li class="fieldcontain">
                         <span id="solicitud-label" class="property-label"><g:message code="valoracion.solicitud.label" default="Solicitud" /></span>
@@ -29,9 +31,6 @@
 
                     </li>
                 </g:if>
-
-			</g:if>
-			<ol class="property-list valoracion">
 
 				<g:if test="${valoracionInstance?.l1antiguedad}">
 				<li class="fieldcontain">
