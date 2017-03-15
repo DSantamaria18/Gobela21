@@ -22,7 +22,7 @@ class Solicitud {
     String representanteLegal
     String tipoSolicitud
     int linea
-    BigDecimal importeSolicitado
+    float importeSolicitado
     String numCuenta
     BigDecimal importeSolicitadoOtros
     BigDecimal importeRecibidoOtros

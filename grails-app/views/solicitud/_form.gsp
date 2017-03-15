@@ -4,7 +4,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: solicitudInstance, field: 'codigo', 'error')} required">
     <label for="codigo">
-        <g:message code="solicitud.codigo.label" default="Codigo"/>
+        <g:message code="solicitud.codigo.label" default="Número solicitud:"/>
         <span class="required-indicator">*</span>
     </label>
     <g:textField name="codigo" required="" value="${solicitudInstance?.codigo}"/>
@@ -13,7 +13,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: solicitudInstance, field: 'nombreSolicitante', 'error')} required">
     <label for="nombreSolicitante">
-        <g:message code="solicitud.nombreSolicitante.label" default="Nombre Solicitante"/>
+        <g:message code="solicitud.nombreSolicitante.label" default="Nombre solicitante:"/>
         <span class="required-indicator">*</span>
     </label>
     <g:textField name="nombreSolicitante" required="" value="${solicitudInstance?.nombreSolicitante}"/>
@@ -22,7 +22,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: solicitudInstance, field: 'solicitanteId', 'error')} required">
     <label for="solicitanteId">
-        <g:message code="solicitud.solicitanteId.label" default="Solicitante Id"/>
+        <g:message code="solicitud.solicitanteId.label" default="Solicitante Id:"/>
         <span class="required-indicator">*</span>
     </label>
     <g:textField name="solicitanteId" required="" value="${solicitudInstance?.solicitanteId}"/>
@@ -31,7 +31,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: solicitudInstance, field: 'municipioSolicitante', 'error')} required">
     <label for="municipioSolicitante">
-        <g:message code="solicitud.municipioSolicitante.label" default="Municipio Solicitante"/>
+        <g:message code="solicitud.municipioSolicitante.label" default="Municipio solicitante:"/>
         <span class="required-indicator">*</span>
     </label>
     <g:textField name="municipioSolicitante" required="" value="${solicitudInstance?.municipioSolicitante}"/>
@@ -40,7 +40,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: solicitudInstance, field: 'cpSolicitante', 'error')} required">
     <label for="cpSolicitante">
-        <g:message code="solicitud.cpSolicitante.label" default="Cp Solicitante"/>
+        <g:message code="solicitud.cpSolicitante.label" default="CP Solicitante:"/>
         <span class="required-indicator">*</span>
     </label>
     <g:field name="cpSolicitante" type="number" value="${solicitudInstance.cpSolicitante}" required=""/>
@@ -49,7 +49,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: solicitudInstance, field: 'emailSolicitante', 'error')} required">
     <label for="emailSolicitante">
-        <g:message code="solicitud.emailSolicitante.label" default="Email Solicitante"/>
+        <g:message code="solicitud.emailSolicitante.label" default="Email solicitante:"/>
         <span class="required-indicator">*</span>
     </label>
     <g:field type="email" name="emailSolicitante" required="" value="${solicitudInstance?.emailSolicitante}"/>
@@ -58,7 +58,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: solicitudInstance, field: 'direccionSolicitante', 'error')} required">
     <label for="direccionSolicitante">
-        <g:message code="solicitud.direccionSolicitante.label" default="Direccion Solicitante"/>
+        <g:message code="solicitud.direccionSolicitante.label" default="Direccion solicitante:"/>
         <span class="required-indicator">*</span>
     </label>
     <g:textField name="direccionSolicitante" required="" value="${solicitudInstance?.direccionSolicitante}"/>
@@ -67,7 +67,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: solicitudInstance, field: 'telefonoSolicitante1', 'error')} required">
     <label for="telefonoSolicitante1">
-        <g:message code="solicitud.telefonoSolicitante1.label" default="Telefono Solicitante1"/>
+        <g:message code="solicitud.telefonoSolicitante1.label" default="Teléfono:"/>
         <span class="required-indicator">*</span>
     </label>
     <g:textField name="telefonoSolicitante1" required="" value="${solicitudInstance?.telefonoSolicitante1}"/>
@@ -76,7 +76,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: solicitudInstance, field: 'telefonoSolicitante2', 'error')} ">
     <label for="telefonoSolicitante2">
-        <g:message code="solicitud.telefonoSolicitante2.label" default="Telefono Solicitante2"/>
+        <g:message code="solicitud.telefonoSolicitante2.label" default="Teléfono 2:"/>
 
     </label>
     <g:textField name="telefonoSolicitante2" value="${solicitudInstance?.telefonoSolicitante2}"/>
@@ -85,7 +85,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: solicitudInstance, field: 'representante', 'error')} ">
     <label for="representante">
-        <g:message code="solicitud.representante.label" default="Representante"/>
+        <g:message code="solicitud.representante.label" default="Representanta a una entidad:"/>
 
     </label>
     <g:checkBox name="representante" value="${solicitudInstance?.representante}"/>
@@ -94,7 +94,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: solicitudInstance, field: 'nombreEntidad', 'error')} ">
     <label for="nombreEntidad">
-        <g:message code="solicitud.nombreEntidad.label" default="Nombre Entidad"/>
+        <g:message code="solicitud.nombreEntidad.label" default="Nombre entidad:"/>
 
     </label>
     <g:textField name="nombreEntidad" value="${solicitudInstance?.nombreEntidad}"/>
@@ -103,7 +103,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: solicitudInstance, field: 'entidadId', 'error')} ">
     <label for="entidadId">
-        <g:message code="solicitud.entidadId.label" default="Entidad Id"/>
+        <g:message code="solicitud.entidadId.label" default="Entidad Id:"/>
 
     </label>
     <g:textField name="entidadId" value="${solicitudInstance?.entidadId}"/>
@@ -112,7 +112,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: solicitudInstance, field: 'direccionEntidad', 'error')} ">
     <label for="direccionEntidad">
-        <g:message code="solicitud.direccionEntidad.label" default="Direccion Entidad"/>
+        <g:message code="solicitud.direccionEntidad.label" default="Dirección entidad:"/>
 
     </label>
     <g:textField name="direccionEntidad" value="${solicitudInstance?.direccionEntidad}"/>
@@ -121,7 +121,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: solicitudInstance, field: 'municipioEntidad', 'error')} ">
     <label for="municipioEntidad">
-        <g:message code="solicitud.municipioEntidad.label" default="Municipio Entidad"/>
+        <g:message code="solicitud.municipioEntidad.label" default="Municipio entidad:"/>
 
     </label>
     <g:textField name="municipioEntidad" value="${solicitudInstance?.municipioEntidad}"/>
@@ -130,7 +130,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: solicitudInstance, field: 'cpEntidad', 'error')} ">
     <label for="cpEntidad">
-        <g:message code="solicitud.cpEntidad.label" default="Cp Entidad"/>
+        <g:message code="solicitud.cpEntidad.label" default="CP Entidad:"/>
 
     </label>
     <g:field name="cpEntidad" type="number" value="${solicitudInstance.cpEntidad}"/>
@@ -139,7 +139,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: solicitudInstance, field: 'emailEntidad', 'error')} ">
     <label for="emailEntidad">
-        <g:message code="solicitud.emailEntidad.label" default="Email Entidad"/>
+        <g:message code="solicitud.emailEntidad.label" default="Email entidad:"/>
 
     </label>
     <g:field type="email" name="emailEntidad" value="${solicitudInstance?.emailEntidad}"/>
@@ -148,7 +148,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: solicitudInstance, field: 'telefonoEntidad1', 'error')} ">
     <label for="telefonoEntidad1">
-        <g:message code="solicitud.telefonoEntidad1.label" default="Telefono Entidad1"/>
+        <g:message code="solicitud.telefonoEntidad1.label" default="Teléfono 1:"/>
 
     </label>
     <g:field name="telefonoEntidad1" type="number" value="${solicitudInstance.telefonoEntidad1}"/>
@@ -157,7 +157,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: solicitudInstance, field: 'telefonoEntidad2', 'error')} ">
     <label for="telefonoEntidad2">
-        <g:message code="solicitud.telefonoEntidad2.label" default="Telefono Entidad2"/>
+        <g:message code="solicitud.telefonoEntidad2.label" default="Teléfono 2:"/>
 
     </label>
     <g:field name="telefonoEntidad2" type="number" value="${solicitudInstance.telefonoEntidad2}"/>
@@ -166,7 +166,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: solicitudInstance, field: 'representanteLegal', 'error')} ">
     <label for="representanteLegal">
-        <g:message code="solicitud.representanteLegal.label" default="Representante Legal"/>
+        <g:message code="solicitud.representanteLegal.label" default="Representante legal:"/>
 
     </label>
     <g:textField name="representanteLegal" value="${solicitudInstance?.representanteLegal}"/>
@@ -175,7 +175,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: solicitudInstance, field: 'tipoSolicitud', 'error')} required">
     <label for="tipoSolicitud">
-        <g:message code="solicitud.tipoSolicitud.label" default="Tipo Solicitud"/>
+        <g:message code="solicitud.tipoSolicitud.label" default="Tipo de solicitud:"/>
         <span class="required-indicator">*</span>
     </label>
     <g:select name="tipoSolicitud" from="${solicitudInstance.constraints.tipoSolicitud.inList}" required=""
@@ -185,27 +185,25 @@
 
 <div class="fieldcontain ${hasErrors(bean: solicitudInstance, field: 'linea', 'error')} required">
     <label for="linea">
-        <g:message code="solicitud.linea.label" default="Linea"/>
+        <g:message code="solicitud.linea.label" default="Línea:"/>
         <span class="required-indicator">*</span>
     </label>
     <g:select name="linea" from="${solicitudInstance.constraints.linea.inList}" required=""
               value="${fieldValue(bean: solicitudInstance, field: 'linea')}" valueMessagePrefix="solicitud.linea"/>
-
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: solicitudInstance, field: 'importeSolicitado', 'error')} required">
     <label for="importeSolicitado">
-        <g:message code="solicitud.importeSolicitado.label" default="Importe Solicitado"/>
+        <g:message code="solicitud.importeSolicitado.label" default="Importe solicitado:"/>
         <span class="required-indicator">*</span>
     </label>
     <g:field name="importeSolicitado" value="${fieldValue(bean: solicitudInstance, field: 'importeSolicitado')}"
              required=""/>
-
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: solicitudInstance, field: 'numCuenta', 'error')} ">
     <label for="numCuenta">
-        <g:message code="solicitud.numCuenta.label" default="Num Cuenta"/>
+        <g:message code="solicitud.numCuenta.label" default="Número de cuenta:"/>
 
     </label>
     <g:textField name="numCuenta" value="${solicitudInstance?.numCuenta}"/>
@@ -214,7 +212,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: solicitudInstance, field: 'importeSolicitadoOtros', 'error')} ">
     <label for="importeSolicitadoOtros">
-        <g:message code="solicitud.importeSolicitadoOtros.label" default="Importe Solicitado Otros"/>
+        <g:message code="solicitud.importeSolicitadoOtros.label" default="Importe solicitado a otros organismos:"/>
 
     </label>
     <g:field name="importeSolicitadoOtros"
@@ -224,7 +222,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: solicitudInstance, field: 'importeRecibidoOtros', 'error')} ">
     <label for="importeRecibidoOtros">
-        <g:message code="solicitud.importeRecibidoOtros.label" default="Importe Recibido Otros"/>
+        <g:message code="solicitud.importeRecibidoOtros.label" default="Importe recibido de otros organismos:"/>
 
     </label>
     <g:field name="importeRecibidoOtros" value="${fieldValue(bean: solicitudInstance, field: 'importeRecibidoOtros')}"/>
@@ -233,7 +231,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: solicitudInstance, field: 'fechaSolicitud', 'error')} required">
     <label for="fechaSolicitud">
-        <g:message code="solicitud.fechaSolicitud.label" default="Fecha Solicitud"/>
+        <g:message code="solicitud.fechaSolicitud.label" default="Fecha de solicitud:"/>
         <span class="required-indicator">*</span>
     </label>
     <g:datePicker name="fechaSolicitud" precision="day" value="${solicitudInstance?.fechaSolicitud}"/>
