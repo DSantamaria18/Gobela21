@@ -67,8 +67,8 @@ environments {
         dataSource {
             dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
             url = "jdbc:mysql://localhost:3306/gobela21Test"
-            username = "root"
-            password = "9Zseo1_8"
+            username = "gobela21"
+            password = "ge62R!o2"
         }
     }
 }
