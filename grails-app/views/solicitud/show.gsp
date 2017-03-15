@@ -288,8 +288,11 @@
                 <span id="importeSolicitado-label" class="property-label"><g:message
                         code="solicitud.importeSolicitado.label" default="Importe Solicitado"/></span>
 
-                <span class="property-value" aria-labelledby="importeSolicitado-label"><g:fieldValue
-                        bean="${solicitudInstance}" field="importeSolicitado"/></span>
+                <span class="property-value" aria-labelledby="importeSolicitado-label">
+                    %{--<g:fieldValue bean="${solicitudInstance}" field="importeSolicitado"/>--}%
+                    <g:formatNumber number="${solicitudInstance.importeSolicitado}" type="currency" currencyCode="EUR" />
+                </span>
+
 
             </li>
         </g:if>
@@ -310,8 +313,10 @@
                 <span id="importeSolicitadoOtros-label" class="property-label"><g:message
                         code="solicitud.importeSolicitadoOtros.label" default="Importe Solicitado Otros"/></span>
 
-                <span class="property-value" aria-labelledby="importeSolicitadoOtros-label"><g:fieldValue
-                        bean="${solicitudInstance}" field="importeSolicitadoOtros"/></span>
+                <span class="property-value" aria-labelledby="importeSolicitadoOtros-label">
+                    %{--<g:fieldValue bean="${solicitudInstance}" field="importeSolicitadoOtros"/>--}%
+                    <g:formatNumber number="${solicitudInstance.importeSolicitadoOtros}" type="currency" currencyCode="EUR" />
+                </span>
 
             </li>
         </g:if>

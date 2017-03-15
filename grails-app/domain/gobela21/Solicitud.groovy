@@ -24,8 +24,8 @@ class Solicitud {
     int linea
     float importeSolicitado
     String numCuenta
-    BigDecimal importeSolicitadoOtros
-    BigDecimal importeRecibidoOtros
+    float importeSolicitadoOtros
+    float importeRecibidoOtros
     Date fechaSolicitud = new Date()
 
     static hasOne = [balance: Balance,memoria: Memoria, justificacion: Justificacion, valoracion: Valoracion]

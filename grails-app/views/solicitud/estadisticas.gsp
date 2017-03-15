@@ -14,8 +14,8 @@
 <div class="nav" role="navigation">
     <ul>
         <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-        <li><g:link class="list" action="create">Informe Anual</g:link></li>
-        <li><g:link class="list" action="create">Informe Semestral</g:link></li>
+        <li><g:link class="list" action="informeAnual">Informe Anual</g:link></li>
+        %{--<li><g:link class="list" action="create">Informe Semestral</g:link></li>--}%
     </ul>
 </div>
 
@@ -24,7 +24,7 @@
     <g:if test="${flash.message}">
         <div class="message" role="status">${flash.message}</div>
     </g:if>
-    <div id="query-builder" class="content scaffold-list" role="main">
+    %{--<div id="query-builder" class="content scaffold-list" role="main">
         <g:form url="[resource: buildedQuery, action: 'filtrar']" method="POST">
             <fieldset class="queryForm">
                 <g:render template="queryForm"/>
@@ -33,7 +33,7 @@
                 <g:actionSubmit class="save" action="filtrar" value="Filtrar"/>
             </fieldset>
         </g:form>
-    </div>
+    </div>--}%
     <table>
         <thead>
         <tr>

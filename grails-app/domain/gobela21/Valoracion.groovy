@@ -68,6 +68,7 @@ class Valoracion {
 
     // Continuidad y estabilidad
     int l2antiguedad
+    int l2participantes   //Sólo asociaciones de pesca
 
     // Valoración de deportistas
     int l2puestoEnTorneosInternacionales
