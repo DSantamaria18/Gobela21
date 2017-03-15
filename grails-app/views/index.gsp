@@ -107,14 +107,14 @@
 		<div id="page-body" role="main">
 			<h1>Gobela 21</h1>
 			<h2>App Version: <g:meta name="app.version"/></h2>
-			<div id="controller-list" role="navigation">
+			%{--<div id="controller-list" role="navigation">
 				<h2>Controllers Disponibles:</h2>
 				<ul>
 					<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
 						<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
 					</g:each>
 				</ul>
-			</div>
+			</div>--}%
 		</div>
 	</body>
 </html>
