@@ -68,7 +68,7 @@ environments {
             dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
             url = "jdbc:mysql://localhost:3306/gobela21Test"
             username = "root"
-            password = "root"
+            password = "9Zseo1_8"
         }
     }
 }
