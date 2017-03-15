@@ -28,12 +28,32 @@ class BootStrap {
 
         new gobela21.Solicitud(codigo: "43423F23F", nombreSolicitante: "Getxo Futbol", solicitanteId: "234112234223V", municipioSolicitante: "Getxo",
                 cpSolicitante: 48991, emailSolicitante: "pacoporras@getxofutbol.com", direccionSolicitante: "Telletxe 9",
-                telefonoSolicitante1: 944676473, representante: false, tipoSolicitud: "Club", linea: 3,
+                telefonoSolicitante1: 944676473, representante: false, tipoSolicitud: "Club", linea: 2,
                 importeSolicitado: 66666).save(failOnError: true)
 
         new gobela21.Solicitud(codigo: "4r3f3f43", nombreSolicitante: "Getxo Futbol", solicitanteId: "234112234223V", municipioSolicitante: "Getxo",
                 cpSolicitante: 48991, emailSolicitante: "pacoporras@getxofutbol.com", direccionSolicitante: "Telletxe 9",
                 telefonoSolicitante1: 944676473, representante: false, tipoSolicitud: "Club", linea: 3,
+                importeSolicitado: 66666).save(failOnError: true)
+
+        new gobela21.Solicitud(codigo: "4r3fewrqwer3", nombreSolicitante: "Getxo Futbol", solicitanteId: "234112234223V", municipioSolicitante: "Getxo",
+                cpSolicitante: 48991, emailSolicitante: "pacoporras@getxofutbol.com", direccionSolicitante: "Telletxe 9",
+                telefonoSolicitante1: 944676473, representante: false, tipoSolicitud: "Club", linea: 4,
+                importeSolicitado: 66666).save(failOnError: true)
+
+        new gobela21.Solicitud(codigo: "75745664", nombreSolicitante: "Getxo Futbol", solicitanteId: "234112234223V", municipioSolicitante: "Getxo",
+                cpSolicitante: 48991, emailSolicitante: "pacoporras@getxofutbol.com", direccionSolicitante: "Telletxe 9",
+                telefonoSolicitante1: 944676473, representante: false, tipoSolicitud: "Club", linea: 5,
+                importeSolicitado: 66666).save(failOnError: true)
+
+        new gobela21.Solicitud(codigo: "987987978", nombreSolicitante: "Getxo Futbol", solicitanteId: "234112234223V", municipioSolicitante: "Getxo",
+                cpSolicitante: 48991, emailSolicitante: "pacoporras@getxofutbol.com", direccionSolicitante: "Telletxe 9",
+                telefonoSolicitante1: 944676473, representante: false, tipoSolicitud: "Club", linea: 6,
+                importeSolicitado: 66666).save(failOnError: true)
+
+        new gobela21.Solicitud(codigo: "4r45t56y", nombreSolicitante: "Getxo Futbol", solicitanteId: "234112234223V", municipioSolicitante: "Getxo",
+                cpSolicitante: 48991, emailSolicitante: "pacoporras@getxofutbol.com", direccionSolicitante: "Telletxe 9",
+                telefonoSolicitante1: 944676473, representante: false, tipoSolicitud: "Club", linea: 7,
                 importeSolicitado: 66666).save(failOnError: true)
     }
 

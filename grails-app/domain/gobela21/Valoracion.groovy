@@ -1,6 +1,7 @@
 package gobela21
 
 class Valoracion {
+    int linea
     //TODO: escoger el tipo de imput adecuado a cada campo en el formulario
     int l1costesActividad
     int l1mediosPropios
@@ -191,6 +192,6 @@ class Valoracion {
     static belongsTo = [solicitud: Solicitud]
 
     static constraints = {
-        l1proyectoDeportivoCoherencia(inList: ["0","2,5","5"])
+        l1proyectoDeportivoCoherencia(nullable: true, inList: ["0","2,5","5"])
     }
 }

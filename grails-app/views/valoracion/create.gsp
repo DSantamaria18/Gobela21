@@ -33,6 +33,7 @@
     </g:hasErrors>
     <g:form url="[resource: valoracionInstance, action: 'save']">
         <input type="hidden" name="solicitud" value="${params.solicitudId}" />
+        <input type="hidden" name="linea" value="${params.linea}" />
         <fieldset class="form">
             <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'codigo', 'error')} required">
                 <label for="solicitud">
