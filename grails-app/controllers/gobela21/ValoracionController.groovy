@@ -7,9 +7,8 @@ import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
 class ValoracionController {
-    static scaffold = true
 
-    /*static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
@@ -87,7 +86,8 @@ class ValoracionController {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.deleted.message', args: [message(code: 'Valoracion.label', default: 'Valoracion'), valoracionInstance.id])
-                redirect action:"index", method:"GET"
+                //redirect action:"index", method:"GET"
+                redirect(uri:'/')
             }
             '*'{ render status: NO_CONTENT }
         }
@@ -101,5 +101,5 @@ class ValoracionController {
             }
             '*'{ render status: NOT_FOUND }
         }
-    }*/
+    }
 }

@@ -81,10 +81,10 @@ class Valoracion {
     int l2campeonatosMundo
 
     //Indice de participacion
-    float l2indiceParticipacion = 0.0
+    float l2indiceParticipacion
 
     // Indice de corrección
-    float l2indiceCorreccion = 0.0
+    float l2indiceCorreccion
 
     ////////////////
     /// LINEA 3 ////
