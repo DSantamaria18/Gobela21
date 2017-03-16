@@ -32,27 +32,11 @@
         </ul>
     </g:hasErrors>
     <g:form url="[resource: valoracionInstance, action: 'save']">
-        <input type="hidden" name="solicitud" value="${params.solicitudId}" />
-        <input type="hidden" name="linea" value="${params.linea}" />
-        <fieldset class="form">
-            <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'codigo', 'error')} required">
-                <label for="solicitud">
-                    <g:message code="valoracion.solicitud.label" default="Solicitud:"/>
-                </label> ${params.token}
-            </div>
-        </fieldset>
-        <fieldset class="form">
+
+
             <g:render template="formCreate"/>
         </fieldset>
-        <fieldset class="form">
-        <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'importeConcedido', 'error')} required">
-            <label for="importeConcedido">
-                <g:message code="valoracion.importeConcedido.label" default="importeConcedido"/>
-            </label>
-            <g:field name="importeConcedido" value="${fieldValue(bean: valoracionInstance, field: 'importeConcedido')}"/>
-            <span>€</span>
-        </div>
-        </fieldset>
+
         <fieldset class="buttons">
             <g:submitButton name="create" class="save"
                             value="${message(code: 'default.button.create.label', default: 'Create')}"/>

@@ -33,28 +33,7 @@
         </ul>
     </g:hasErrors>
     <g:form url="[resource: valoracionInstance, action: 'update']" method="PUT">
-        <fieldset class="form">
-            <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'codigo', 'error')} required">
-                <span id="l6prensaEstatal-label" class="property-label">
-                    <g:message code="valoracion.solicitud.label" default="Número de solicitud:"/>
-                </span>
-                <span class="property-value" aria-labelledby="solicitud-label">
-                    <g:fieldValue bean="${valoracionInstance}" field="solicitud"/></span>
-            </div>
-            <g:hiddenField name="version" value="${valoracionInstance?.version}"/>
-        </fieldset>
-        <fieldset class="form">
-            <g:render template="formEdit"/>
-        </fieldset>
-        <fieldset class="form">
-            <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'importeConcedido', 'error')} required">
-                <label for="importeConcedido">
-                    <g:message code="valoracion.importeConcedido.label" default="Importe concedido:"/>
-                </label>
-                <g:field name="importeConcedido" value="${fieldValue(bean: valoracionInstance, field: 'importeConcedido')}"/>
-                <span>€</span>
-            </div>
-        </fieldset>
+        <g:render template="formEdit"/>
         <fieldset class="buttons">
             <g:actionSubmit class="save" action="update"
                             value="${message(code: 'default.button.update.label', default: 'Update')}"/>
