@@ -25,7 +25,7 @@
 			<ol class="property-list valoracion">
                 <g:if test="${valoracionInstance?.solicitud}">
                     <li class="fieldcontain">
-                        <span id="solicitud-label" class="property-label"><g:message code="valoracion.solicitud.label" default="Solicitud" /></span>
+                        <span id="solicitud-label" class="property-label"><g:message code="valoracion.solicitud.label" default="Número de solicitud:" /></span>
 
                         <span class="property-value" aria-labelledby="solicitud-label"><g:link controller="solicitud" action="show" id="${valoracionInstance?.solicitud?.id}">${valoracionInstance?.solicitud?.encodeAsHTML()}</g:link></span>
 
@@ -34,7 +34,7 @@
 
 				<g:if test="${valoracionInstance?.l1antiguedad}">
 				<li class="fieldcontain">
-					<span id="l1antiguedad-label" class="property-label"><g:message code="valoracion.l1antiguedad.label" default="L1antiguedad" /></span>
+					<span id="l1antiguedad-label" class="property-label"><g:message code="valoracion.l1antiguedad.label" default="Antiguedad del Club:" /></span>
 
 						<span class="property-value" aria-labelledby="l1antiguedad-label"><g:fieldValue bean="${valoracionInstance}" field="l1antiguedad"/></span>
 
@@ -43,7 +43,7 @@
 
 				<g:if test="${valoracionInstance?.l1centrosEscolares}">
 				<li class="fieldcontain">
-					<span id="l1centrosEscolares-label" class="property-label"><g:message code="valoracion.l1centrosEscolares.label" default="L1centros Escolares" /></span>
+					<span id="l1centrosEscolares-label" class="property-label"><g:message code="valoracion.l1centrosEscolares.label" default="Colaboración con Centros Escolares:" /></span>
 
 						<span class="property-value" aria-labelledby="l1centrosEscolares-label"><g:fieldValue bean="${valoracionInstance}" field="l1centrosEscolares"/></span>
 
@@ -775,7 +775,7 @@
 
                 <g:if test="${valoracionInstance?.importeConcedido}">
                     <li class="fieldcontain">
-                        <span id="importeConcedido-label" class="property-label"><g:message code="valoracion.importeConcedido.label" default="importeConcedido" /></span>
+                        <span id="importeConcedido-label" class="property-label"><g:message code="valoracion.importeConcedido.label" default="Importe concedido:" /></span>
                         <span class="property-value" aria-labelledby="importeConcedido-label">
                             <g:formatNumber number="${valoracionInstance.importeConcedido}" type="currency" currencyCode="EUR" />
                     </li>

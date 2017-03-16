@@ -2,8 +2,8 @@ package gobela21
 
 class Justificacion {
     String codigo
-    float importeRecibido
-    float importeJustificado
+    BigDecimal importeRecibido
+    BigDecimal importeJustificado
 
     static belongsTo = [solicitud: Solicitud]
 

@@ -25,7 +25,7 @@
 			
 				<g:if test="${justificacionInstance?.codigo}">
 				<li class="fieldcontain">
-					<span id="codigo-label" class="property-label"><g:message code="justificacion.codigo.label" default="Codigo" /></span>
+					<span id="codigo-label" class="property-label"><g:message code="justificacion.codigo.label" default="Número de justificación:" /></span>
 					
 						<span class="property-value" aria-labelledby="codigo-label"><g:fieldValue bean="${justificacionInstance}" field="codigo"/></span>
 					
@@ -34,7 +34,7 @@
 			
 				<g:if test="${justificacionInstance?.importeRecibido}">
 				<li class="fieldcontain">
-					<span id="importeRecibido-label" class="property-label"><g:message code="justificacion.importeRecibido.label" default="Importe Recibido" /></span>
+					<span id="importeRecibido-label" class="property-label"><g:message code="justificacion.importeRecibido.label" default="Importe recibido:" /></span>
 					
 						<span class="property-value" aria-labelledby="importeRecibido-label">
 							%{--<g:fieldValue bean="${justificacionInstance}" field="importeRecibido"/>--}%
@@ -47,7 +47,7 @@
 			
 				<g:if test="${justificacionInstance?.importeJustificado}">
 				<li class="fieldcontain">
-					<span id="importeJustificado-label" class="property-label"><g:message code="justificacion.importeJustificado.label" default="Importe Justificado" /></span>
+					<span id="importeJustificado-label" class="property-label"><g:message code="justificacion.importeJustificado.label" default="Importe justificado:" /></span>
 					
 						<span class="property-value" aria-labelledby="importeJustificado-label">
 							%{--<g:fieldValue bean="${justificacionInstance}" field="importeJustificado"/>--}%

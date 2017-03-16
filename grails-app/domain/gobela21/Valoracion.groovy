@@ -186,8 +186,8 @@ class Valoracion {
     /// COMUN ////
     //////////////
 
-    int puntuacion
-    float importeConcedido
+    float puntuacion
+    BigDecimal importeConcedido
 
     static belongsTo = [solicitud: Solicitud]
 

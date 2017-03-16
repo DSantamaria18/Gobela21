@@ -1,13 +1,13 @@
 package gobela21
 
 class Balance {
-    float gastosEjercicioAnterior
-    float gastosEstimados
-    float ingresosEjercicioAnterior
-    float ingresosEstimados
+    BigDecimal gastosEjercicioAnterior
+    BigDecimal gastosEstimados
+    BigDecimal ingresosEjercicioAnterior
+    BigDecimal ingresosEstimados
     String dificultades
     String clubConvenio
-    float aportacionConvenio
+    BigDecimal aportacionConvenio
     Date fechaInicioConvenio
     Date fechaFinConvenio
 
@@ -18,7 +18,7 @@ class Balance {
         gastosEstimados(nullable: false)
         ingresosEjercicioAnterior(nullable: false)
         ingresosEstimados(nullable: false)
-        dificultades(maxSize: 500)
+        dificultades(nullable: true, maxSize: 500)
         clubConvenio(nullable: true)
         aportacionConvenio(nullable: true)
         fechaInicioConvenio(nullable: true)
