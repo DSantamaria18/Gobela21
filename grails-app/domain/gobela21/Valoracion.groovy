@@ -186,12 +186,26 @@ class Valoracion {
     /// COMUN ////
     //////////////
 
-    float puntuacion
+    //float puntuacion = 0.0
     BigDecimal importeConcedido
 
     static belongsTo = [solicitud: Solicitud]
 
     static constraints = {
-        l1proyectoDeportivoCoherencia(nullable: true, inList: ["0","2,5","5"])
+        l1proyectoDeportivoCoherencia(nullable: true, inList: ["0","2.5","5"])
+        importeConcedido(nullable: true)
     }
+
+    def suma(){
+        List<String> filtro = ["importeConcedido", "solicitud", "linea", "solicitudId"]
+        float res = 0.0
+        this.properties.each {prop, val ->
+            if (!filtro.contains(prop)) {
+                float valor = val as float
+                res = res + valor
+            }
+        }
+        return res as String
+    }
+
 }

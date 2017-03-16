@@ -771,13 +771,20 @@
 				</li>
 				</g:if>
 
-
+				%{--<g:if test="${valoracionInstance?.puntuacion}">--}%
+					<li class="fieldcontain">
+						<span id="puntuacion-label" class="property-label"><g:message code="valoracion.puntuacion.label" default="Puntuación total:" /></span>
+						<span class="property-value" aria-labelledby="puntuacion-label">
+							${valoracionInstance.suma()}
+						</span>
+					</li>
+				%{--</g:if>--}%
 
                 <g:if test="${valoracionInstance?.importeConcedido}">
                     <li class="fieldcontain">
                         <span id="importeConcedido-label" class="property-label"><g:message code="valoracion.importeConcedido.label" default="Importe concedido:" /></span>
                         <span class="property-value" aria-labelledby="importeConcedido-label">
-                            <g:formatNumber number="${valoracionInstance.importeConcedido}" type="currency" currencyCode="EUR" />
+							<g:formatNumber number="${valoracionInstance.importeConcedido}" type="currency" currencyCode="EUR" /></span>
                     </li>
                 </g:if>
 

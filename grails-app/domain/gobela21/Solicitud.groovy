@@ -22,10 +22,10 @@ class Solicitud {
     String representanteLegal
     String tipoSolicitud
     int linea
-    float importeSolicitado
+    BigDecimal importeSolicitado
     String numCuenta
-    float importeSolicitadoOtros
-    float importeRecibidoOtros
+    BigDecimal importeSolicitadoOtros
+    BigDecimal importeRecibidoOtros
     Date fechaSolicitud = new Date()
 
     static hasOne = [balance: Balance,memoria: Memoria, justificacion: Justificacion, valoracion: Valoracion]
