@@ -26,6 +26,7 @@
 					<tr>
 						<g:sortableColumn property="codigo" title="${message(code: 'solicitud.codigo.label', default: 'Codigo')}" />
 						<g:sortableColumn property="nombreSolicitante" title="${message(code: 'solicitud.nombreSolicitante.label', default: 'Nombre Solicitante')}" />
+						<g:sortableColumn property="nombreEntidad" title="${message(code: 'solicitud.nombreEntidad.label', default: 'Entidad')}" />
 						<g:sortableColumn property="linea" title="${message(code: 'solicitud.linea.label', default: 'Línea')}" />
 						<g:sortableColumn property="importeSolicitado" title="${message(code: 'solicitud.importeSolicitado.label', default: 'Importe Solicitado')}" />
 					</tr>
@@ -36,6 +37,7 @@
 					
 						<td><g:link action="show" id="${solicitudInstance.id}">${fieldValue(bean: solicitudInstance, field: "codigo")}</g:link></td>
 						<td>${fieldValue(bean: solicitudInstance, field: "nombreSolicitante")}</td>
+						<td>${fieldValue(bean: solicitudInstance, field: "nombreEntidad")}</td>
 						<td>${fieldValue(bean: solicitudInstance, field: "linea")}</td>
 						<td>${g.formatNumber(number: solicitudInstance.importeSolicitado, type: "currency", currencyCode: "EUR")}</td>
 					</tr>
