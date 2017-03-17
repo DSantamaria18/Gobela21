@@ -2,6 +2,15 @@ package gobela21
 
 class Valoracion {
     int linea
+    //float puntuacion = 0.0
+    BigDecimal importeConcedido
+
+    static belongsTo = [solicitud: Solicitud]
+
+    ///////////////
+    /// LINEA 1 ///
+    ///////////////
+
     //TODO: escoger el tipo de imput adecuado a cada campo en el formulario
     int l1costesActividad
     int l1mediosPropios
@@ -121,9 +130,9 @@ class Valoracion {
     // Valoración del solicitante
     int l4experienciaSolicitante
 
-    ///////////////////////////
-    /// EXCLUSIVOS LINEA 5 ////
-    ///////////////////////////
+    ////////////////
+    /// LINEA 5 ////
+    ////////////////
 
     // Impacto actividad
     int l5numeroEspectadores
@@ -181,15 +190,6 @@ class Valoracion {
 
     // Dificultad para acudir a otros medios de financiación
     int l7patrcinioPrivado
-
-    //////////////
-    /// COMUN ////
-    //////////////
-
-    //float puntuacion = 0.0
-    BigDecimal importeConcedido
-
-    static belongsTo = [solicitud: Solicitud]
 
     static constraints = {
         l1proyectoDeportivoCoherencia(nullable: true, inList: ["0","2.5","5"])
