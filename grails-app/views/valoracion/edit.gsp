@@ -5,6 +5,7 @@
     <meta name="layout" content="main">
     <g:set var="entityName" value="${message(code: 'valoracion.label', default: 'Valoracion')}"/>
     <title><g:message code="default.edit.label" args="[entityName]"/></title>
+    <g:javascript library="jquery" />
 </head>
 
 <body>
@@ -37,6 +38,9 @@
         <fieldset class="buttons">
             <g:actionSubmit class="save" action="update"
                             value="${message(code: 'default.button.update.label', default: 'Update')}"/>
+            %{--<g:submitToRemote url="[controller:'valoracion', action:'recalcular']"
+                              update="form${valoracionInstance.linea}"
+                              value="RECALCULAR PUNTOS"/>--}%
         </fieldset>
     </g:form>
 </div>

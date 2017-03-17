@@ -8,7 +8,7 @@ class Valoracion {
     int l1dificultadFinanciacion
 
     // Proyecto deportivo
-    String l1proyectoDeportivoCoherencia        //TODO: dividir en sus elementos
+    String l1proyectoDeportivoCoherencia = '0'       //TODO: dividir en sus elementos
     int l1proyectoDeportivoDiversidad
     int l1proyectoDeportivoEuskera
     int l1proyectoDeportivoParticipacionFemenina
@@ -197,15 +197,16 @@ class Valoracion {
     }
 
     def suma(){
-        List<String> filtro = ["importeConcedido", "solicitud", "linea", "solicitudId"]
+        List<String> filtro = ["importeConcedido", "solicitud", "linea", "solicitudId", "_method", "action", "format", "controller", "id"]
         float res = 0.0
         this.properties.each {prop, val ->
+            //println("   :: ${prop}")
             if (!filtro.contains(prop)) {
                 float valor = val as float
                 res = res + valor
             }
         }
-        return res as String
+        return res
     }
 
 }

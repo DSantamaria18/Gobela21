@@ -102,4 +102,24 @@ class ValoracionController {
             '*'{ render status: NOT_FOUND }
         }
     }
+
+    def recalcular(params){
+        println("   :: EN EL CONTROLLER DE RECALCULAR!!!")
+        def valoracionInstance = Valoracion.findAllById(params.id).first()
+        valoracionInstance.properties = params
+
+        List<String> filtro = ["importeConcedido", "solicitud", "linea", "solicitudId", "_method", "action", "format", "controller", "id"]
+        float res = 0.0
+        valoracionInstance.properties.each {prop, val ->
+            //println("   :: ${prop}")
+            if (!filtro.contains(prop)) {
+                float valor = val as float
+                res = res + valor
+            }
+        }
+        valoracionInstance.puntuacion = res
+        //respond valoracionInstance, model:[puntos: valoracionInstance.puntuacion]
+        //render valoracionInstance
+
+    }
 }

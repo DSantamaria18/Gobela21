@@ -776,6 +776,7 @@
 						<span id="puntuacion-label" class="property-label"><g:message code="valoracion.puntuacion.label" default="Puntuación total:" /></span>
 						<span class="property-value" aria-labelledby="puntuacion-label">
 							${valoracionInstance.suma()}
+							%{--${valoracionInstance.puntuacion}--}%
 						</span>
 					</li>
 				%{--</g:if>--}%

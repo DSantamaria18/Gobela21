@@ -37,9 +37,9 @@
     </g:if>
 </fieldset>
 
-<fieldset class="form">
+%{--<fieldset class="form">
     <input class="buttons" type="button" name="boton-calcular" onclick="actualizaPuntos()" value="Calcular Puntuación">
-</fieldset>
+</fieldset>--}%
 
 <fieldset class="form">
     <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'importeConcedido', 'error')} required">
@@ -51,12 +51,12 @@
     </div>
 </fieldset>
 
-<script>
+%{--<script>
     function actualizaPuntos(){
         var puntos = ${valoracionInstance.suma()};
         document.getElementById("puntuacion-value").innerHTML =puntos;
     }
-</script>
+</script>--}%
 
 
 
