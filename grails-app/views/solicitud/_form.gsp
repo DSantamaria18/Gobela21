@@ -4,7 +4,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: solicitudInstance, field: 'codigo', 'error')} required">
     <label for="codigo">
-        <g:message code="solicitud.codigo.label" default="Número solicitud:"/>
+        <g:message code="solicitud.codigo.label" default="Número de registro:"/>
         <span class="required-indicator">*</span>
     </label>
     <g:textField name="codigo" required="" value="${solicitudInstance?.codigo}"/>

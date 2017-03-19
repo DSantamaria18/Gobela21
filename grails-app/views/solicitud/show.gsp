@@ -55,7 +55,7 @@
         <g:if test="${solicitudInstance?.codigo}">
             <li class="fieldcontain">
                 <span id="codigo-label" class="property-label"><g:message code="solicitud.codigo.label"
-                                                                          default="Codigo"/></span>
+                                                                          default="Número de registro:"/></span>
 
                 <span class="property-value" aria-labelledby="codigo-label"><g:fieldValue bean="${solicitudInstance}"
                                                                                           field="codigo"/></span>
