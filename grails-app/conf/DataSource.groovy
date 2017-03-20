@@ -51,11 +51,11 @@ environments {
             pooled = true
             dbCreate = "update"
             //url = "jdbc:mysql://192.168.0.169:3306/gobela21Test;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
-            url = "jdbc:mysql://192.168.0.169:3306/gobela21Test"
+            url = "jdbc:mysql://vps389236.ovh.net:3306/testdb"
             driverClassName = "com.mysql.jdbc.Driver"
             dialect = org.hibernate.dialect.MySQL5InnoDBDialect
-            username="root"
-            password="toor"
+            username="gobela21"
+            password="fadura2017"
             properties {
                 // See http://grails.org/doc/latest/guide/conf.html#dataSource for documentation
                 jmxEnabled = true
