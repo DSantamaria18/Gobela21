@@ -73,7 +73,6 @@ environments {
                 testOnBorrow = true
                 testWhileIdle = true
                 testOnReturn = false
-                //jdbcInterceptors = "ConnectionState"
                 jdbcInterceptors = "ConnectionState;StatementCache(max=200)"
                 defaultTransactionIsolation = java.sql.Connection.TRANSACTION_READ_COMMITTED
             }
@@ -83,12 +82,11 @@ environments {
         dataSource {
             pooled = true
             dbCreate = "update"
-            url = "jdbc:mysql://localhost:3306/gobela21;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
-            //url = "jdbc:h2:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
+            url = "jdbc:mysql://localhost:3306/gobela21db"
             driverClassName = "com.mysql.jdbc.Driver"
             dialect = org.hibernate.dialect.MySQL5InnoDBDialect
-            username="root"
-            password="toor"
+            username="gobela21"
+            password="fadura2017"
             properties {
                // See http://grails.org/doc/latest/guide/conf.html#dataSource for documentation
                jmxEnabled = true
@@ -106,7 +104,6 @@ environments {
                testOnBorrow = true
                testWhileIdle = true
                testOnReturn = false
-               //jdbcInterceptors = "ConnectionState"
                 jdbcInterceptors = "ConnectionState;StatementCache(max=200)"
                defaultTransactionIsolation = java.sql.Connection.TRANSACTION_READ_COMMITTED
             }
