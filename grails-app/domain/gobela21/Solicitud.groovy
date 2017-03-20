@@ -2,7 +2,7 @@ package gobela21
 
 class Solicitud {
     String codigo
-    //String desc
+    String descSolicitud
     String nombreSolicitante
     String solicitanteId
     String municipioSolicitante
@@ -33,7 +33,7 @@ class Solicitud {
 
     static constraints = {
         codigo(nullable: false, unique: true)
-        //desc(nullable: true)
+        descSolicitud(nullable: true)
         nombreSolicitante(blank: false)
         solicitanteId(blank: false)
         municipioSolicitante(blank: false)

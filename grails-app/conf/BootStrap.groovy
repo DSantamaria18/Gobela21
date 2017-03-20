@@ -3,7 +3,7 @@ class BootStrap {
 
     def init = { servletContext ->
 
-        if (grails.util.Environment.currentEnvironment != grails.util.Environment.PRODUCTION) {
+        if (grails.util.Environment.currentEnvironment == grails.util.Environment.DEVELOPMENT) {
             new gobela21.Club(clubId: 1, nombre: "Getxo Rugby", lugar_entrenamiento: "Fadura",
                     horario_entrenamiento: "18:30 - 20:30", websiteUrl: "http://www.getxorugby.com",
                     rrss: "@getxorugby", logros: "Campeonato liga 1987").save(failOnError: true)
