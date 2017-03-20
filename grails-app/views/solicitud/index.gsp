@@ -25,21 +25,30 @@
 			<thead>
 					<tr>
 						<g:sortableColumn property="codigo" title="${message(code: 'solicitud.codigo.label', default: 'Codigo')}" />
-						<g:sortableColumn property="nombreSolicitante" title="${message(code: 'solicitud.nombreSolicitante.label', default: 'Nombre Solicitante')}" />
+						<g:sortableColumn property="descSolicitud" title="${message(code: 'solicitud.descSolicitud.label', default: 'Desc')}" />
+						<g:sortableColumn property="nombreSolicitante" title="${message(code: 'solicitud.nombreSolicitante.label', default: 'Solicitante')}" />
 						<g:sortableColumn property="nombreEntidad" title="${message(code: 'solicitud.nombreEntidad.label', default: 'Entidad')}" />
 						<g:sortableColumn property="linea" title="${message(code: 'solicitud.linea.label', default: 'Línea')}" />
-						<g:sortableColumn property="importeSolicitado" title="${message(code: 'solicitud.importeSolicitado.label', default: 'Importe Solicitado')}" />
+						%{--<g:sortableColumn property="importeSolicitado" title="${message(code: 'solicitud.importeSolicitado.label', default: 'Importe Solicitado')}" />--}%
+						<g:sortableColumn property="balance" title="${message(code: 'solicitud.balance.label', default: 'Balance')}" />
+						<g:sortableColumn property="memoria" title="${message(code: 'solicitud.memoria.label', default: 'Memoria')}" />
+						<g:sortableColumn property="valoracion" title="${message(code: 'solicitud.valoracion.label', default: 'Valoración')}" />
+						<g:sortableColumn property="justificacion" title="${message(code: 'solicitud.justificacion.label', default: 'Justificación')}" />
 					</tr>
 				</thead>
 				<tbody>
 				<g:each in="${solicitudInstanceList}" status="i" var="solicitudInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-					
 						<td><g:link action="show" id="${solicitudInstance.id}">${fieldValue(bean: solicitudInstance, field: "codigo")}</g:link></td>
+						<td>${fieldValue(bean: solicitudInstance, field: "descSolicitud")}</td>
 						<td>${fieldValue(bean: solicitudInstance, field: "nombreSolicitante")}</td>
 						<td>${fieldValue(bean: solicitudInstance, field: "nombreEntidad")}</td>
 						<td>${fieldValue(bean: solicitudInstance, field: "linea")}</td>
-						<td>${g.formatNumber(number: solicitudInstance.importeSolicitado, type: "currency", currencyCode: "EUR")}</td>
+						%{--<td>${g.formatNumber(number: solicitudInstance.importeSolicitado, type: "currency", currencyCode: "EUR")}</td>--}%
+						<td><g:link controller="balance" action="show" id="${solicitudInstance.balanceId}">${fieldValue(bean: solicitudInstance, field: "balanceId")}</g:link></td>
+						<td><g:link controller="memoria" action="show" id="${solicitudInstance.memoriaId}">${fieldValue(bean: solicitudInstance, field: "memoriaId")}</g:link></td>
+						<td><g:link controller="valoracion" action="show" id="${solicitudInstance.valoracionId}">${fieldValue(bean: solicitudInstance, field: "valoracionId")}</g:link></td>
+						<td><g:link controller="justificacion" action="show" id="${solicitudInstance.justificacionId}">${fieldValue(bean: solicitudInstance, field: "justificacionId")}</g:link></td>
 					</tr>
 				</g:each>
 				</tbody>

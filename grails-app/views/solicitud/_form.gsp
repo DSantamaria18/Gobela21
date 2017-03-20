@@ -11,6 +11,14 @@
 
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: solicitudInstance, field: 'descSolicitud', 'error')} required">
+    <label for="descSolicitud">
+        <g:message code="solicitud.descSolicitud.label" default="Descripción:"/>
+    </label>
+    <g:textField name="descSolicitud" value="${solicitudInstance?.descSolicitud}"/>
+
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: solicitudInstance, field: 'nombreSolicitante', 'error')} required">
     <label for="nombreSolicitante">
         <g:message code="solicitud.nombreSolicitante.label" default="Nombre solicitante:"/>

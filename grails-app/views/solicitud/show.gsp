@@ -63,6 +63,17 @@
             </li>
         </g:if>
 
+        <g:if test="${solicitudInstance?.descSolicitud}">
+            <li class="fieldcontain">
+                <span id="descSolicitud-label" class="property-label"><g:message code="solicitud.descSolicitud.label"
+                                                                          default="Descripción:"/></span>
+
+                <span class="property-value" aria-labelledby="descSolicitud-label"><g:fieldValue bean="${solicitudInstance}"
+                                                                                          field="descSolicitud"/></span>
+
+            </li>
+        </g:if>
+
         <g:if test="${solicitudInstance?.nombreSolicitante}">
             <li class="fieldcontain">
                 <span id="nombreSolicitante-label" class="property-label"><g:message
