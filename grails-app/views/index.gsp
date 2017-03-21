@@ -83,26 +83,26 @@
 	<body>
 		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div id="status" role="complementary">
-			<h1>Gestión de Clubes</h1>
+			%{--<h1>Gestión de Clubes</h1>
 			<ul>
 				<li class="controller"><g:link controller="Club">Clubes</g:link></li>
 				<li class="controller"><g:link controller="Jugador">Jugadores</g:link></li>
 				<li class="controller"><g:link controller="Categoria">Categorías</g:link></li>
 				<li class="controller"><g:link controller="Actividad">Actividades</g:link></li>
-			</ul>
+			</ul>--}%
 			<h1>Gestión de Subvenciones</h1>
 			<ul>
 				<li class="controller"><g:link controller="Solicitud">Solicitudes</g:link></li>
-				<li class="controller"><g:link controller="Balance">Balances</g:link></li>
-				<li class="controller"><g:link controller="Memoria">Memorias</g:link></li>
+				%{--<li class="controller"><g:link controller="Balance">Balances</g:link></li>--}%
+				%{--<li class="controller"><g:link controller="Memoria">Memorias</g:link></li>--}%
 				<li class="controller"><g:link controller="Valoracion">Valoraciones</g:link></li>
-				<li class="controller"><g:link controller="Justificacion">Justificaciones</g:link></li>
-				<li class="controller"><g:link controller="Solicitud" action="estadisticas">Estadísticas</g:link></li>
+				%{--<li class="controller"><g:link controller="Justificacion">Justificaciones</g:link></li>--}%
+				%{--<li class="controller"><g:link controller="Solicitud" action="estadisticas">Estadísticas</g:link></li>--}%
 			</ul>
-			<h1>Gestión de Eventos</h1>
+			%{--<h1>Gestión de Eventos</h1>
 			<ul>
 				<li class="controller"><g:link controller="Evento">Eventos</g:link></li>
-			</ul>
+			</ul>--}%
 		</div>
 		<div id="page-body" role="main">
 			<h1>Gobela 21</h1>

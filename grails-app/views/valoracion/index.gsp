@@ -23,37 +23,28 @@
 			<table>
 			<thead>
 					<tr>
-					
-						<g:sortableColumn property="l1antiguedad" title="${message(code: 'valoracion.l1antiguedad.label', default: 'L1antiguedad')}" />
-					
-						<g:sortableColumn property="l1centrosEscolares" title="${message(code: 'valoracion.l1centrosEscolares.label', default: 'L1centros Escolares')}" />
-					
-						<g:sortableColumn property="l1costesActividad" title="${message(code: 'valoracion.l1costesActividadDe.label', default: 'L1costes Actividad')}" />
-					
-						<g:sortableColumn property="l1deporteEscolar" title="${message(code: 'valoracion.l1deporteEscolar.label', default: 'L1deporte Escolar')}" />
-					
-						<g:sortableColumn property="l1dificultadFinanciacion" title="${message(code: 'valoracion.l1dificultadFinanciacion.label', default: 'L1dificultad Financiacion')}" />
-					
-						<g:sortableColumn property="l1getxoKirolak" title="${message(code: 'valoracion.l1getxoKirolak.label', default: 'L1getxo Kirolak')}" />
-					
+						<g:sortableColumn property="id" title="${message(code: 'valoracion.index.label', default: 'ID')}" />
+						<g:sortableColumn property="solicitud" title="${message(code: 'valoracion.solicitud.label', default: 'Solicitud')}" />
+						<g:sortableColumn property="entidad" title="${message(code: 'solicitud.entidad.label', default: 'Entidad / Solicitante')}" />
+						<g:sortableColumn property="linea" title="${message(code: 'valoracion.linea.label', default: 'Línea')}" />
+						<g:sortableColumn property="puntuacion" title="${message(code: 'valoracion.puntuacion.label', default: 'Puntos')}" />
+						<g:sortableColumn property="importeConcedido" title="${message(code: 'valoracion.importeConcedido.label', default: 'Concedido')}" />
 					</tr>
 				</thead>
 				<tbody>
-				<g:each in="${valoracionInstanceList}" status="i" var="valoracionInstance">
+				<g:each in="${list}" status="i" var="valoracionInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-					
-						<td><g:link action="show" id="${valoracionInstance.id}">${fieldValue(bean: valoracionInstance, field: "l1antiguedad")}</g:link></td>
-					
-						<td>${fieldValue(bean: valoracionInstance, field: "l1centrosEscolares")}</td>
-					
-						<td>${fieldValue(bean: valoracionInstance, field: "l1costesActividad")}</td>
-					
-						<td>${fieldValue(bean: valoracionInstance, field: "l1deporteEscolar")}</td>
-					
-						<td>${fieldValue(bean: valoracionInstance, field: "l1dificultadFinanciacion")}</td>
-					
-						<td>${fieldValue(bean: valoracionInstance, field: "l1getxoKirolak")}</td>
-					
+						<td><g:link action="show" id="${valoracionInstance[0].id}">${valoracionInstance[0].id}</g:link></td>
+						<td><g:link action="show" id="${valoracionInstance[0].solicitudId}">${valoracionInstance[0].solicitud}</g:link></td>
+						<g:if test="${valoracionInstance[1] != null}">
+							<td>${valoracionInstance[1]}</td>
+						</g:if>
+						<g:else>
+							<td>${valoracionInstance[2]}</td>
+						</g:else>
+						<td>${valoracionInstance[0].linea}</td>
+						<td>${valoracionInstance[0].suma()}</td>
+						<td>${g.formatNumber(number: valoracionInstance[0].importeConcedido, type: "currency", currencyCode: "EUR")}</td>
 					</tr>
 				</g:each>
 				</tbody>

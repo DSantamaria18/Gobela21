@@ -26,8 +26,8 @@
 					<tr>
 						<g:sortableColumn property="codigo" title="${message(code: 'solicitud.codigo.label', default: 'Codigo')}" />
 						<g:sortableColumn property="descSolicitud" title="${message(code: 'solicitud.descSolicitud.label', default: 'Desc')}" />
-						<g:sortableColumn property="nombreSolicitante" title="${message(code: 'solicitud.nombreSolicitante.label', default: 'Solicitante')}" />
-						<g:sortableColumn property="nombreEntidad" title="${message(code: 'solicitud.nombreEntidad.label', default: 'Entidad')}" />
+						%{--<g:sortableColumn property="nombreSolicitante" title="${message(code: 'solicitud.nombreSolicitante.label', default: 'Solicitante')}" />--}%
+						<g:sortableColumn property="nombreEntidad" title="${message(code: 'solicitud.nombreEntidad.label', default: 'Entidad / Solicitante')}" />
 						<g:sortableColumn property="linea" title="${message(code: 'solicitud.linea.label', default: 'Línea')}" />
 						%{--<g:sortableColumn property="importeSolicitado" title="${message(code: 'solicitud.importeSolicitado.label', default: 'Importe Solicitado')}" />--}%
 						<g:sortableColumn property="balance" title="${message(code: 'solicitud.balance.label', default: 'Balance')}" />
@@ -41,8 +41,12 @@
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 						<td><g:link action="show" id="${solicitudInstance.id}">${fieldValue(bean: solicitudInstance, field: "codigo")}</g:link></td>
 						<td>${fieldValue(bean: solicitudInstance, field: "descSolicitud")}</td>
-						<td>${fieldValue(bean: solicitudInstance, field: "nombreSolicitante")}</td>
-						<td>${fieldValue(bean: solicitudInstance, field: "nombreEntidad")}</td>
+						<g:if test="${solicitudInstance.nombreEntidad == null}">
+							<td>${fieldValue(bean: solicitudInstance, field: "nombreSolicitante")}</td>
+						</g:if>
+						<g:else>
+							<td>${fieldValue(bean: solicitudInstance, field: "nombreEntidad")}</td>
+						</g:else>
 						<td>${fieldValue(bean: solicitudInstance, field: "linea")}</td>
 						%{--<td>${g.formatNumber(number: solicitudInstance.importeSolicitado, type: "currency", currencyCode: "EUR")}</td>--}%
 						<td><g:link controller="balance" action="show" id="${solicitudInstance.balanceId}">${fieldValue(bean: solicitudInstance, field: "balanceId")}</g:link></td>

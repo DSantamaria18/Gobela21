@@ -151,7 +151,6 @@ class Valoracion {
     // Valoración del solicitante  (tb linea 5)
     int l5experienciaSolicitante
 
-
     ////////////////
     /// LINEA 6 ////
     ////////////////
@@ -170,7 +169,6 @@ class Valoracion {
 
     // Dificultad para acudir a otros medios de financiación
     int l6patrcinioPrivado
-
 
     ////////////////
     /// LINEA 7 ////
@@ -192,14 +190,14 @@ class Valoracion {
     int l7patrcinioPrivado
 
     static constraints = {
-        l1proyectoDeportivoCoherencia(nullable: true, inList: ["0","2.5","5"])
+        l1proyectoDeportivoCoherencia(nullable: true, inList: ["0", "2.5", "5"])
         importeConcedido(nullable: true)
     }
 
-    def suma(){
+    def suma() {
         List<String> filtro = ["importeConcedido", "solicitud", "linea", "solicitudId", "_method", "action", "format", "controller", "id"]
         float res = 0.0
-        this.properties.each {prop, val ->
+        this.properties.each { prop, val ->
             //println("   :: ${prop}")
             if (!filtro.contains(prop)) {
                 float valor = val as float
@@ -209,4 +207,9 @@ class Valoracion {
         return res
     }
 
+    static namedQueries = {
+        withSolicitud {
+
+        }
+    }
 }

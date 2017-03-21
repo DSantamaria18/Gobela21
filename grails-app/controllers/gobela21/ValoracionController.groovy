@@ -12,7 +12,11 @@ class ValoracionController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond Valoracion.list(params), model:[valoracionInstanceCount: Valoracion.count()]
+
+        def result = Valoracion.executeQuery("select v, s.nombreEntidad as entidad, s.nombreSolicitante as solicitante from Valoracion v join v.solicitud s")
+
+//        respond Valoracion.list(params), model:[valoracionInstanceCount: Valoracion.count()]
+        [list: result, valoracionInstanceCount: result.size()]
     }
 
     def show(Valoracion valoracionInstance) {
