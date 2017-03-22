@@ -6,7 +6,7 @@
         <g:message code="valoracion.l4propioClub.label" default="Propio club:"/>
         <span class="required-indicator">*</span>
     </label>
-    <g:field name="l4propioClub" type="number" value="${valoracionInstance.l4propioClub}" required=""/>
+    <g:field onchange="sumar();" data="suma" name="l4propioClub" type="number" value="${valoracionInstance.l4propioClub}" required=""/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l4otrosClubes', 'error')} required">
@@ -14,7 +14,7 @@
         <g:message code="valoracion.l4otrosClubes.label" default="Otros clubes:"/>
         <span class="required-indicator">*</span>
     </label>
-    <g:field name="l4otrosClubes" type="number" value="${valoracionInstance.l4otrosClubes}" required=""/>
+    <g:field onchange="sumar();" data="suma" name="l4otrosClubes" type="number" value="${valoracionInstance.l4otrosClubes}" required=""/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l4ampas', 'error')} required">
@@ -22,7 +22,7 @@
         <g:message code="valoracion.l4ampas.label" default="AMPAS:"/>
         <span class="required-indicator">*</span>
     </label>
-    <g:field name="l4ampas" type="number" value="${valoracionInstance.l4ampas}" required=""/>
+    <g:field  onchange="sumar();" data="suma" name="l4ampas" type="number" value="${valoracionInstance.l4ampas}" required=""/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l4categoriasEscolares', 'error')} required">
@@ -30,7 +30,7 @@
         <g:message code="valoracion.l4categoriasEscolares.label" default="Categorias escolares:"/>
         <span class="required-indicator">*</span>
     </label>
-    <g:field name="l4categoriasEscolares" type="number" value="${valoracionInstance.l4categoriasEscolares}"
+    <g:field  onchange="sumar();" data="suma" name="l4categoriasEscolares" type="number" value="${valoracionInstance.l4categoriasEscolares}"
              required=""/>
 </div>
 
@@ -39,7 +39,7 @@
         <g:message code="valoracion.l4categoriasFederadas.label" default="Categorias federadas:"/>
         <span class="required-indicator">*</span>
     </label>
-    <g:field name="l4categoriasFederadas" type="number" value="${valoracionInstance.l4categoriasFederadas}"
+    <g:field  onchange="sumar();" data="suma" name="l4categoriasFederadas" type="number" value="${valoracionInstance.l4categoriasFederadas}"
              required=""/>
 </div>
 
@@ -48,18 +48,17 @@
         <g:message code="valoracion.l4veteranos.label" default="Personas veteranas:"/>
         <span class="required-indicator">*</span>
     </label>
-    <g:field name="l4veteranos" type="number" value="${valoracionInstance.l4veteranos}" required=""/>
+    <g:field  onchange="sumar();" data="suma" name="l4veteranos" type="number" value="${valoracionInstance.l4veteranos}" required=""/>
 </div>
 %{--fin--}%
 
 %{--Adecuación del presupuesto--}%
-
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l4desviacion', 'error')} required">
     <label for="l4desviacion">
         <g:message code="valoracion.l4desviacion.label" default="Desviación del presupuesto:"/>
         <span class="required-indicator">*</span>
     </label>
-    <g:field name="l4desviacion" type="number" value="${valoracionInstance.l4desviacion}" required=""/>
+    <g:field  onchange="sumar();" data="suma" name="l4desviacion" type="number" value="${valoracionInstance.l4desviacion}" required=""/>
 </div>
 %{--fin--}%
 
@@ -69,7 +68,7 @@
         <g:message code="valoracion.l4participacionEstimada.label" default="Participacion estimada:"/>
         <span class="required-indicator">*</span>
     </label>
-    <g:field name="l4participacionEstimada" type="number" value="${valoracionInstance.l4participacionEstimada}"
+    <g:field  onchange="sumar();" data="suma" name="l4participacionEstimada" type="number" value="${valoracionInstance.l4participacionEstimada}"
              required=""/>
 </div>
 
@@ -78,7 +77,7 @@
         <g:message code="valoracion.l4comunicacionAMedios.label" default="Comunicación a medios:"/>
         <span class="required-indicator">*</span>
     </label>
-    <g:field name="l4comunicacionAMedios" type="number" value="${valoracionInstance.l4comunicacionAMedios}"
+    <g:field  onchange="sumar();" data="suma" name="l4comunicacionAMedios" type="number" value="${valoracionInstance.l4comunicacionAMedios}"
              required=""/>
 </div>
 
@@ -87,7 +86,7 @@
         <g:message code="valoracion.l4usoNuevasTecnologías.label" default="Uso de nuevas tecnologías:"/>
         <span class="required-indicator">*</span>
     </label>
-    <g:field name="l4usoNuevasTecnologías" type="number" value="${valoracionInstance.l4usoNuevasTecnologías}"
+    <g:field  onchange="sumar();" data="suma" name="l4usoNuevasTecnologías" type="number" value="${valoracionInstance.l4usoNuevasTecnologías}"
              required=""/>
 
 </div>
@@ -100,7 +99,7 @@
         <g:message code="valoracion.l4participacionFemeninaEvento.label" default="Participación femenina:"/>
         <span class="required-indicator">*</span>
     </label>
-    <g:field name="l4participacionFemeninaEvento" type="number"
+    <g:field  onchange="sumar();" data="suma" name="l4participacionFemeninaEvento" type="number"
              value="${valoracionInstance.l4participacionFemeninaEvento}" required=""/>
 </div>
 
@@ -109,7 +108,7 @@
         <g:message code="valoracion.l4experienciaSolicitante.label" default="Experiencia del solicitante:"/>
         <span class="required-indicator">*</span>
     </label>
-    <g:field name="l4experienciaSolicitante" type="number" value="${valoracionInstance.l4experienciaSolicitante}"
+    <g:field  onchange="sumar();" data="suma" name="l4experienciaSolicitante" type="number" value="${valoracionInstance.l4experienciaSolicitante}"
              required=""/>
 </div>
 %{--fin--}%

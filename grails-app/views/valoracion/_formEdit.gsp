@@ -76,21 +76,12 @@
         var total = 0.0;
         total = (total == null || total == undefined || total == "") ? 0.0 : total;
 
-        $('[type="number"]').each(function(){
+        $('[data="suma"]').each(function(){
             valor = parseFloat($(this).val());
-            console.log("Sumando " + valor);
             total = (parseFloat(total) + parseFloat(valor));
         });
-        valorSelect = $('#select-coherencia').val();
-        console.log("Sumando SELECT " + valorSelect);
-        total = (parseFloat(total) + parseFloat(valorSelect));
-        console.log("TOTAL " + total)
-
         document.getElementById('puntuacion-value').innerHTML = total;
     }
-
-
-
 </g:javascript>
 
 

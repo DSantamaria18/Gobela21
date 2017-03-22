@@ -6,7 +6,7 @@
 		<g:message code="valoracion.l5numeroEspectadores.label" default="Impacto de la actividad:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field name="l5numeroEspectadores" type="number" value="${valoracionInstance.l5numeroEspectadores}" required=""/>
+	<g:field onchange="sumar();" data="suma" name="l5numeroEspectadores" type="number" value="${valoracionInstance.l5numeroEspectadores}" required=""/>
 
 </div>
 
@@ -15,7 +15,7 @@
 		<g:message code="valoracion.l5recursosPropios.label" default="Adecuación del presupuesto:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field name="l5recursosPropios" type="number" value="${valoracionInstance.l5recursosPropios}" required=""/>
+	<g:field onchange="sumar();" data="suma" name="l5recursosPropios" type="number" value="${valoracionInstance.l5recursosPropios}" required=""/>
 </div>
 
 %{--Calidad en el diseño de la actividad--}%
@@ -24,7 +24,7 @@
 		<g:message code="valoracion.l5participacionEstimada.label" default="Inclusión de resultados esperados:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field name="l5participacionEstimada" type="number" value="${valoracionInstance.l5participacionEstimada}" required=""/>
+	<g:field onchange="sumar();" data="suma" name="l5participacionEstimada" type="number" value="${valoracionInstance.l5participacionEstimada}" required=""/>
 
 </div>
 
@@ -33,7 +33,7 @@
 		<g:message code="valoracion.l5comunicacionAMedios.label" default="Comunicación a medios:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field name="l5comunicacionAMedios" type="number" value="${valoracionInstance.l5comunicacionAMedios}" required=""/>
+	<g:field onchange="sumar();" data="suma" name="l5comunicacionAMedios" type="number" value="${valoracionInstance.l5comunicacionAMedios}" required=""/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l5usoNuevasTecnologías', 'error')} required">
@@ -41,7 +41,7 @@
 		<g:message code="valoracion.l5usoNuevasTecnologías.label" default="Uso de nuevas tecnologías:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field name="l5usoNuevasTecnologías" type="number" value="${valoracionInstance.l5usoNuevasTecnologías}" required=""/>
+	<g:field onchange="sumar();" data="suma" name="l5usoNuevasTecnologías" type="number" value="${valoracionInstance.l5usoNuevasTecnologías}" required=""/>
 </div>
 %{--fin--}%
 
@@ -50,7 +50,7 @@
 		<g:message code="valoracion.l5participacionFemenina.label" default="Participación femenina:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field name="l5participacionFemenina" type="number" value="${valoracionInstance.l5participacionFemenina}" required=""/>
+	<g:field onchange="sumar();" data="suma" name="l5participacionFemenina" type="number" value="${valoracionInstance.l5participacionFemenina}" required=""/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l5experienciaSolicitante', 'error')} required">
@@ -58,7 +58,7 @@
 		<g:message code="valoracion.l5experienciaSolicitante.label" default="Valoración solicitante:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field name="l5experienciaSolicitante" type="number" value="${valoracionInstance.l5experienciaSolicitante}" required=""/>
+	<g:field onchange="sumar();" data="suma" name="l5experienciaSolicitante" type="number" value="${valoracionInstance.l5experienciaSolicitante}" required=""/>
 </div>
 
 %{--<div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'solicitud', 'error')} required">

@@ -7,7 +7,7 @@
 		<g:message code="valoracion.l3categoriaFaseFinal.label" default="Fase final:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field name="l3categoriaFaseFinal" type="number" value="${valoracionInstance.l3categoriaFaseFinal}" required=""/>
+	<g:field onchange="sumar();" data="suma" name="l3categoriaFaseFinal" type="number" value="${valoracionInstance.l3categoriaFaseFinal}" required=""/>
 
 </div>
 
@@ -16,7 +16,7 @@
 		<g:message code="valoracion.l3resultadoObtenido.label" default="Resultado obtenido:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field name="l3resultadoObtenido" type="number" value="${valoracionInstance.l3resultadoObtenido}" required=""/>
+	<g:field onchange="sumar();" data="suma" name="l3resultadoObtenido" type="number" value="${valoracionInstance.l3resultadoObtenido}" required=""/>
 
 </div>
 

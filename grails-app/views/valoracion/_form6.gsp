@@ -6,7 +6,7 @@
 		<g:message code="valoracion.l6prensaLocal.label" default="Aparición en prensa local:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field name="l6prensaLocal" type="number" value="${valoracionInstance.l6prensaLocal}" required=""/>
+	<g:field onchange="sumar();" data="suma" name="l6prensaLocal" type="number" value="${valoracionInstance.l6prensaLocal}" required=""/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l6prensaComarcal', 'error')} required">
@@ -14,7 +14,7 @@
 		<g:message code="valoracion.l6prensaComarcal.label" default="Aparición en prensa comarcal:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field name="l6prensaComarcal" type="number" value="${valoracionInstance.l6prensaComarcal}" required=""/>
+	<g:field onchange="sumar();" data="suma" name="l6prensaComarcal" type="number" value="${valoracionInstance.l6prensaComarcal}" required=""/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l6prensaRegional', 'error')} required">
@@ -22,7 +22,7 @@
 		<g:message code="valoracion.l6prensaRegional.label" default="Aparición en prensa regional:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field name="l6prensaRegional" type="number" value="${valoracionInstance.l6prensaRegional}" required=""/>
+	<g:field onchange="sumar();" data="suma" name="l6prensaRegional" type="number" value="${valoracionInstance.l6prensaRegional}" required=""/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l6prensaEstatal', 'error')} required">
@@ -30,7 +30,7 @@
 		<g:message code="valoracion.l6prensaEstatal.label" default="Aparición en prensa estatal:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field name="l6prensaEstatal" type="number" value="${valoracionInstance.l6prensaEstatal}" required=""/>
+	<g:field onchange="sumar();" data="suma" name="l6prensaEstatal" type="number" value="${valoracionInstance.l6prensaEstatal}" required=""/>
 </div>
 %{--fin--}%
 
@@ -40,7 +40,7 @@
 		<g:message code="valoracion.l6costeActividad.label" default="Costes de la actividad:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field name="l6costeActividad" type="number" value="${valoracionInstance.l6costeActividad}" required=""/>
+	<g:field onchange="sumar();" data="suma" name="l6costeActividad" type="number" value="${valoracionInstance.l6costeActividad}" required=""/>
 </div>
 %{--fin--}%
 
@@ -50,7 +50,7 @@
 		<g:message code="valoracion.l6mediosPropios.label" default="Medios económicos propios:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field name="l6mediosPropios" type="number" value="${valoracionInstance.l6mediosPropios}" required=""/>
+	<g:field onchange="sumar();" data="suma" name="l6mediosPropios" type="number" value="${valoracionInstance.l6mediosPropios}" required=""/>
 </div>
 %{--fin--}%
 
@@ -60,16 +60,6 @@
 		<g:message code="valoracion.l6patrcinioPrivado.label" default="Patrocinio Privado:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field name="l6patrcinioPrivado" type="number" value="${valoracionInstance.l6patrcinioPrivado}" required=""/>
+	<g:field onchange="sumar();" data="suma" name="l6patrcinioPrivado" type="number" value="${valoracionInstance.l6patrcinioPrivado}" required=""/>
 </div>
-
-%{--
-<div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'solicitud', 'error')} required">
-	<label for="solicitud">
-		<g:message code="valoracion.solicitud.label" default="Solicitud" />
-		<span class="required-indicator">*</span>
-	</label>${params.solicitudId}
-	--}%%{--<g:select id="solicitud" name="solicitud.id" from="${gobela21.Solicitud.list()}" optionKey="id" required="" value="${valoracionInstance?.solicitud?.id}" class="many-to-one"/>--}%%{--
-
-</div>--}%
 

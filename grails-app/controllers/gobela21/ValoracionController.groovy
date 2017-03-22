@@ -105,21 +105,4 @@ class ValoracionController {
         }
     }
 
-    def recalcular(){
-        println("   :: EN EL CONTROLLER DE RECALCULAR!!!")
-
-        List<String> filtro = ["importeConcedido", "solicitud", "linea", "solicitudId", "_method", "action", "format", "controller", "id"]
-        float res = 0.0
-        params.each {prop, val ->
-            if (!filtro.contains(prop)) {
-                float valor = val as float
-                res = res + valor
-            }
-        }
-        //respond valoracionInstance, model:[puntos: valoracionInstance.puntuacion]
-        //render valoracionInstance
-        //[puntos: res]
-
-        render view: "edit", model: [puntos: res]
-    }
 }
