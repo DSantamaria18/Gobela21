@@ -38,9 +38,9 @@
         <fieldset class="buttons">
             <g:actionSubmit class="save" action="update"
                             value="${message(code: 'default.button.update.label', default: 'Update')}"/>
-            %{--<g:submitToRemote url="[controller:'valoracion', action:'recalcular']"
+            <g:submitToRemote url="[controller:'valoracion', action:'recalcular']"
                               update="form${valoracionInstance.linea}"
-                              value="RECALCULAR PUNTOS"/>--}%
+                              value="RECALCULAR PUNTOS"/>
         </fieldset>
     </g:form>
 </div>

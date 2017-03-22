@@ -5,6 +5,7 @@
     <meta name="layout" content="main">
     <g:set var="entityName" value="${message(code: 'valoracion.label', default: 'Valoracion')}"/>
     <title><g:message code="default.create.label" args="[entityName]"/></title>
+    <g:javascript library="jquery"/>
 </head>
 
 <body>

@@ -14,8 +14,6 @@ class ValoracionController {
         params.max = Math.min(max ?: 10, 100)
 
         def result = Valoracion.executeQuery("select v, s.nombreEntidad as entidad, s.nombreSolicitante as solicitante from Valoracion v join v.solicitud s")
-
-//        respond Valoracion.list(params), model:[valoracionInstanceCount: Valoracion.count()]
         [list: result, valoracionInstanceCount: result.size()]
     }
 
@@ -107,23 +105,21 @@ class ValoracionController {
         }
     }
 
-    def recalcular(params){
+    def recalcular(){
         println("   :: EN EL CONTROLLER DE RECALCULAR!!!")
-        def valoracionInstance = Valoracion.findAllById(params.id).first()
-        valoracionInstance.properties = params
 
         List<String> filtro = ["importeConcedido", "solicitud", "linea", "solicitudId", "_method", "action", "format", "controller", "id"]
         float res = 0.0
-        valoracionInstance.properties.each {prop, val ->
-            //println("   :: ${prop}")
+        params.each {prop, val ->
             if (!filtro.contains(prop)) {
                 float valor = val as float
                 res = res + valor
             }
         }
-        valoracionInstance.puntuacion = res
         //respond valoracionInstance, model:[puntos: valoracionInstance.puntuacion]
         //render valoracionInstance
+        //[puntos: res]
 
+        render view: "edit", model: [puntos: res]
     }
 }

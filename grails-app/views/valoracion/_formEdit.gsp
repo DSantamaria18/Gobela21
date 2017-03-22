@@ -47,24 +47,17 @@
         </fieldset>--}%
 
     <fieldset>
-        %{--<div class="fieldcontain">
+        <div class="fieldcontain">
             <span id="puntuacion-label" class="property-label">
                 <g:message code="valoracion.puntuacion.label" default="Puntuación total:"/>
             </span>
-            <span class="property-value" aria-labelledby="puntuacion-label" id="puntuacion-value">
-                --}%%{--${valoracionInstance?.puntuacion}--}%%{--
-                --}%%{--<g:field name="puntuacion"
-                         value="${fieldValue(bean: valoracionInstance, field: 'puntuacion')}"/>--}%%{--
-                --}%%{--<g:if test="${valoracionInstance?.puntuacion}">${valoracionInstance.puntuacion}</g:if>
-                <g:else>0.0</g:else>--}%%{--
+            <span class="property-value" aria-labelledby="puntuacion-label" id="puntuacion-value">0.0
             </span>
-        </div>--}%
+        </div>
 
         <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: '', 'error')} required">
             <span id="importeConcedido-label" class="property-label" for="importeConcedido">
-                %{--<label for="importeConcedido">--}%
                 <g:message code="valoracion.importeConcedido.label" default="Importe concedido:"/>
-                %{--</label>--}%
             </span>
             <span class="property-value" aria-labelledby="importeConcedido-label">
                 <g:field name="importeConcedido"
@@ -73,21 +66,31 @@
         </div>
     </fieldset>
 </div>
-%{--<script>
-    function actualizaPuntos() {
-        console.log(":::::::::: ENTRANDO!!!");
-        var puntos = ${valoracionInstance.suma()};
-        document.getElementById("puntuacion-value").innerHTML = puntos;
-    }
 
-    function recalcula() {
-        console.log(":::::::::: RECALCULANDO!!!");
-        $.ajax({
-            url: '${g.createLink(controller: 'valoracion', action: 'recalcular')}',
-            data: $('form').serialize()
+<g:javascript>
+    $(document).ready(function(){
+      sumar()
+    });
+
+    function sumar () {
+        var total = 0.0;
+        total = (total == null || total == undefined || total == "") ? 0.0 : total;
+
+        $('[type="number"]').each(function(){
+            valor = parseFloat($(this).val());
+            console.log("Sumando " + valor);
+            total = (parseFloat(total) + parseFloat(valor));
         });
-    }
-</script>--}%
+        valorSelect = $('#select-coherencia').val();
+        console.log("Sumando SELECT " + valorSelect);
+        total = (parseFloat(total) + parseFloat(valorSelect));
+        console.log("TOTAL " + total)
 
+        document.getElementById('puntuacion-value').innerHTML = total;
+    }
+
+
+
+</g:javascript>
 
 
