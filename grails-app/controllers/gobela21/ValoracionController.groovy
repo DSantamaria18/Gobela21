@@ -22,6 +22,11 @@ class ValoracionController {
     }
 
     def create() {
+        println()
+
+//        def result =  Valoracion.executeQuery("select v, s.importeSolicitado as importeSolicitado from Valoracion v join v.solicitud s")
+        Solicitud solicitud = Solicitud.get(params.solicitudId)
+        params.importeSolicitado = solicitud.importeSolicitado
         respond new Valoracion(params)
     }
 

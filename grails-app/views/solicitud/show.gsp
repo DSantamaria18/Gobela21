@@ -14,8 +14,6 @@
 <div class="nav" role="navigation">
     <ul>
         <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-        %{--<li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]"/></g:link></li>--}%
-        %{--<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]"/></g:link></li>--}%
         <li><g:link class="list" action="index">Lista Solicitudes</g:link></li>
         <li><g:link class="create" action="create">Nueva Solicitud</g:link></li>
         <g:if test="${!solicitudInstance?.balance}">
@@ -66,10 +64,11 @@
         <g:if test="${solicitudInstance?.descSolicitud}">
             <li class="fieldcontain">
                 <span id="descSolicitud-label" class="property-label"><g:message code="solicitud.descSolicitud.label"
-                                                                          default="Descripción:"/></span>
+                                                                                 default="Descripción:"/></span>
 
-                <span class="property-value" aria-labelledby="descSolicitud-label"><g:fieldValue bean="${solicitudInstance}"
-                                                                                          field="descSolicitud"/></span>
+                <span class="property-value" aria-labelledby="descSolicitud-label"><g:fieldValue
+                        bean="${solicitudInstance}"
+                        field="descSolicitud"/></span>
 
             </li>
         </g:if>

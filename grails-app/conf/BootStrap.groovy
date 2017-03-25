@@ -55,8 +55,8 @@ class BootStrap {
                     telefonoSolicitante1: 944676473, representante: true, nombreEntidad: "Getxo Futbol", tipoSolicitud: "Club", linea: 3,
                     importeSolicitado: 66666).save(failOnError: true)
 
-            new gobela21.Valoracion(linea: 3, l3categoriaFaseFinal: 50, l3resultadoObtenido: 12
-                    , solicitud: 3, importeConcedido: 33333.33).save(failOnError: true)
+           /* new gobela21.Valoracion(linea: 3, l3categoriaFaseFinal: 50, l3resultadoObtenido: 12
+                    , solicitud: 3, importeConcedido: 33333.33).save(failOnError: true)*/
 
 
             new gobela21.Solicitud(codigo: "4r3fewrqwer3", nombreSolicitante: "Joseba Solozabal", solicitanteId: "234112234223V", municipioSolicitante: "Getxo",

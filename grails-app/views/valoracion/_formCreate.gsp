@@ -7,9 +7,21 @@
 
 <fieldset class="form">
     <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'codigo', 'error')} required">
-        <label for="solicitud">
+        <span id="solicitud-label" class="property-label" for="solicitud">
             <g:message code="valoracion.solicitud.label" default="Solicitud:"/>
-        </label> ${params.token}
+        </span>
+        <span class="property-value" aria-labelledby="solicitud-label">
+            ${params.token}
+        </span>
+    </div>
+
+    <div class="fieldcontain required">
+        <span id="importeSolicitado-label" class="property-label" for="importeSolicitado">
+            <g:message code="solicitud.importeSolicitado.label" default="Importe solicitado:"/>
+        </span>
+        <span class="property-value" aria-labelledby="importeSolicitado-label" id="importeSolicitado">
+            ${formatNumber(number: params.importeSolicitado, type: "currency", currencyCode: "EUR")}
+        </span>
     </div>
 </fieldset>
 
@@ -56,7 +68,7 @@
 </fieldset>
 
 <g:javascript>
-    $(document).ready(function(){
+    $(document).ready(function () {
         sumar()
     });
 </g:javascript>

@@ -28,4 +28,19 @@ function sumar () {
         total = (parseFloat(total) + parseFloat(valor));
     });
     document.getElementById('puntuacion-value').innerHTML = total;
+    console.log("recalculando...");
+    recalcularImporteConcedido();
+}
+
+function recalcularImporteConcedido () {
+    var solicitado = parseFloat($('#importeSolicitado').text().replace(/\./,'').replace(/,/,'.')).toFixed(2);
+    console.log("SOLICITADO: " + solicitado);
+
+    var puntuacion = parseFloat($('#puntuacion-value').text()).toFixed(2);
+    console.log("PUNTOS: " + puntuacion);
+
+    var concedido = solicitado * puntuacion / 100;
+    console.log("CONCEDIDO: " + concedido);
+
+    $('[name="importeConcedido"]').val(concedido.toString().replace(/\./,','));
 }
