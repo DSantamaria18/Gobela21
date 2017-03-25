@@ -40,12 +40,6 @@
 
     </fieldset>
 
-    %{--    <fieldset class="form">
-            --}%%{--<input class="buttons" type="button" name="boton-calcular" onclick="actualizaPuntos()"--}%%{--
-            <input class="buttons" type="button" name="boton-calcular" onclick="recalcula()"
-                   value="Actualizar Puntuación">
-        </fieldset>--}%
-
     <fieldset>
         <div class="fieldcontain">
             <span id="puntuacion-label" class="property-label">
@@ -71,17 +65,6 @@
     $(document).ready(function(){
       sumar()
     });
-
-    function sumar () {
-        var total = 0.0;
-        total = (total == null || total == undefined || total == "") ? 0.0 : total;
-
-        $('[data="suma"]').each(function(){
-            valor = parseFloat($(this).val());
-            total = (parseFloat(total) + parseFloat(valor));
-        });
-        document.getElementById('puntuacion-value').innerHTML = total;
-    }
 </g:javascript>
 
 

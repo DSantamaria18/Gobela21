@@ -37,11 +37,15 @@
     </g:if>
 </fieldset>
 
-%{--<fieldset class="form">
-    <input class="buttons" type="button" name="boton-calcular" onclick="actualizaPuntos()" value="Calcular Puntuación">
-</fieldset>--}%
-
 <fieldset class="form">
+    <div class="fieldcontain">
+        <span id="puntuacion-label" class="property-label">
+            <g:message code="valoracion.puntuacion.label" default="Puntuación total:"/>
+        </span>
+        <span class="property-value" aria-labelledby="puntuacion-label" id="puntuacion-value">0.0
+        </span>
+    </div>
+
     <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'importeConcedido', 'error')} required">
         <label for="importeConcedido">
             <g:message code="valoracion.importeConcedido.label" default="Importe concedido:"/>
@@ -51,12 +55,11 @@
     </div>
 </fieldset>
 
-%{--<script>
-    function actualizaPuntos(){
-        var puntos = ${valoracionInstance.suma()};
-        document.getElementById("puntuacion-value").innerHTML =puntos;
-    }
-</script>--}%
+<g:javascript>
+    $(document).ready(function(){
+        sumar()
+    });
+</g:javascript>
 
 
 
