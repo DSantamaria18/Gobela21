@@ -12,7 +12,6 @@ class ValoracionController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-
         def result = Valoracion.executeQuery("select v, s.nombreEntidad as entidad, s.nombreSolicitante as solicitante from Valoracion v join v.solicitud s")
         [list: result, valoracionInstanceCount: result.size()]
     }
@@ -22,9 +21,6 @@ class ValoracionController {
     }
 
     def create() {
-        println()
-
-//        def result =  Valoracion.executeQuery("select v, s.importeSolicitado as importeSolicitado from Valoracion v join v.solicitud s")
         Solicitud solicitud = Solicitud.get(params.solicitudId)
         params.importeSolicitado = solicitud.importeSolicitado
         respond new Valoracion(params)
@@ -54,7 +50,9 @@ class ValoracionController {
     }
 
     def edit(Valoracion valoracionInstance) {
-        respond valoracionInstance
+        Solicitud solicitud = Solicitud.get(valoracionInstance.solicitudId)
+        def importeSolicitado = solicitud.importeSolicitado
+        [valoracionInstance: valoracionInstance, importeSolicitado: importeSolicitado]
     }
 
     @Transactional

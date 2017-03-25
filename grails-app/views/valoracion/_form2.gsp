@@ -5,7 +5,7 @@
 		<g:message code="valoracion.l2costesActividadDe.label" default="Costes de actividad:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field onchange="sumar();" data="suma" name="l2costesActividadDe" type="number" value="${valoracionInstance.l2costesActividadDe}" required="" />
+	<g:field onchange="sumarL2();" data="suma" name="l2costesActividadDe" type="number" value="${valoracionInstance.l2costesActividadDe}" required="" />
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2mediosPropios', 'error')} required">
@@ -13,7 +13,7 @@
 		<g:message code="valoracion.l2mediosPropios.label" default="Medios propios:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field onchange="sumar();" data="suma" name="l2mediosPropios" type="number" value="${valoracionInstance.l2mediosPropios}" required=""/>
+	<g:field onchange="sumarL2();" data="suma" name="l2mediosPropios" type="number" value="${valoracionInstance.l2mediosPropios}" required=""/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2dificultadFinanciacion', 'error')} required">
@@ -21,7 +21,7 @@
 		<g:message code="valoracion.l2dificultadFinanciacion.label" default="Dificultad de financiación:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field onchange="sumar();" data="suma" name="l2dificultadFinanciacion" type="number" value="${valoracionInstance.l2dificultadFinanciacion}" required=""/>
+	<g:field onchange="sumarL2();" data="suma" name="l2dificultadFinanciacion" type="number" value="${valoracionInstance.l2dificultadFinanciacion}" required=""/>
 </div>
 
 %{--Proyecto Deportivo--}%
@@ -30,7 +30,7 @@
 		<g:message code="valoracion.l2proyectoDeportivoCoherencia.label" default="Coherencia del proyecto:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field onchange="sumar();" data="suma" name="l2proyectoDeportivoCoherencia" type="number" value="${valoracionInstance.l2proyectoDeportivoCoherencia}" required=""/>
+	<g:field onchange="sumarL2();" data="suma" name="l2proyectoDeportivoCoherencia" type="number" value="${valoracionInstance.l2proyectoDeportivoCoherencia}" required=""/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2proyectoDeportivoDiversidad', 'error')} required">
@@ -38,7 +38,7 @@
 		<g:message code="valoracion.l2proyectoDeportivoDiversidad.label" default="Atención a la diversidad:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field onchange="sumar();" data="suma" name="l2proyectoDeportivoDiversidad" type="number" value="${valoracionInstance.l2proyectoDeportivoDiversidad}" required=""/>
+	<g:field onchange="sumarL2();" data="suma" name="l2proyectoDeportivoDiversidad" type="number" value="${valoracionInstance.l2proyectoDeportivoDiversidad}" required=""/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2proyectoDeportivoEuskera', 'error')} required">
@@ -46,7 +46,7 @@
 		<g:message code="valoracion.l2proyectoDeportivoEuskera.label" default="Uso del Euskera:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field onchange="sumar();" data="suma" name="l2proyectoDeportivoEuskera" type="number" value="${valoracionInstance.l2proyectoDeportivoEuskera}" required=""/>
+	<g:field onchange="sumarL2();" data="suma" name="l2proyectoDeportivoEuskera" type="number" value="${valoracionInstance.l2proyectoDeportivoEuskera}" required=""/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2proyectoDeportivoParticipacionFemenina', 'error')} required">
@@ -54,7 +54,7 @@
 		<g:message code="valoracion.l2proyectoDeportivoParticipacionFemenina.label" default="Participacion femenina:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field onchange="sumar();" data="suma" name="l2proyectoDeportivoParticipacionFemenina" type="number" value="${valoracionInstance.l2proyectoDeportivoParticipacionFemenina}" required=""/>
+	<g:field onchange="sumarL2();" data="suma" name="l2proyectoDeportivoParticipacionFemenina" type="number" value="${valoracionInstance.l2proyectoDeportivoParticipacionFemenina}" required=""/>
 </div>
 %{--fin--}%
 
@@ -63,7 +63,7 @@
 		<g:message code="valoracion.l2residentes.label" default="Porcentaje de residentes en Getxo:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field onchange="sumar();" data="suma" name="l2residentes" type="number" value="${valoracionInstance.l2residentes}" required=""/>
+	<g:field onchange="sumarL2();" data="suma" name="l2residentes" type="number" value="${valoracionInstance.l2residentes}" required=""/>
 </div>
 
 %{--Difusión y mejora de la imagen de Getxo--}%
@@ -72,7 +72,7 @@
 		<g:message code="valoracion.l2prensaLocal.label" default="Prensa local:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field onchange="sumar();" data="suma" name="l2prensaLocal" type="number" value="${valoracionInstance.l2prensaLocal}" required=""/>
+	<g:field onchange="sumarL2();" data="suma" name="l2prensaLocal" type="number" value="${valoracionInstance.l2prensaLocal}" required=""/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2prensaComarcal', 'error')} required">
@@ -80,7 +80,7 @@
 		<g:message code="valoracion.l2prensaComarcal.label" default="Prensa comarcal:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field onchange="sumar();" data="suma" name="l2prensaComarcal" type="number" value="${valoracionInstance.l2prensaComarcal}" required=""/>
+	<g:field onchange="sumarL2();" data="suma" name="l2prensaComarcal" type="number" value="${valoracionInstance.l2prensaComarcal}" required=""/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2prensaRegional', 'error')} required">
@@ -88,7 +88,7 @@
 		<g:message code="valoracion.l2prensaRegional.label" default="Prensa regional:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field onchange="sumar();" data="suma" name="l2prensaRegional" type="number" value="${valoracionInstance.l2prensaRegional}" required=""/>
+	<g:field onchange="sumarL2();" data="suma" name="l2prensaRegional" type="number" value="${valoracionInstance.l2prensaRegional}" required=""/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2prensaEstatalInternacional', 'error')} required">
@@ -96,7 +96,7 @@
 		<g:message code="valoracion.l2prensaEstatalInternacional.label" default="Prensa estatal o internacional:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field onchange="sumar();" data="suma" name="l2prensaEstatalInternacional" type="number" value="${valoracionInstance.l2prensaEstatalInternacional}" required=""/>
+	<g:field onchange="sumarL2();" data="suma" name="l2prensaEstatalInternacional" type="number" value="${valoracionInstance.l2prensaEstatalInternacional}" required=""/>
 </div>
 %{--fin--}%
 
@@ -106,7 +106,7 @@
 		<g:message code="valoracion.l2deporteEscolar.label" default="Deporte escolar:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field onchange="sumar();" data="suma" name="l2deporteEscolar" type="number" value="${valoracionInstance.l2deporteEscolar}" required=""/>
+	<g:field onchange="sumarL2();" data="suma" name="l2deporteEscolar" type="number" value="${valoracionInstance.l2deporteEscolar}" required=""/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2marcaGetxo', 'error')} required">
@@ -114,7 +114,7 @@
 		<g:message code="valoracion.l2marcaGetxo.label" default="Clubes marca Getxo:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field onchange="sumar();" data="suma" name="l2marcaGetxo" type="number" value="${valoracionInstance.l2marcaGetxo}" required=""/>
+	<g:field onchange="sumarL2();" data="suma" name="l2marcaGetxo" type="number" value="${valoracionInstance.l2marcaGetxo}" required=""/>
 </div>
 %{--fin--}%
 
@@ -124,7 +124,7 @@
 		<g:message code="valoracion.l2getxoKirolak.label" default="Colabora con Getxo Kirolak:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field onchange="sumar();" data="suma" name="l2getxoKirolak" type="number" value="${valoracionInstance.l2getxoKirolak}" required=""/>
+	<g:field onchange="sumarL2();" data="suma" name="l2getxoKirolak" type="number" value="${valoracionInstance.l2getxoKirolak}" required=""/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2centrosEscolares', 'error')} required">
@@ -132,7 +132,7 @@
 		<g:message code="valoracion.l2centrosEscolares.label" default="Colabora con centros escolares:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field onchange="sumar();" data="suma" name="l2centrosEscolares" type="number" value="${valoracionInstance.l2centrosEscolares}" required=""/>
+	<g:field onchange="sumarL2();" data="suma" name="l2centrosEscolares" type="number" value="${valoracionInstance.l2centrosEscolares}" required=""/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2otrosClubes', 'error')} required">
@@ -140,7 +140,7 @@
 		<g:message code="valoracion.l2otrosClubes.label" default="Colabora con otros clubes:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field onchange="sumar();" data="suma" name="l2otrosClubes" type="number" value="${valoracionInstance.l2otrosClubes}" required=""/>
+	<g:field onchange="sumarL2();" data="suma" name="l2otrosClubes" type="number" value="${valoracionInstance.l2otrosClubes}" required=""/>
 </div>
 %{--fin--}%
 
@@ -150,7 +150,7 @@
 		<g:message code="valoracion.l2antiguedad.label" default="Antiguedad:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field onchange="sumar();" data="suma" name="l2antiguedad" type="number" value="${valoracionInstance.l2antiguedad}" required=""/>
+	<g:field onchange="sumarL2();" data="suma" name="l2antiguedad" type="number" value="${valoracionInstance.l2antiguedad}" required=""/>
 </div>
 %{--fin--}%
 
@@ -160,7 +160,7 @@
 		<g:message code="valoracion.l2participantes.label" default="Participantes (Asoc. pesca):" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field onchange="sumar();" data="suma" name="l2participantes" type="number" value="${valoracionInstance.l2participantes}" required=""/>
+	<g:field onchange="sumarL2();" data="suma" name="l2participantes" type="number" value="${valoracionInstance.l2participantes}" required=""/>
 </div>
 %{--fin--}%
 
@@ -170,7 +170,7 @@
 		<g:message code="valoracion.l2puestoEnTorneosInternacionales.label" default="Puesto en torneos/open internacionales" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field onchange="sumar();" data="suma" name="l2puestoEnTorneosInternacionales" type="number" value="${valoracionInstance.l2puestoEnTorneosInternacionales}" required=""/>
+	<g:field onchange="sumarL2();" data="suma" name="l2puestoEnTorneosInternacionales" type="number" value="${valoracionInstance.l2puestoEnTorneosInternacionales}" required=""/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2puestoEnCircuitosInternacionales', 'error')} required">
@@ -178,7 +178,7 @@
 		<g:message code="valoracion.l2puestoEnCircuitosInternacionales.label" default="Puesto en circuitos internacionales:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field onchange="sumar();" data="suma" name="l2puestoEnCircuitosInternacionales" type="number" value="${valoracionInstance.l2puestoEnCircuitosInternacionales}" required=""/>
+	<g:field onchange="sumarL2();" data="suma" name="l2puestoEnCircuitosInternacionales" type="number" value="${valoracionInstance.l2puestoEnCircuitosInternacionales}" required=""/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2puestoEnTorneosNacionales', 'error')} required">
@@ -186,7 +186,7 @@
 		<g:message code="valoracion.l2puestoEnTorneosNacionales.label" default="Puesto en torneos/open estatales:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field onchange="sumar();" data="suma" name="l2puestoEnTorneosNacionales" type="number" value="${valoracionInstance.l2puestoEnTorneosNacionales}" required=""/>
+	<g:field onchange="sumarL2();" data="suma" name="l2puestoEnTorneosNacionales" type="number" value="${valoracionInstance.l2puestoEnTorneosNacionales}" required=""/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2puestoEnCircuitosNacionales', 'error')} required">
@@ -194,7 +194,7 @@
 		<g:message code="valoracion.l2puestoEnCircuitosNacionales.label" default="Puesto en circuitos nacionales:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field onchange="sumar();" data="suma" name="l2puestoEnCircuitosNacionales" type="number" value="${valoracionInstance.l2puestoEnCircuitosNacionales}" required=""/>
+	<g:field onchange="sumarL2();" data="suma" name="l2puestoEnCircuitosNacionales" type="number" value="${valoracionInstance.l2puestoEnCircuitosNacionales}" required=""/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2PrimerPuestoEnTorneosAutonomicos', 'error')} required">
@@ -202,7 +202,7 @@
 		<g:message code="valoracion.l2PrimerPuestoEnTorneosAutonomicos.label" default="Primer puesto en torneos/open autonómicos:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field onchange="sumar();" data="suma" name="l2PrimerPuestoEnTorneosAutonomicos" type="number" value="${valoracionInstance.l2PrimerPuestoEnTorneosAutonomicos}" required=""/>
+	<g:field onchange="sumarL2();" data="suma" name="l2PrimerPuestoEnTorneosAutonomicos" type="number" value="${valoracionInstance.l2PrimerPuestoEnTorneosAutonomicos}" required=""/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2campeonatosEuskadi', 'error')} required">
@@ -210,7 +210,7 @@
 		<g:message code="valoracion.l2campeonatosEuskadi.label" default="Campeonatos de Euskadi:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field onchange="sumar();" data="suma" name="l2campeonatosEuskadi" type="number" value="${valoracionInstance.l2campeonatosEuskadi}" required=""/>
+	<g:field onchange="sumarL2();" data="suma" name="l2campeonatosEuskadi" type="number" value="${valoracionInstance.l2campeonatosEuskadi}" required=""/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2campeonatosEspaña', 'error')} required">
@@ -218,7 +218,7 @@
 		<g:message code="valoracion.l2campeonatosEspaña.label" default="Campeonatos de España:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field onchange="sumar();" data="suma" name="l2campeonatosEspaña" type="number" value="${valoracionInstance.l2campeonatosEspaña}" required=""/>
+	<g:field onchange="sumarL2();" data="suma" name="l2campeonatosEspaña" type="number" value="${valoracionInstance.l2campeonatosEspaña}" required=""/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2campeonatosEuropa', 'error')} required">
@@ -226,7 +226,7 @@
 		<g:message code="valoracion.l2campeonatosEuropa.label" default="Campeonatos de Europa:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field onchange="sumar();" data="suma" name="l2campeonatosEuropa" type="number" value="${valoracionInstance.l2campeonatosEuropa}" required=""/>
+	<g:field onchange="sumarL2();" data="suma" name="l2campeonatosEuropa" type="number" value="${valoracionInstance.l2campeonatosEuropa}" required=""/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2campeonatosMundo', 'error')} required">
@@ -234,7 +234,7 @@
 		<g:message code="valoracion.l2campeonatosMundo.label" default="Campeonatos del Mundo:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field onchange="sumar();" data="suma" name="l2campeonatosMundo" type="number" value="${valoracionInstance.l2campeonatosMundo}" required=""/>
+	<g:field onchange="sumarL2();" data="suma" name="l2campeonatosMundo" type="number" value="${valoracionInstance.l2campeonatosMundo}" required=""/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2indiceParticipacion', 'error')} required">
@@ -242,7 +242,7 @@
 		<g:message code="valoracion.l2indiceParticipacion.label" default="Indice de participacion:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field onchange="sumar();" data="suma" name="l2indiceParticipacion" value="${fieldValue(bean: valoracionInstance, field: 'l2indiceParticipacion')}" required=""/>
+	<g:field onchange="sumarL2();" name="l2indiceParticipacion" value="${fieldValue(bean: valoracionInstance, field: 'l2indiceParticipacion')}" required=""/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2indiceCorreccion', 'error')} required">
@@ -250,7 +250,7 @@
 		<g:message code="valoracion.l2indiceCorreccion.label" default="Indice de corrección:" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field onchange="sumar();" data="suma" name="l2indiceCorreccion" value="${fieldValue(bean: valoracionInstance, field: 'l2indiceCorreccion')}" required=""/>
+	<g:field onchange="sumarL2();" name="l2indiceCorreccion" value="${fieldValue(bean: valoracionInstance, field: 'l2indiceCorreccion')}" required=""/>
 
 </div>
 %{--fin--}%

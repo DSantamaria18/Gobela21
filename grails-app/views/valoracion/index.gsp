@@ -43,7 +43,9 @@
 							<td>${valoracionInstance[2]}</td>
 						</g:else>
 						<td>${valoracionInstance[0].linea}</td>
-						<td>${valoracionInstance[0].suma()}</td>
+						%{--<td>${valoracionInstance[0].suma()}</td>--}%
+						%{--${valoracionInstance.puntuacion}--}%
+						<td>${fieldValue(bean: valoracionInstance[0], field: "puntuacion")} </td>
 						<td>${g.formatNumber(number: valoracionInstance[0].importeConcedido, type: "currency", currencyCode: "EUR")}</td>
 					</tr>
 				</g:each>

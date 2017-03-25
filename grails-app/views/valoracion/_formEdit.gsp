@@ -11,8 +11,18 @@
             </span>
         </div>
 
+        <div class="fieldcontain required">
+            <span id="importeSolicitado-label" class="property-label" for="importeSolicitado">
+                <g:message code="solicitud.importeSolicitado.label" default="Importe solicitado:"/>
+            </span>
+            <span class="property-value" aria-labelledby="importeSolicitado-label" id="importeSolicitado">
+                ${formatNumber(number: importeSolicitado, type: "currency", currencyCode: "EUR")}
+            </span>
+        </div>
+
         <g:hiddenField name="version" value="${valoracionInstance?.version}"/>
         <g:hiddenField name="id" value="${valoracionInstance?.id}"/>
+        <g:hiddenField name="linea" value="${valoracionInstance?.linea}"/>
     </fieldset>
 
     <fieldset class="form">
@@ -41,11 +51,13 @@
     </fieldset>
 
     <fieldset>
-        <div class="fieldcontain">
+        <div class="fieldcontain" ${hasErrors(bean: valoracionInstance, field: 'puntuacion', 'error')}>
             <span id="puntuacion-label" class="property-label">
                 <g:message code="valoracion.puntuacion.label" default="Puntuación total:"/>
             </span>
-            <span class="property-value" aria-labelledby="puntuacion-label" id="puntuacion-value">0.0
+            <span class="property-value" aria-labelledby="puntuacion-label" id="puntuacion-value">
+                <g:field name="puntuacion" type="text" value="${fieldValue(bean: valoracionInstance, field: 'puntuacion')}"
+                         required=""/>
             </span>
         </div>
 
@@ -62,8 +74,8 @@
 </div>
 
 <g:javascript>
-    $(document).ready(function(){
-      sumar()
+    $(document).ready(function () {
+        sumar()
     });
 </g:javascript>
 

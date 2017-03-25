@@ -10,37 +10,54 @@
 //= require_self
 
 if (typeof jQuery !== 'undefined') {
-	(function($) {
-		$(document).ajaxStart(function(){
-			$('#spinner').fadeIn();
-		}).ajaxStop(function(){
-			$('#spinner').fadeOut();
-		});
-	})(jQuery);
+    (function ($) {
+        $(document).ajaxStart(function () {
+            $('#spinner').fadeIn();
+        }).ajaxStop(function () {
+            $('#spinner').fadeOut();
+        });
+    })(jQuery);
 }
 
-function sumar () {
+function sumar() {
     var total = 0.0;
     total = (total == null || total == undefined || total == "") ? 0.0 : total;
 
-    $('[data="suma"]').each(function(){
+    $('[data="suma"]').each(function () {
         valor = parseFloat($(this).val());
         total = (parseFloat(total) + parseFloat(valor));
     });
-    document.getElementById('puntuacion-value').innerHTML = total;
-    console.log("recalculando...");
+    // document.getElementById('puntuacion-value').innerHTML = total.toFixed(2);
+    // console.log("PUNTOS: " + total);
+    var sTotal = total.toString().replace(/\./,',')
+    // console.log("PUNTOS STRING: " + sTotal);
+    $('#puntuacion').attr('value',sTotal);
+    // $('#puntuacion').attr('value',total.toFixed(2));
     recalcularImporteConcedido();
 }
 
-function recalcularImporteConcedido () {
-    var solicitado = parseFloat($('#importeSolicitado').text().replace(/\./,'').replace(/,/,'.')).toFixed(2);
+function sumarL2() {
+    /*   var total = 0.0;
+     total = (total == null || total == undefined || total == "") ? 0.0 : total;
+
+     $('[data="suma"]').each(function(){
+     valor = parseFloat($(this).val());
+     total = (parseFloat(total) + parseFloat(valor));
+     });
+     document.getElementById('puntuacion-value').innerHTML = total.toFixed(2);
+     recalcularImporteConcedido();*/
+}
+
+function recalcularImporteConcedido() {
+    var solicitado = parseFloat($('#importeSolicitado').text().replace(/\./, '').replace(/,/, '.')).toFixed(2);
     console.log("SOLICITADO: " + solicitado);
 
-    var puntuacion = parseFloat($('#puntuacion-value').text()).toFixed(2);
+    var puntuacion = parseFloat($('#puntuacion').val().toString().replace(',', '.')).toFixed(2);
+    // var puntuacion = parseFloat($('#puntuacion').val()).toFixed(2);
     console.log("PUNTOS: " + puntuacion);
 
     var concedido = solicitado * puntuacion / 100;
     console.log("CONCEDIDO: " + concedido);
 
-    $('[name="importeConcedido"]').val(concedido.toString().replace(/\./,','));
+    $('[name="importeConcedido"]').val(concedido.toString().replace(/\./, ','));
 }

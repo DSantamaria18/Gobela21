@@ -2,7 +2,7 @@ package gobela21
 
 class Valoracion {
     int linea
-    //float puntuacion = 0.0
+    float puntuacion
     BigDecimal importeConcedido
 
     static belongsTo = [solicitud: Solicitud]
@@ -192,24 +192,6 @@ class Valoracion {
     static constraints = {
         l1proyectoDeportivoCoherencia(nullable: true, inList: ["0", "2.5", "5"])
         importeConcedido(nullable: true)
-    }
-
-    def suma() {
-        List<String> filtro = ["importeConcedido", "solicitud", "linea", "solicitudId", "_method", "action", "format", "controller", "id"]
-        float res = 0.0
-        this.properties.each { prop, val ->
-            //println("   :: ${prop}")
-            if (!filtro.contains(prop)) {
-                float valor = val as float
-                res = res + valor
-            }
-        }
-        return res
-    }
-
-    static namedQueries = {
-        withSolicitud {
-
-        }
+        puntuacion(nullable: true)
     }
 }
