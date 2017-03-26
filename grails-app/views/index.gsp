@@ -98,6 +98,7 @@
 				<li class="controller"><g:link controller="Valoracion">Valoraciones</g:link></li>
 				%{--<li class="controller"><g:link controller="Justificacion">Justificaciones</g:link></li>--}%
 				%{--<li class="controller"><g:link controller="Solicitud" action="estadisticas">Estadísticas</g:link></li>--}%
+				<li class="controller"><g:link controller="Estadisticas" action="index">Estadísticas</g:link></li>
 			</ul>
 			%{--<h1>Gestión de Eventos</h1>
 			<ul>
