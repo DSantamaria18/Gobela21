@@ -108,14 +108,19 @@
 			<h1>Gobela 21</h1>
 			<h2>App Version: <g:meta name="app.version"/></h2>
 			<h3>Entorno: ${grails.util.Environment.currentEnvironment}</h3>
-			%{--<div id="controller-list" role="navigation">
-				<h2>Controllers Disponibles:</h2>
+			<div id="controller-list" role="navigation">
+				<h2>Modificaciones 26/03/2017:</h2>
 				<ul>
-					<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-						<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
-					</g:each>
+					<li>Añadida la suma automática de puntos en las valoraciones (Excepto Línea 2)</li>
+					<li>Añadido el cálculo automático del importe concedido (Excepto Línea 2)</li>
 				</ul>
-			</div>--}%
+				%{--<h2>Controllers Disponibles:</h2>--}%
+				%{--<ul>--}%
+					%{--<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">--}%
+						%{--<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>--}%
+					%{--</g:each>--}%
+				%{--</ul>--}%
+			</div>
 		</div>
 	</body>
 </html>
