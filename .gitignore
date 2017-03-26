@@ -2,3 +2,4 @@
 .slcache/
 *.iml
 target/
+.asscache

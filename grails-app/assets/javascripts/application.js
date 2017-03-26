@@ -57,7 +57,7 @@ function recalcularImporteConcedido() {
     console.log("PUNTOS: " + puntuacion);
 
     var concedido = solicitado * puntuacion / 100;
-    console.log("CONCEDIDO: " + concedido);
+    console.log("CONCEDIDO: " + concedido.toFixed(2));
 
-    $('[name="importeConcedido"]').val(concedido.toString().replace(/\./, ','));
+    $('[name="importeConcedido"]').val(concedido.toFixed(2).toString().replace(/\./, ','));
 }
