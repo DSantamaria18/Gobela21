@@ -105,9 +105,13 @@
 			</ul>--}%
 		</div>
 		<div id="page-body" role="main">
-			<h1>Gobela 21</h1>
-			<h2>App Version: <g:meta name="app.version"/></h2>
 			<h3>Entorno: ${grails.util.Environment.currentEnvironment}</h3>
+			<h1>Gobela 21</h1>
+			<h2>App Version: 
+			${grailsApplication.metadata['app.version']}
+			(Build #${grailsApplication.metadata['app.buildNumber']}
+			${grailsApplication.metadata['app.buildDate']}
+			${grailsApplication.metadata['app.buildProfile']})</h2>
 			<div id="controller-list" role="navigation">
 				<h2>Modificaciones 26/03/2017:</h2>
 				<ul>
