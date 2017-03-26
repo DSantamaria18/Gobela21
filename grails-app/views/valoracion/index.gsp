@@ -52,7 +52,7 @@
 				</tbody>
 			</table>
 			<div class="pagination">
-				<g:paginate total="${valoracionInstanceCount ?: 0}" />
+				<g:paginate total="${valoracionInstanceCount ?: 0}" max="${params.max}"/>
 			</div>
 		</div>
 	</body>

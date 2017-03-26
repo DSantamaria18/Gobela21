@@ -6,13 +6,16 @@ class SolicitudController {
     def exportService
     def grailsApplication
 
-    //def index() { }
+    def index(Integer max) {
+        params.max = Math.min(max ?: 10, 100)
+        [solicitudInstanceList: Solicitud.list(params), solicitudInstanceCount: Solicitud.count()]
+    }
 
     def estadisticas() {
         if (!params.max) params.max = 10
         if (params?.format && params.format != "html") {
             response.contentType = grailsApplication.config.grails.mime.types[params.format]
-            response.setHeader("Content-disposition", "attachment;filename = solicitudInstance.${ params.extension }")
+            response.setHeader("Content-disposition", "attachment;filename = solicitudInstance.${params.extension}")
             exportService.export(params.format, response.outputStream, Solicitud.list(params), [:], [:])
         }
         [solicitudInstanceList: Solicitud.list(params)]

@@ -58,7 +58,7 @@
 				</tbody>
 			</table>
 			<div class="pagination">
-				<g:paginate total="${solicitudInstanceCount ?: 0}" />
+				<g:paginate total="${solicitudInstanceCount ?: 0}" max="${params.max}"/>
 			</div>
 		</div>
 	</body>
