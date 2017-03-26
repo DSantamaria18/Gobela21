@@ -107,7 +107,7 @@
 		<div id="page-body" role="main">
 			<h3>Entorno: ${grails.util.Environment.currentEnvironment}</h3>
 			<h1>Gobela 21</h1>
-			<h2>App Version: 
+			<h2>App Version:
 			${grailsApplication.metadata['app.version']}
 			(Build #${grailsApplication.metadata['app.buildNumber']}
 			${grailsApplication.metadata['app.buildDate']}
