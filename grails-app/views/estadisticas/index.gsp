@@ -10,6 +10,7 @@
 <head>
     <meta name="layout" content="main">
     <title>Estadísticas</title>
+    %{--<r:require module="export"/>--}%
 </head>
 
 <body>
@@ -44,6 +45,10 @@
                 </g:each>
                 </tbody>
             </table>
+            <fieldset class="buttons">
+                <g:link class="edit" controller="estadisticas" action="exportar" params="[format:'excel', extension:'xls']">EXPORTAR</g:link>
+            </fieldset>
+
         </div>
     </g:if>
 </g:each>
