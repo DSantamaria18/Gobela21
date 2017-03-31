@@ -25,13 +25,13 @@
     <g:if test="${resultado.size() > 0}">
         <div class="queryResult" id="resultDivL${i}">
             <br>
-            <h4>SUBVENCIONES LINEA ${i+1}</h4>
+            <h4>SUBVENCIONES LINEA ${i + 1}</h4>
             <br>
             <table>
                 <thead>
                 <tr>
                     <g:each in="${resultado[0].keySet()}" var="header">
-                        <g:sortableColumn property="header${i}" title="${header}" />
+                        <g:sortableColumn property="header${i}" title="${header}"/>
                     </g:each>
                 </tr>
                 </thead>
@@ -45,13 +45,20 @@
                 </g:each>
                 </tbody>
             </table>
-            <fieldset class="buttons">
-                <g:link class="edit" controller="estadisticas" action="exportar" params="[format:'excel', extension:'xls']">EXPORTAR</g:link>
-            </fieldset>
-
         </div>
     </g:if>
 </g:each>
+<fieldset class="buttons">
+    %{--<g:link class="edit" controller="estadisticas" action="exportar" params="[format: 'excel', extension: 'xls']">EXPORTAR</g:link>--}%
+    %{--<g:link class="edit" controller="estadisticas" action="exportar" params="${pageScope.variables}">EXPORTAR 2</g:link>--}%
+    <g:link class="edit" controller="estadisticas" action="jxl" params="${pageScope.variables}">Descargar Excel</g:link>
+</fieldset>
+%{--<g:form action="exportar">
+    <input type="hidden" name="resultList" value="${resultList}"/>
+    <fieldset class="buttons">
+        <g:actionSubmit class="edit" action="exportar" value="EXPORTAR 3" />
+    </fieldset>
+</g:form>--}%
 
 %{--<div class="queryResult" id="resultDivL2">
     <br>

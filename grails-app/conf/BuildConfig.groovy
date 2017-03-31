@@ -30,7 +30,7 @@ grails.project.dependency.resolution = {
     }
     log "error" // log level of Ivy resolver, either 'error', 'warn', 'info', 'debug' or 'verbose'
     checksums true // Whether to verify checksums on resolve
-    legacyResolve false
+    legacyResolve true
     // whether to do a secondary resolve on plugin installation, not advised and here for backwards compatibility
 
     repositories {
@@ -42,11 +42,13 @@ grails.project.dependency.resolution = {
         grailsCentral()
         mavenCentral()
         // uncomment these (or add new ones) to enable remote dependency resolution from public Maven repositories
-        //mavenRepo "http://repository.codehaus.org"
-        //mavenRepo "http://download.java.net/maven/2/"
-        //mavenRepo "http://repository.jboss.com/maven2/"
+        //mavenRepo "https://repository.codehaus.org"
+        mavenRepo "http://download.java.net/maven/2/"
+        mavenRepo "http://repository.jboss.com/maven2/"
+        mavenRepo "https://repo.grails.org/grails/core"
+        mavenRepo "https://repo.grails.org/grails/repo/"
+        mavenRepo "https://repo.grails.org/grails/snapshots"
 
-        mavenRepo "http://repo.grails.org/grails/core"
     }
 
     dependencies {
@@ -56,6 +58,7 @@ grails.project.dependency.resolution = {
         test "org.grails:grails-datastore-test-support:1.0.2-grails-2.4"
         runtime 'jline:jline:2.12'
         compile 'commons-beanutils:commons-beanutils:1.8.3'
+        runtime 'net.sourceforge.jexcelapi:jxl:2.6.12'
     }
 
     plugins {
@@ -79,7 +82,9 @@ grails.project.dependency.resolution = {
         //compile ":coffee-asset-pipeline:1.8.0"
         //compile ":handlebars-asset-pipeline:1.3.0.3"
 
+        //compile "org.grails.plugins:jxl:0.54"
         compile ":export:1.6"
+        //compile "org.grails.plugins:excel-export:2.0.2"
 
     }
 }
