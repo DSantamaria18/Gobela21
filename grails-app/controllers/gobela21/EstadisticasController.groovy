@@ -26,15 +26,22 @@ class EstadisticasController {
         response.setContentType('application/vnd.ms-excel')
         response.setHeader('Content-Disposition', 'Attachment;Filename="subvenciones.xls"')
         WritableWorkbook workbook = Workbook.createWorkbook(response.outputStream)
-        for (int i = 1; i <= resultList.size(); i++){
-            String nombreHoja = "Linea ${i}"
-            if (resultList[i].size() > 0){
-                println("   :: Crreando la hoja ${nombreHoja}")
-                WritableSheet sheet = workbook.createSheet(nombreHoja,0)
-                sheet.addCell(new Label(0,0, "SUBVENCIONES LINEA ${i}"))
-                def cabeceras = resultList[i][0].keySet()
+        for (int i = 0; i < resultList.size(); i++){
+            String nombreHoja = "Linea ${i+1}"
+            def datosLinea = resultList[i]
+            if (datosLinea.size() > 0){
+                println("   :: Creando la hoja ${nombreHoja}")
+                WritableSheet sheet = workbook.createSheet(nombreHoja,i)
+                sheet.addCell(new Label(0,0, "SUBVENCIONES LINEA ${i+1}"))
+                def cabeceras = datosLinea[0].keySet()
                 for (int j = 0; j < cabeceras.size(); j++){
-                    sheet.addCell(new Label(3,j, "${cabeceras[j]}"))
+                    sheet.addCell(new Label(j,3, "${cabeceras[j]}"))
+                }
+                for (int z = 0; z < datosLinea.size(); z++){
+                    def subvencion = datosLinea[z]
+                    for (int x = 0; x < subvencion.size(); x++){
+                        sheet.addCell(new Label(x, z+4, "${subvencion[x]}"))
+                    }
                 }
             }
         }

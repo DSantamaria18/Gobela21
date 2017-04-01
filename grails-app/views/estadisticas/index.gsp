@@ -51,7 +51,7 @@
 <fieldset class="buttons">
     %{--<g:link class="edit" controller="estadisticas" action="exportar" params="[format: 'excel', extension: 'xls']">EXPORTAR</g:link>--}%
     %{--<g:link class="edit" controller="estadisticas" action="exportar" params="${pageScope.variables}">EXPORTAR 2</g:link>--}%
-    <g:link class="edit" controller="estadisticas" action="jxl" params="${pageScope.variables}">Descargar Excel</g:link>
+    <g:link class="edit" controller="estadisticas" action="jxl">Descargar Excel</g:link>
 </fieldset>
 %{--<g:form action="exportar">
     <input type="hidden" name="resultList" value="${resultList}"/>
