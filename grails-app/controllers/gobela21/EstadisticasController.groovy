@@ -3,6 +3,7 @@ package gobela21
 import jxl.*
 import jxl.Workbook
 import jxl.write.*
+import jxl.WorkbookSettings
 
 class EstadisticasController {
     def InformesService
@@ -16,7 +17,10 @@ class EstadisticasController {
         def resultList = InformesService.subvencionesPorLinea()
         response.setContentType('application/vnd.ms-excel')
         response.setHeader('Content-Disposition', 'Attachment;Filename="subvenciones.xls"')
-        WritableWorkbook workbook = Workbook.createWorkbook(response.outputStream)
+        WorkbookSettings ws = new WorkbookSettings()
+        ws.setLocale(new Locale("es", "ES"))
+        WritableWorkbook workbook = Workbook.createWorkbook(response.outputStream, ws)
+
         try {
             for (int i = 0; i < resultList.size(); i++) {
                 String nombreHoja = "Linea ${i + 1}"
