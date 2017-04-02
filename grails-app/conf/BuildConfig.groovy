@@ -58,6 +58,7 @@ grails.project.dependency.resolution = {
         test "org.grails:grails-datastore-test-support:1.0.2-grails-2.4"
         runtime 'jline:jline:2.12'
         compile 'commons-beanutils:commons-beanutils:1.8.3'
+        compile "commons-validator:commons-validator:1.4.1"
         runtime 'net.sourceforge.jexcelapi:jxl:2.6.12'
     }
 
@@ -83,8 +84,6 @@ grails.project.dependency.resolution = {
         //compile ":handlebars-asset-pipeline:1.3.0.3"
 
         //compile "org.grails.plugins:jxl:0.54"
-        compile ":export:1.6"
-        //compile "org.grails.plugins:excel-export:2.0.2"
 
     }
 }

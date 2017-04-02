@@ -114,17 +114,21 @@
 			${grailsApplication.metadata['app.buildDate']}
 			${grailsApplication.metadata['app.buildProfile']})</h2>
 			<div id="controller-list" role="navigation">
+				<h2>Modificaciones 04/02/2017 (2):</h2>
+				<ul>
+					<li>Ahora el dominio .EUS es válido </li>
+				</ul>
+				<h2>Modificaciones 04/02/2017:</h2>
+				<ul>
+					<li>paginación de vistas</li>
+					<li>Vista de estadísticas</li>
+					<li>Descarga en Excel de informe de subvenciones</li>
+				</ul>
 				<h2>Modificaciones 26/03/2017:</h2>
 				<ul>
 					<li>Añadida la suma automática de puntos en las valoraciones (Excepto Línea 2)</li>
 					<li>Añadido el cálculo automático del importe concedido (Excepto Línea 2)</li>
 				</ul>
-				%{--<h2>Controllers Disponibles:</h2>--}%
-				%{--<ul>--}%
-					%{--<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">--}%
-						%{--<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>--}%
-					%{--</g:each>--}%
-				%{--</ul>--}%
 			</div>
 		</div>
 	</body>
