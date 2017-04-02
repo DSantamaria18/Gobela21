@@ -114,11 +114,16 @@
 			${grailsApplication.metadata['app.buildDate']}
 			${grailsApplication.metadata['app.buildProfile']})</h2>
 			<div id="controller-list" role="navigation">
-				<h2>Modificaciones 04/02/2017 (2):</h2>
+				<h2>Modificaciones 03/04/2017:</h2>
+				<ul>
+					<li>Ampliado el tamaño de los campos de texto de MEMORIA (2000 caracteres para ACCIONES y SITUACION, 1000 para el resto)</li>
+					<li>Corregido el cálculo de totales en el Excel de subvenciones por línea cuando se genera desde el servidor</li>
+				</ul>
+				<h2>Modificaciones 02/04/2017 (2):</h2>
 				<ul>
 					<li>Ahora el dominio .EUS es válido </li>
 				</ul>
-				<h2>Modificaciones 04/02/2017:</h2>
+				<h2>Modificaciones 02/04/2017:</h2>
 				<ul>
 					<li>paginación de vistas</li>
 					<li>Vista de estadísticas</li>
