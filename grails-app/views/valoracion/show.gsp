@@ -628,6 +628,13 @@
 				</li>
 				</g:if>
 
+				<g:if test="${valoracionInstance?.l5actividadesEuskera}">
+					<li class="fieldcontain">
+						<span id="l5actividadesEuskera-label" class="property-label"><g:message code="valoracion.l5actividadesEuskera.label" default="Actividad en Euskera para niños/as" /></span>
+						<span class="property-value" aria-labelledby="l5actividadesEuskera-label"><g:fieldValue bean="${valoracionInstance}" field="l5actividadesEuskera"/></span>
+					</li>
+				</g:if>
+
 				<g:if test="${valoracionInstance?.l5recursosPropios}">
 				<li class="fieldcontain">
 					<span id="l5recursosPropios-label" class="property-label"><g:message code="valoracion.l5recursosPropios.label" default="L5recursos Propios" /></span>

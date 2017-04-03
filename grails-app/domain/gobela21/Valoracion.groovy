@@ -147,6 +147,7 @@ class Valoracion {
 
     // Participación femenina   (tb linea 5)
     int l5participacionFemenina
+    int l5actividadesEuskera
 
     // Valoración del solicitante  (tb linea 5)
     int l5experienciaSolicitante

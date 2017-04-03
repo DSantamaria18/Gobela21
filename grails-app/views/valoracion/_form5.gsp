@@ -53,6 +53,14 @@
 	<g:field onchange="sumar();" data="suma" name="l5participacionFemenina" type="number" value="${valoracionInstance.l5participacionFemenina}" required=""/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l5actividadesEuskera', 'error')} required">
+	<label for="l5actividadesEuskera">
+		<g:message code="valoracion.l5actividadesEuskera.label" default="Actividad en Euskera para niños/as:" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:field onchange="sumar();" data="suma" name="l5actividadesEuskera" type="number" value="${valoracionInstance.l5actividadesEuskera}" required=""/>
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l5experienciaSolicitante', 'error')} required">
 	<label for="l5experienciaSolicitante">
 		<g:message code="valoracion.l5experienciaSolicitante.label" default="Valoración solicitante:" />
