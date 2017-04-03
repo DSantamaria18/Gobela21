@@ -50,6 +50,11 @@ class JustificacionController {
         respond justificacionInstance
     }
 
+    def cancel() {
+        Justificacion justificacionInstance = Justificacion.get(params.id)
+        redirect action: "show", id: justificacionInstance.id
+    }
+
     @Transactional
     def update(Justificacion justificacionInstance) {
         if (justificacionInstance == null) {

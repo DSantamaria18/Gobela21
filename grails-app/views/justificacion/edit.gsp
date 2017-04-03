@@ -34,6 +34,10 @@
 				</fieldset>
 				<fieldset class="buttons">
 					<g:actionSubmit class="save" action="update" value="${message(code: 'default.button.update.label', default: 'Update')}" />
+					<g:actionSubmit class="button"
+									action="cancel"
+									value="${message(code: 'default.button.cancel.label', default: 'Cancelar')}"
+									onclick="return confirm('${message(code: 'default.button.cancel.confirm.message', default: '¿Estás seguro/a?')}');"/>
 				</fieldset>
 			</g:form>
 		</div>

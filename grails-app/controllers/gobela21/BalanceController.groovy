@@ -1,7 +1,6 @@
 package gobela21
 
 
-
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
@@ -12,7 +11,7 @@ class BalanceController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond Balance.list(params), model:[balanceInstanceCount: Balance.count()]
+        respond Balance.list(params), model: [balanceInstanceCount: Balance.count()]
     }
 
     def show(Balance balanceInstance) {
@@ -31,11 +30,11 @@ class BalanceController {
         }
 
         if (balanceInstance.hasErrors()) {
-            respond balanceInstance.errors, view:'create'
+            respond balanceInstance.errors, view: 'create'
             return
         }
 
-        balanceInstance.save flush:true
+        balanceInstance.save flush: true
 
         request.withFormat {
             form multipartForm {
@@ -50,6 +49,12 @@ class BalanceController {
         respond balanceInstance
     }
 
+    def cancel() {
+        Balance balanceInstance = Balance.get(params.id)
+        redirect action: "show", id: balanceInstance.id
+    }
+
+
     @Transactional
     def update(Balance balanceInstance) {
         if (balanceInstance == null) {
@@ -58,18 +63,18 @@ class BalanceController {
         }
 
         if (balanceInstance.hasErrors()) {
-            respond balanceInstance.errors, view:'edit'
+            respond balanceInstance.errors, view: 'edit'
             return
         }
 
-        balanceInstance.save flush:true
+        balanceInstance.save flush: true
 
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.updated.message', args: [message(code: 'Balance.label', default: 'Balance'), balanceInstance.id])
                 redirect balanceInstance
             }
-            '*'{ respond balanceInstance, [status: OK] }
+            '*' { respond balanceInstance, [status: OK] }
         }
     }
 
@@ -81,15 +86,15 @@ class BalanceController {
             return
         }
 
-        balanceInstance.delete flush:true
+        balanceInstance.delete flush: true
 
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.deleted.message', args: [message(code: 'Balance.label', default: 'Balance'), balanceInstance.id])
 //                redirect action:"index", method:"GET"
-                redirect(uri:'/')
+                redirect(uri: '/')
             }
-            '*'{ render status: NO_CONTENT }
+            '*' { render status: NO_CONTENT }
         }
     }
 
@@ -99,7 +104,7 @@ class BalanceController {
                 flash.message = message(code: 'default.not.found.message', args: [message(code: 'balance.label', default: 'Balance'), params.id])
                 redirect action: "index", method: "GET"
             }
-            '*'{ render status: NOT_FOUND }
+            '*' { render status: NOT_FOUND }
         }
     }
 }

@@ -49,6 +49,11 @@ class MemoriaController {
         respond memoriaInstance
     }
 
+    def cancel() {
+        Memoria memoriaInstance = Memoria.get(params.id)
+        redirect action: "show", id: memoriaInstance.id
+    }
+
     @Transactional
     def update(Memoria memoriaInstance) {
         if (memoriaInstance == null) {

@@ -55,6 +55,11 @@ class ValoracionController {
         [valoracionInstance: valoracionInstance, importeSolicitado: importeSolicitado]
     }
 
+    def cancel() {
+        Valoracion valoracionInstance = Valoracion.get(params.id)
+        redirect action: "show", id: valoracionInstance.id
+    }
+
     @Transactional
     def update(Valoracion valoracionInstance) {
         if (valoracionInstance == null) {
