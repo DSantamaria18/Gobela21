@@ -114,10 +114,11 @@
 			${grailsApplication.metadata['app.buildDate']}
 			${grailsApplication.metadata['app.buildProfile']})</h2>
 			<div id="controller-list" role="navigation">
-				<h2>Modificaciones 04/04/2017:</h2>
+				<h2>Modificaciones LATEST:</h2>
 				<ul>
 					<li>Añadido botón "Cancelar" a pantallas de edición</li>
 					<li>Añadido campo en valoraciones L5 para "Actividades en Euskera para niños"</li>
+					<li>Corregidos los nombres de los campos de MEMORIA</li>
 				</ul>
 				<h2>Modificaciones 03/04/2017:</h2>
 				<ul>

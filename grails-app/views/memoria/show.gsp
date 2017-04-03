@@ -13,9 +13,6 @@
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
 				<li><g:link class="list" controller="solicitud" action="index">Lista Solicitudes</g:link></li>
-
-				%{--<li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>--}%
-				%{--<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>--}%
 			</ul>
 		</div>
 		<div id="show-memoria" class="content scaffold-show" role="main">
@@ -27,7 +24,7 @@
 			
 				<g:if test="${memoriaInstance?.situacion}">
 				<li class="fieldcontain">
-					<span id="situacion-label" class="property-label"><g:message code="memoria.situacion.label" default="Situacion" /></span>
+					<span id="situacion-label" class="property-label"><g:message code="memoria.situacion.label" default="Situación actual:" /></span>
 					
 						<span class="property-value" aria-labelledby="situacion-label"><g:fieldValue bean="${memoriaInstance}" field="situacion"/></span>
 					
@@ -36,7 +33,7 @@
 			
 				<g:if test="${memoriaInstance?.retos}">
 				<li class="fieldcontain">
-					<span id="retos-label" class="property-label"><g:message code="memoria.retos.label" default="Retos" /></span>
+					<span id="retos-label" class="property-label"><g:message code="memoria.retos.label" default="Retos planteados:" /></span>
 					
 						<span class="property-value" aria-labelledby="retos-label"><g:fieldValue bean="${memoriaInstance}" field="retos"/></span>
 					
@@ -45,7 +42,7 @@
 			
 				<g:if test="${memoriaInstance?.acciones}">
 				<li class="fieldcontain">
-					<span id="acciones-label" class="property-label"><g:message code="memoria.acciones.label" default="Acciones" /></span>
+					<span id="acciones-label" class="property-label"><g:message code="memoria.acciones.label" default="Acciones y actividades a desarrollar:" /></span>
 					
 						<span class="property-value" aria-labelledby="acciones-label"><g:fieldValue bean="${memoriaInstance}" field="acciones"/></span>
 					
@@ -54,7 +51,7 @@
 			
 				<g:if test="${memoriaInstance?.mejoras}">
 				<li class="fieldcontain">
-					<span id="mejoras-label" class="property-label"><g:message code="memoria.mejoras.label" default="Mejoras" /></span>
+					<span id="mejoras-label" class="property-label"><g:message code="memoria.mejoras.label" default="Propuestas de mejora:" /></span>
 					
 						<span class="property-value" aria-labelledby="mejoras-label"><g:fieldValue bean="${memoriaInstance}" field="mejoras"/></span>
 					
@@ -63,7 +60,7 @@
 			
 				<g:if test="${memoriaInstance?.sistemas}">
 				<li class="fieldcontain">
-					<span id="sistemas-label" class="property-label"><g:message code="memoria.sistemas.label" default="Sistemas" /></span>
+					<span id="sistemas-label" class="property-label"><g:message code="memoria.sistemas.label" default="Sistemas de evaluación y seguimiento:" /></span>
 					
 						<span class="property-value" aria-labelledby="sistemas-label"><g:fieldValue bean="${memoriaInstance}" field="sistemas"/></span>
 					
@@ -72,7 +69,7 @@
 			
 				<g:if test="${memoriaInstance?.tecnicos}">
 				<li class="fieldcontain">
-					<span id="tecnicos-label" class="property-label"><g:message code="memoria.tecnicos.label" default="Tecnicos" /></span>
+					<span id="tecnicos-label" class="property-label"><g:message code="memoria.tecnicos.label" default="Personal técnico:" /></span>
 					
 						<span class="property-value" aria-labelledby="tecnicos-label"><g:fieldValue bean="${memoriaInstance}" field="tecnicos"/></span>
 					
@@ -81,7 +78,7 @@
 			
 				<g:if test="${memoriaInstance?.numDeportistas}">
 				<li class="fieldcontain">
-					<span id="numDeportistas-label" class="property-label"><g:message code="memoria.numDeportistas.label" default="Num Deportistas" /></span>
+					<span id="numDeportistas-label" class="property-label"><g:message code="memoria.numDeportistas.label" default="Número de deportistas:" /></span>
 					
 						<span class="property-value" aria-labelledby="numDeportistas-label"><g:fieldValue bean="${memoriaInstance}" field="numDeportistas"/></span>
 					
@@ -90,7 +87,7 @@
 			
 				<g:if test="${memoriaInstance?.numMujeres}">
 				<li class="fieldcontain">
-					<span id="numMujeres-label" class="property-label"><g:message code="memoria.numMujeres.label" default="Num Mujeres" /></span>
+					<span id="numMujeres-label" class="property-label"><g:message code="memoria.numMujeres.label" default="Número de mujeres:" /></span>
 					
 						<span class="property-value" aria-labelledby="numMujeres-label"><g:fieldValue bean="${memoriaInstance}" field="numMujeres"/></span>
 					
@@ -99,7 +96,7 @@
 			
 				<g:if test="${memoriaInstance?.numHombres}">
 				<li class="fieldcontain">
-					<span id="numHombres-label" class="property-label"><g:message code="memoria.numHombres.label" default="Num Hombres" /></span>
+					<span id="numHombres-label" class="property-label"><g:message code="memoria.numHombres.label" default="Número de hombres:" /></span>
 					
 						<span class="property-value" aria-labelledby="numHombres-label"><g:fieldValue bean="${memoriaInstance}" field="numHombres"/></span>
 					
@@ -108,7 +105,7 @@
 			
 				<g:if test="${memoriaInstance?.numResidentes}">
 				<li class="fieldcontain">
-					<span id="numResidentes-label" class="property-label"><g:message code="memoria.numResidentes.label" default="Num Residentes" /></span>
+					<span id="numResidentes-label" class="property-label"><g:message code="memoria.numResidentes.label" default="Número de residentes:" /></span>
 					
 						<span class="property-value" aria-labelledby="numResidentes-label"><g:fieldValue bean="${memoriaInstance}" field="numResidentes"/></span>
 					
@@ -117,7 +114,7 @@
 			
 				<g:if test="${memoriaInstance?.politicaDeportiva}">
 				<li class="fieldcontain">
-					<span id="politicaDeportiva-label" class="property-label"><g:message code="memoria.politicaDeportiva.label" default="Politica Deportiva" /></span>
+					<span id="politicaDeportiva-label" class="property-label"><g:message code="memoria.politicaDeportiva.label" default="Participación en la política deportiva local:" /></span>
 					
 						<span class="property-value" aria-labelledby="politicaDeportiva-label"><g:fieldValue bean="${memoriaInstance}" field="politicaDeportiva"/></span>
 					
@@ -126,7 +123,7 @@
 			
 				<g:if test="${memoriaInstance?.colaboraciones}">
 				<li class="fieldcontain">
-					<span id="colaboraciones-label" class="property-label"><g:message code="memoria.colaboraciones.label" default="Colaboraciones" /></span>
+					<span id="colaboraciones-label" class="property-label"><g:message code="memoria.colaboraciones.label" default="Otras colaboraciones:" /></span>
 					
 						<span class="property-value" aria-labelledby="colaboraciones-label"><g:fieldValue bean="${memoriaInstance}" field="colaboraciones"/></span>
 					
@@ -135,7 +132,7 @@
 			
 				<g:if test="${memoriaInstance?.contribuciones}">
 				<li class="fieldcontain">
-					<span id="contribuciones-label" class="property-label"><g:message code="memoria.contribuciones.label" default="Contribuciones" /></span>
+					<span id="contribuciones-label" class="property-label"><g:message code="memoria.contribuciones.label" default="Contribuciones a la difusión de una imagen positiva de Getxo:" /></span>
 					
 						<span class="property-value" aria-labelledby="contribuciones-label"><g:fieldValue bean="${memoriaInstance}" field="contribuciones"/></span>
 					
