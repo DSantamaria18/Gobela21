@@ -1,4 +1,3 @@
-
 class BootStrap {
 
     def init = { servletContext ->
@@ -55,8 +54,8 @@ class BootStrap {
                     telefonoSolicitante1: 944676473, representante: true, nombreEntidad: "Getxo Futbol", tipoSolicitud: "Club", linea: 3,
                     importeSolicitado: 66666).save(failOnError: true)
 
-           /* new gobela21.Valoracion(linea: 3, l3categoriaFaseFinal: 50, l3resultadoObtenido: 12
-                    , solicitud: 3, importeConcedido: 33333.33).save(failOnError: true)*/
+            new gobela21.Valoracion(linea: 3, l3categoriaFaseFinal: 50, l3resultadoObtenido: 12
+                    , solicitud: 3, importeConcedido: 33333.33).save(failOnError: true)
 
 
             new gobela21.Solicitud(codigo: "4r3fewrqwer3",descSolicitud: "4r3fewrqwer3", nombreSolicitante: "Joseba Solozabal", solicitanteId: "234112234223V", municipioSolicitante: "Getxo",
@@ -64,9 +63,9 @@ class BootStrap {
                     telefonoSolicitante1: 944676473, representante: true, nombreEntidad: "Getxo Waterpolo", tipoSolicitud: "Club", linea: 4,
                     importeSolicitado: 66666).save(failOnError: true)
 
-            new gobela21.Valoracion(linea: 4, l4propioClub: 1, l4otrosClubes: 2, l4ampas: 2, l4categoriasEscolares: 4
-                    , l4categoriasFederadas: 4, l4veteranos: 1, l4desviacion: 2, l4participacionEstimada: 2, l4comunicacionAMedios: 3
-                    , l4usoNuevasTecnologías: 4, l4participacionFemeninaEvento: 5, l4experienciaSolicitante: 1
+            new gobela21.Valoracion(linea: 4, l4propioClub: 0, l4otrosClubes: 15, l4ampas: 0, l4categoriasEscolares: 15
+                    , l4categoriasFederadas: 10, l4veteranos: 0, l4desviacion: 6, l4participacionEstimada: 2, l4comunicacionAMedios: 4
+                    , l4usoNuevasTecnologías: 4, l4participacionFemeninaEvento: 8, l4experienciaSolicitante: 3
                     , solicitud: 4, importeConcedido: 44444.44).save(failOnError: true)
 
 
