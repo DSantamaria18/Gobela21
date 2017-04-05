@@ -84,6 +84,10 @@ class ValoracionController {
         valoracionInstance.l4categoriasFederadas = (params?.l4categoriasFederadas) ? 10 : 0
         valoracionInstance.l4veteranos = (params?.l4veteranos) ? 5 : 0
 
+        valoracionInstance.l4participacionEstimada = (params?.l4participacionEstimada) ? 2 : 0
+        valoracionInstance.l4comunicacionAMedios = (params?.l4comunicacionAMedios) ? 4 : 0
+        valoracionInstance.l4usoNuevasTecnologías = (params?.l4usoNuevasTecnologías) ? 4 : 0
+
         valoracionInstance.save flush: true
 
         request.withFormat {

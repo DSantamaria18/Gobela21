@@ -56,8 +56,7 @@
                 <g:message code="valoracion.puntuacion.label" default="Puntuación total:"/>
             </span>
             <span class="property-value" aria-labelledby="puntuacion-label" id="puntuacion-value">
-                <g:field name="puntuacion" type="text"
-                         value="${fieldValue(bean: valoracionInstance, field: 'puntuacion')}"
+                <g:field id="puntuacion-value" name="puntuacion" type="text" value="${fieldValue(bean: valoracionInstance, field: 'puntuacion')}"
                          required=""/>
             </span>
         </div>

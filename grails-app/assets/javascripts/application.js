@@ -20,41 +20,35 @@ if (typeof jQuery !== 'undefined') {
 }
 
 function sumar(linea) {
-    if (linea != 2){
+    if (linea != 2) {
         var total = 0.0;
         total = (total == null || total == undefined || total == "") ? 0.0 : total;
         $('[data="suma"]').each(function () {
-            valor = parseFloat($(this).val());
+            var valor = 0;
+            var type = $(this).attr('type');
+            if (type === "checkbox" || type === "radio") {
+                if (this.checked) {
+                    valor = parseFloat($(this).val());
+                }
+            } else {
+                valor = parseFloat($(this).val());
+            }
             total = (parseFloat(total) + parseFloat(valor));
         });
-        var sTotal = total.toString().replace(/\./,',')
-        $('#puntuacion').attr('value',sTotal);
-        recalcularImporteConcedido();
+        $('[name="puntuacion"]').val(total.toFixed(2).toString().replace(/\./, ','));
+        calcularImporteConcedido(total);
     }
 }
 
-function sumarL2() {
-    /*   var total = 0.0;
-     total = (total == null || total == undefined || total == "") ? 0.0 : total;
-
-     $('[data="suma"]').each(function(){
-     valor = parseFloat($(this).val());
-     total = (parseFloat(total) + parseFloat(valor));
-     });
-     document.getElementById('puntuacion-value').innerHTML = total.toFixed(2);
-     recalcularImporteConcedido();*/
+function calcularImporteConcedido(puntuacion){
+    var solicitado = parseFloat($('#importeSolicitado').text().replace(/\./, '').replace(/,/, '.')).toFixed(2);
+    var concedido = solicitado * puntuacion / 100;
+    $('[name="importeConcedido"]').val(concedido.toFixed(2).toString().replace(/\./, ','));
 }
 
 function recalcularImporteConcedido() {
     var solicitado = parseFloat($('#importeSolicitado').text().replace(/\./, '').replace(/,/, '.')).toFixed(2);
-    console.log("SOLICITADO: " + solicitado);
-
     var puntuacion = parseFloat($('#puntuacion').val().toString().replace(',', '.')).toFixed(2);
-    // var puntuacion = parseFloat($('#puntuacion').val()).toFixed(2);
-    console.log("PUNTOS: " + puntuacion);
-
     var concedido = solicitado * puntuacion / 100;
-    console.log("CONCEDIDO: " + concedido.toFixed(2));
-
     $('[name="importeConcedido"]').val(concedido.toFixed(2).toString().replace(/\./, ','));
 }
