@@ -40,7 +40,8 @@
 				<g:each in="${solicitudInstanceList}" status="i" var="solicitudInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 						<td><g:link action="show" id="${solicitudInstance.id}">${fieldValue(bean: solicitudInstance, field: "codigo")}</g:link></td>
-						<td>${fieldValue(bean: solicitudInstance, field: "descSolicitud")}</td>
+						<td><g:link action="show" id="${solicitudInstance.id}">${fieldValue(bean: solicitudInstance, field: "descSolicitud")}</g:link></td>
+						%{--<td>${fieldValue(bean: solicitudInstance, field: "descSolicitud")}</td>--}%
 						<g:if test="${solicitudInstance.nombreEntidad == null}">
 							<td>${fieldValue(bean: solicitudInstance, field: "nombreSolicitante")}</td>
 						</g:if>

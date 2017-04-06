@@ -119,6 +119,7 @@
 					<li>Añadido botón "Cancelar" a pantallas de edición</li>
 					<li>Añadido campo en valoraciones L5 para "Actividades en Euskera para niños"</li>
 					<li>Corregidos los nombres de los campos de MEMORIA</li>
+					<li>La descripción de las solicitudes ahora son un campo único y accesible a través de él</li>
 				</ul>
 				<h2>Modificaciones 03/04/2017:</h2>
 				<ul>

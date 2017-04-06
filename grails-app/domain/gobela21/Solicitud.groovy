@@ -33,7 +33,7 @@ class Solicitud {
 
     static constraints = {
         codigo(nullable: false, unique: true)
-        descSolicitud(nullable: true)
+        descSolicitud(nullable: false, unique: true)
         nombreSolicitante(blank: false)
         solicitanteId(blank: false)
         municipioSolicitante(blank: false)
