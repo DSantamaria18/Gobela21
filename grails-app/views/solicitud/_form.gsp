@@ -200,6 +200,13 @@
               value="${fieldValue(bean: solicitudInstance, field: 'linea')}" valueMessagePrefix="solicitud.linea"/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: solicitudInstance, field: 'nombreEvento', 'error')} required">
+    <label for="nombreEvento">
+        <g:message code="solicitud.nombreEvento.label" default="Nombre Evento:"/>
+    </label>
+    <g:textField name="nombreEvento" value="${solicitudInstance?.nombreEvento}"/>
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: solicitudInstance, field: 'importeSolicitado', 'error')} required">
     <label for="importeSolicitado">
         <g:message code="solicitud.importeSolicitado.label" default="Importe solicitado:"/>

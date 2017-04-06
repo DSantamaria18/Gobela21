@@ -292,6 +292,16 @@
 
             </li>
         </g:if>
+        <g:if test="${solicitudInstance?.codigo && solicitudInstance.linea == 4}">
+            <li class="fieldcontain">
+                <span id="nombreEvento-label" class="property-label"><g:message code="solicitud.nombreEvento.label"
+                                                                          default="Nombre Evento:"/></span>
+
+                <span class="property-value" aria-labelledby="nombreEvento-label"><g:fieldValue bean="${solicitudInstance}"
+                                                                                          field="nombreEvento"/></span>
+
+            </li>
+        </g:if>
 
         <g:if test="${solicitudInstance?.importeSolicitado}">
             <li class="fieldcontain">

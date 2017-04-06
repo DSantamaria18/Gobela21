@@ -28,6 +28,7 @@ class Solicitud {
     BigDecimal importeSolicitadoOtros
     BigDecimal importeRecibidoOtros
     Date fechaSolicitud = new Date()
+    String nombreEvento
 
     static hasOne = [balance: Balance,memoria: Memoria, justificacion: Justificacion, valoracion: Valoracion]
 
@@ -63,6 +64,7 @@ class Solicitud {
         memoria(nullable: true)
         valoracion(nullable: true)
         justificacion(nullable: true)
+        nombreEvento(nullable: true)
     }
 
     String toString() {return codigo}
