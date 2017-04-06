@@ -426,6 +426,7 @@
             <g:actionSubmit class="delete" action="delete"
                             value="${message(code: 'default.button.delete.label', default: 'Delete')}"
                             onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: '¿Estás seguro/a?')}');"/>
+            <g:link class="edit" controller="solicitud" action="exportarSolicitud" params='[id: "${solicitudInstance.id}"]' >Exportar</g:link>
         </fieldset>
     </g:form>
 </div>

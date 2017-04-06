@@ -121,6 +121,7 @@
 					<li>Corregidos los nombres de los campos de MEMORIA</li>
 					<li>La descripción de las solicitudes ahora son un campo único y accesible a través de él</li>
 					<li>Añadido campo para el nombre del evento de las solicitudes de la Línea 4</li>
+					<li>Exportación a Excel de los datos de la solicitud (individual)</li>
 				</ul>
 				<h2>Modificaciones 03/04/2017:</h2>
 				<ul>
