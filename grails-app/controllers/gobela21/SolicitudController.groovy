@@ -60,6 +60,7 @@ class SolicitudController {
                 setBackground(Colour.GREY_25_PERCENT)
                 setBorder(Border.ALL, BorderLineStyle.THIN)
                 setFont(headerFont)
+                setAlignment(jxl.format.Alignment.RIGHT)
                 setWrap(true)
             }
 
