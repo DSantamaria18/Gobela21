@@ -37,7 +37,7 @@ class SolicitudController {
         println()
     }
 
-    def exportarSolicitud(){
+    def exportarSolicitud() {
         Solicitud solicitud = Solicitud.get(params.id)
         response.setContentType('application/vnd.ms-excel')
         response.setHeader('Content-Disposition', "Attachment;Filename='solicitud_${solicitud.codigo}.xls'")
@@ -46,17 +46,46 @@ class SolicitudController {
         WritableWorkbook workbook = Workbook.createWorkbook(response.outputStream, ws)
 
         try {
-            WritableSheet sheet = workbook.createSheet("Solicitud", 0)
+            WritableSheet sheet = workbook.createSheet("SOLICITUD", 0)
 
             WritableFont titleFont = new WritableFont(WritableFont.ARIAL, 16, WritableFont.BOLD)
             WritableCellFormat titleFormat = new WritableCellFormat()
             titleFormat.setFont(titleFont)
-            Label title = new Label(0,0,"SOLICITUD ${solicitud.id}",titleFormat)
-            sheet .addCell(title)
+            Label title = new Label(0, 0, "ANEXO 1. SOLICITUD DE SUBVENCION ${solicitud.codigo}", titleFormat)
+            sheet.addCell(title)
 
-            
+            WritableFont headerFont = new WritableFont(WritableFont.ARIAL, 11, WritableFont.BOLD)
+            WritableCellFormat headerFormat = new WritableCellFormat()
+            headerFormat.with {
+                setBackground(Colour.GREY_25_PERCENT)
+                setBorder(Border.ALL, BorderLineStyle.THIN)
+                setFont(headerFont)
+                setWrap(true)
+            }
 
+            WritableFont cellFont = new WritableFont(WritableFont.ARIAL, 10)
+            WritableCellFormat cellFormat = new WritableCellFormat()
+            cellFormat.with {
+                setFont(cellFont)
+                setBorder(Border.ALL, BorderLineStyle.THIN)
+                setWrap(true)
+            }
 
+            int col = 0
+            int row = 2
+
+            solicitud.properties.each { key, value ->
+                String msg = "solicitud.${key}.label"
+                if (value && key!='valoracionId') {
+                    Label campo = new Label(col, row, message(code: msg)+':', headerFormat)
+                    Label valor = new Label(col + 1, row, value.toString(), cellFormat)
+                    sheet.addCell(campo)
+                    sheet.addCell(valor)
+                    row++
+                }
+                sheet.setColumnView(col, 30)
+                sheet.setColumnView(col+1, 30)
+            }
 
             /*for (int i = 0; i < resultList.size(); i++) {
                 String nombreHoja = "Linea ${i + 1}"
