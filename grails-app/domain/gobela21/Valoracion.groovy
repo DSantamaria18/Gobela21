@@ -61,6 +61,9 @@ class Valoracion {
     //  Incidencia de la actividad en la promoción del deporte entre quienes residen en Getxo
     int l2residentes
 
+    //Que el equipo senior disponga de jugadores entre los 18 y 23 años (sólo clubes de fútbol senior que militen por debajo de la 2ª B)
+    int l2jugadoresEquipoSenior
+
     //Contribución a la difusión y mejora de la imagen del municipio de Getxo
     int l2prensaLocal
     int l2prensaComarcal
@@ -192,6 +195,7 @@ class Valoracion {
 
     static constraints = {
         l1proyectoDeportivoCoherencia(nullable: true, inList: ["0", "2.5", "5"])
+        l2jugadoresEquipoSenior(nullable: true)
         importeConcedido(nullable: true)
         puntuacion(nullable: true)
     }

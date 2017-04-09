@@ -457,6 +457,15 @@
 				</li>
 				</g:if>
 
+				<g:if test="${valoracionInstance?.l2jugadoresEquipoSenior}">
+					<li class="fieldcontain">
+						<span id="l2jugadoresEquipoSenior-label" class="property-label"><g:message code="valoracion.l2jugadoresEquipoSenior.label" default="l2jugadoresEquipoSenior" /></span>
+
+						<span class="property-value" aria-labelledby="l2jugadoresEquipoSenior-label"><g:fieldValue bean="${valoracionInstance}" field="l2jugadoresEquipoSenior"/></span>
+
+					</li>
+				</g:if>
+
 				<g:if test="${valoracionInstance?.l3categoriaFaseFinal}">
 				<li class="fieldcontain">
 					<span id="l3categoriaFaseFinal-label" class="property-label"><g:message code="valoracion.l3categoriaFaseFinal.label" default="L3categoria Fase Final" /></span>

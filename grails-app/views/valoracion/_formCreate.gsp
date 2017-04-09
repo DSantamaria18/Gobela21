@@ -71,7 +71,8 @@
 
 <g:javascript>
     $(document).ready(function () {
-        sumar()
+        console.log("LINEA: " + ${params.linea});
+        sumar(${params.linea == '2'})
     });
 </g:javascript>
 

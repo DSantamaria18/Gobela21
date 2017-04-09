@@ -114,6 +114,11 @@
 			${grailsApplication.metadata['app.buildDate']}
 			${grailsApplication.metadata['app.buildProfile']})</h2>
 			<div id="controller-list" role="navigation">
+				<h2>Modificaciones 09/04/2017:</h2>
+				<ul>
+					<li>Arreglado límite de campos de MEMORIA</li>
+					<li>Añadido campo a VALORACION para la Línea 2 (jugadores entre 18 y 23 años en equipo Senior)</li>
+				</ul>
 				<h2>Modificaciones 07/04/2017:</h2>
 				<ul>
 					<li>Añadido botón "Cancelar" a pantallas de edición</li>

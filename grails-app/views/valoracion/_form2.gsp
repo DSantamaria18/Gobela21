@@ -66,6 +66,15 @@
 	<g:field onchange="sumarL2();" data="suma" name="l2residentes" type="number" value="${valoracionInstance.l2residentes}" required=""/>
 </div>
 
+
+<div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2jugadoresEquipoSenior', 'error')}">
+	<label for="l2jugadoresEquipoSenior">
+		<g:message code="valoracion.l2jugadoresEquipoSenior.label" default="Jugadores entre los 18 y 23 años en equipo Senior:" />
+	</label>
+	<g:field onchange="sumarL2();" data="suma" name="l2jugadoresEquipoSenior" type="number" value="${valoracionInstance.l2jugadoresEquipoSenior}" required=""/>
+</div>
+<h6>* Sólo clubes de fútbol senior que militen por debajo de la 2ª B</h6>
+
 %{--Difusión y mejora de la imagen de Getxo--}%
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2prensaLocal', 'error')} required">
 	<label for="l2prensaLocal">
