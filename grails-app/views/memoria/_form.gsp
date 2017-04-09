@@ -7,7 +7,7 @@
 		<g:message code="memoria.situacion.label" default="Situación actual:" />
 		
 	</label>
-	<g:textArea name="situacion" cols="40" rows="5" maxlength="500" value="${memoriaInstance?.situacion}"/>
+	<g:textArea name="situacion" cols="60" rows="15" maxlength="2000" value="${memoriaInstance?.situacion}"/>
 
 </div>
 
@@ -16,7 +16,7 @@
 		<g:message code="memoria.retos.label" default="Retos planteados:" />
 		
 	</label>
-	<g:textArea name="retos" cols="40" rows="5" maxlength="500" value="${memoriaInstance?.retos}"/>
+	<g:textArea name="retos" cols="60" rows="15" maxlength="2000" value="${memoriaInstance?.retos}"/>
 
 </div>
 
@@ -25,7 +25,7 @@
 		<g:message code="memoria.acciones.label" default="Acciones y actividades a desarrollar:" />
 		
 	</label>
-	<g:textArea name="acciones" cols="40" rows="5" maxlength="500" value="${memoriaInstance?.acciones}"/>
+	<g:textArea name="acciones" cols="60" rows="15" maxlength="2000" value="${memoriaInstance?.acciones}"/>
 
 </div>
 
@@ -34,7 +34,7 @@
 		<g:message code="memoria.mejoras.label" default="Propuestas de mejora:" />
 		
 	</label>
-	<g:textArea name="mejoras" cols="40" rows="5" maxlength="500" value="${memoriaInstance?.mejoras}"/>
+	<g:textArea name="mejoras" cols="60" rows="15" maxlength="2000" value="${memoriaInstance?.mejoras}"/>
 
 </div>
 
@@ -43,7 +43,7 @@
 		<g:message code="memoria.sistemas.label" default="Sistemas de evaluación y seguimiento:" />
 		
 	</label>
-	<g:textArea name="sistemas" cols="40" rows="5" maxlength="500" value="${memoriaInstance?.sistemas}"/>
+	<g:textArea name="sistemas" cols="60" rows="15" maxlength="2000" value="${memoriaInstance?.sistemas}"/>
 
 </div>
 
@@ -52,7 +52,7 @@
 		<g:message code="memoria.tecnicos.label" default="Personal técnico:" />
 		
 	</label>
-	<g:textArea name="tecnicos" cols="40" rows="5" maxlength="500" value="${memoriaInstance?.tecnicos}"/>
+	<g:textArea name="tecnicos" cols="60" rows="15" maxlength="2000" value="${memoriaInstance?.tecnicos}"/>
 
 </div>
 
@@ -97,7 +97,7 @@
 		<g:message code="memoria.politicaDeportiva.label" default="Participación en la política deportiva local:" />
 		
 	</label>
-	<g:textArea name="politicaDeportiva" cols="40" rows="5" maxlength="500" value="${memoriaInstance?.politicaDeportiva}"/>
+	<g:textArea name="politicaDeportiva" cols="60" rows="15" maxlength="2000" value="${memoriaInstance?.politicaDeportiva}"/>
 
 </div>
 
@@ -106,7 +106,7 @@
 		<g:message code="memoria.colaboraciones.label" default="Otras colaboraciones:" />
 		
 	</label>
-	<g:textArea name="colaboraciones" cols="40" rows="5" maxlength="500" value="${memoriaInstance?.colaboraciones}"/>
+	<g:textArea name="colaboraciones" cols="60" rows="15" maxlength="2000" value="${memoriaInstance?.colaboraciones}"/>
 
 </div>
 
@@ -115,7 +115,7 @@
 		<g:message code="memoria.contribuciones.label" default="Contribuciones a la difusión de una imagen positiva de Getxo:" />
 		
 	</label>
-	<g:textArea name="contribuciones" cols="40" rows="5" maxlength="500" value="${memoriaInstance?.contribuciones}"/>
+	<g:textArea name="contribuciones" cols="60" rows="15" maxlength="2000" value="${memoriaInstance?.contribuciones}"/>
 
 </div>
 
