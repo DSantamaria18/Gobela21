@@ -43,6 +43,14 @@ class ValoracionController {
         valoracionInstance.l4categoriasEscolares = (params?.l4categoriasEscolares) ? 15 : 0
         valoracionInstance.l4categoriasFederadas = (params?.l4categoriasFederadas) ? 10 : 0
         valoracionInstance.l4veteranos = (params?.l4veteranos) ? 5 : 0
+        valoracionInstance.l4participacionEstimada = (params?.l4participacionEstimada) ? 2 : 0
+        valoracionInstance.l4comunicacionAMedios = (params?.l4comunicacionAMedios) ? 4 : 0
+        valoracionInstance.l4usoNuevasTecnologías = (params?.l4usoNuevasTecnologías) ? 4 : 0
+
+        valoracionInstance.l5participacionEstimada = (params?.l5participacionEstimada) ? 2 : 0
+        valoracionInstance.l5comunicacionAMedios = (params?.l5comunicacionAMedios) ? 4 : 0
+        valoracionInstance.l5usoNuevasTecnologías = (params?.l5usoNuevasTecnologías) ? 4 : 0
+        valoracionInstance.l5actividadesEuskera = (params?.l5usoNuevasTecnologías) ? 5 : 0
 
         valoracionInstance.save flush: true
 
@@ -83,10 +91,15 @@ class ValoracionController {
         valoracionInstance.l4categoriasEscolares = (params?.l4categoriasEscolares) ? 15 : 0
         valoracionInstance.l4categoriasFederadas = (params?.l4categoriasFederadas) ? 10 : 0
         valoracionInstance.l4veteranos = (params?.l4veteranos) ? 5 : 0
-
         valoracionInstance.l4participacionEstimada = (params?.l4participacionEstimada) ? 2 : 0
         valoracionInstance.l4comunicacionAMedios = (params?.l4comunicacionAMedios) ? 4 : 0
         valoracionInstance.l4usoNuevasTecnologías = (params?.l4usoNuevasTecnologías) ? 4 : 0
+
+        valoracionInstance.l5participacionEstimada = (params?.l5participacionEstimada) ? 2 : 0
+        valoracionInstance.l5comunicacionAMedios = (params?.l5comunicacionAMedios) ? 4 : 0
+        valoracionInstance.l5usoNuevasTecnologías = (params?.l5usoNuevasTecnologías) ? 4 : 0
+        valoracionInstance.l5actividadesEuskera = (params?.l5usoNuevasTecnologías) ? 5 : 0
+
 
         valoracionInstance.save flush: true
 
