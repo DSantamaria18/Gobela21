@@ -134,19 +134,19 @@
 	<div class="fieldcontain">
 		<label for="l5experienciaSolicitante"></label>
 		<g:radio name="l5experienciaSolicitante" value="4" onchange="sumar();" data="suma"
-				 checked="${valoracionInstance.l5experienciaSolicitante == 4}"/>  Más de 2 años (4 pt)
+				 checked="${valoracionInstance.l5experienciaSolicitante == 4}"/>  Más de 2 años (4 pts)
 	</div>
 
 	<div class="fieldcontain">
 		<label for="l5experienciaSolicitante"></label>
 		<g:radio name="l5experienciaSolicitante" value="6" onchange="sumar();" data="suma"
-				 checked="${valoracionInstance.l5experienciaSolicitante == 6}"/>  Más de 4 años (6 pt)
+				 checked="${valoracionInstance.l5experienciaSolicitante == 6}"/>  Más de 4 años (6 pts)
 	</div>
 
 	<div class="fieldcontain">
 		<label for="l5experienciaSolicitante"></label>
 		<g:radio name="l5experienciaSolicitante" value="8" onchange="sumar();" data="suma"
-				 checked="${valoracionInstance.l5experienciaSolicitante == 8}"/>  Más de 6 años (8 pt)
+				 checked="${valoracionInstance.l5experienciaSolicitante == 8}"/>  Más de 6 años (8 pts)
 	</div>
 </div>
 

@@ -52,6 +52,11 @@ class ValoracionController {
         valoracionInstance.l5usoNuevasTecnologías = (params?.l5usoNuevasTecnologías) ? 4 : 0
         valoracionInstance.l5actividadesEuskera = (params?.l5usoNuevasTecnologías) ? 5 : 0
 
+        valoracionInstance.l6prensaLocal = (params?.l6prensaLocal) ? 5 : 0
+        valoracionInstance.l6prensaComarcal = (params?.l6prensaComarcal) ? 10 : 0
+        valoracionInstance.l6prensaRegional = (params?.l6prensaRegional) ? 15 : 0
+        valoracionInstance.l6prensaEstatal = (params?.l6prensaEstatal) ? 20 : 0
+
         valoracionInstance.save flush: true
 
         request.withFormat {
@@ -100,6 +105,16 @@ class ValoracionController {
         valoracionInstance.l5usoNuevasTecnologías = (params?.l5usoNuevasTecnologías) ? 4 : 0
         valoracionInstance.l5actividadesEuskera = (params?.l5usoNuevasTecnologías) ? 5 : 0
 
+        valoracionInstance.l6prensaLocal = (params?.l6prensaLocal) ? 5 : 0
+        valoracionInstance.l6prensaComarcal = (params?.l6prensaComarcal) ? 10 : 0
+        valoracionInstance.l6prensaRegional = (params?.l6prensaRegional) ? 15 : 0
+        valoracionInstance.l6prensaEstatal = (params?.l6prensaEstatal) ? 20 : 0
+
+        /*
+        valoracionInstance.l6prensaLocal = (params?.l5usoNuevasTecnologías) ? 5 : 0
+        valoracionInstance.l6prensaLocal = (params?.l5usoNuevasTecnologías) ? 5 : 0
+        valoracionInstance.l6prensaLocal = (params?.l5usoNuevasTecnologías) ? 5 : 0
+*/
 
         valoracionInstance.save flush: true
 
