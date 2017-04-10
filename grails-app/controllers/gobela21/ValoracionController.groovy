@@ -37,6 +37,17 @@ class ValoracionController {
             return
         }
 
+        valoracionInstance.l1proyectoDeportivoEuskera = (params?.l1proyectoDeportivoEuskera) ? 10 : 0
+        valoracionInstance.l1prensaLocal = (params?.l1prensaLocal) ? 1 : 0
+        valoracionInstance.l1prensaComarcal = (params?.l1prensaComarcal) ? 1 : 0
+        valoracionInstance.l1prensaRegional = (params?.l1prensaRegional) ? 1 : 0
+        valoracionInstance.l1prensaEstatalInternacional = (params?.l1prensaEstatalInternacional) ? 2 : 0
+        valoracionInstance.l1deporteEscolar = (params?.l1deporteEscolar) ? 8 : 0
+        valoracionInstance.l1marcaGetxo = (params?.l1marcaGetxo) ? 7 : 0
+        valoracionInstance.l1getxoKirolak = (params?.l1getxoKirolak) ? 3 : 0
+        valoracionInstance.l1centrosEscolares = (params?.l1centrosEscolares) ? 1 : 0
+        valoracionInstance.l1otrosClubes = (params?.l1otrosClubes) ? 1 : 0
+
         valoracionInstance.l4propioClub = (params?.l4propioClub) ? 10 : 0
         valoracionInstance.l4otrosClubes = (params?.l4otrosClubes) ? 15 : 0
         valoracionInstance.l4ampas = (params?.l4ampas) ? 5 : 0
@@ -95,6 +106,18 @@ class ValoracionController {
             respond valoracionInstance.errors, view: 'edit'
             return
         }
+        valoracionInstance.l1proyectoDeportivoEuskera = (params?.l1proyectoDeportivoEuskera) ? 10 : 0
+        valoracionInstance.l1prensaLocal = (params?.l1prensaLocal) ? 1 : 0
+        valoracionInstance.l1prensaComarcal = (params?.l1prensaComarcal) ? 1 : 0
+        valoracionInstance.l1prensaRegional = (params?.l1prensaRegional) ? 1 : 0
+        valoracionInstance.l1prensaEstatalInternacional = (params?.l1prensaEstatalInternacional) ? 2 : 0
+        valoracionInstance.l1deporteEscolar = (params?.l1deporteEscolar) ? 8 : 0
+        valoracionInstance.l1marcaGetxo = (params?.l1marcaGetxo) ? 7 : 0
+        valoracionInstance.l1getxoKirolak = (params?.l1getxoKirolak) ? 3 : 0
+        valoracionInstance.l1centrosEscolares = (params?.l1centrosEscolares) ? 1 : 0
+        valoracionInstance.l1otrosClubes = (params?.l1otrosClubes) ? 1 : 0
+
+
         valoracionInstance.l4propioClub = (params?.l4propioClub) ? 10 : 0
         valoracionInstance.l4otrosClubes = (params?.l4otrosClubes) ? 15 : 0
         valoracionInstance.l4ampas = (params?.l4ampas) ? 5 : 0

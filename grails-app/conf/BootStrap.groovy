@@ -23,18 +23,18 @@ class BootStrap {
             new gobela21.Contacto(contactoId: 2, nombre: "Paco Clavel", telefono: "651323114",
                     email: "clavelito@getxofc.com", cargo: "Delegado", club: 2).save(failOnError: true)
 
-            new gobela21.Solicitud(codigo: "3b3jasdj2",descSolicitud: "3b3jasdj2", nombreSolicitante: "Juanito Navarro", solicitanteId: "2341123112V", municipioSolicitante: "Getxo",
+            new gobela21.Solicitud(codigo: "3b3jasdj2", descSolicitud: "3b3jasdj2", nombreSolicitante: "Juanito Navarro", solicitanteId: "2341123112V", municipioSolicitante: "Getxo",
                     cpSolicitante: 48991, emailSolicitante: "jnavarro@getxorugby.com", direccionSolicitante: "Telletxe 9",
                     telefonoSolicitante1: 944676473, representante: true, nombreEntidad: "Getxo Rugby", tipoSolicitud: "Club", linea: 1,
                     importeSolicitado: 66000).save(failOnError: true)
 
-            new gobela21.Valoracion(linea: 1, l1costesActividad: 1, l1mediosPropios: 2, l1dificultadFinanciacion: 1, l1proyectoDeportivoCoherencia: '0',
-                    l1proyectoDeportivoDiversidad: 2, l1proyectoDeportivoEuskera: 3, l1proyectoDeportivoParticipacionFemenina: 4,
+            new gobela21.Valoracion(linea: 1, l1costesActividad: 1, l1mediosPropios: 2, l1dificultadFinanciacion: 1, l1viabilidadProyecto: 2.5,
+                    l1objetivosGK: 2.5, l1proyectoDeportivoDiversidad: 2, l1proyectoDeportivoEuskera: 3, l1proyectoDeportivoParticipacionFemenina: 4,
                     l1residentes: 4, l1prensaLocal: 2, l1prensaComarcal: 6, l1prensaRegional: 1, l1prensaEstatalInternacional: 2,
                     l1deporteEscolar: 8, l1marcaGetxo: 2, l1getxoKirolak: 2, l1centrosEscolares: 3, l1otrosClubes: 1,
                     l1antiguedad: 1, l1participantes: 3, solicitud: 1, importeConcedido: 11111.11).save(failOnError: true)
 
-            new gobela21.Solicitud(codigo: "43423F23F", descSolicitud: "43423F23F",nombreSolicitante: "Pacp Porras", solicitanteId: "234112234223V", municipioSolicitante: "Getxo",
+            new gobela21.Solicitud(codigo: "43423F23F", descSolicitud: "43423F23F", nombreSolicitante: "Pacp Porras", solicitanteId: "234112234223V", municipioSolicitante: "Getxo",
                     cpSolicitante: 48991, emailSolicitante: "pacoporras@getxofutbol.com", direccionSolicitante: "Telletxe 9",
                     telefonoSolicitante1: 944676473, representante: true, nombreEntidad: "Getxo Futbol", tipoSolicitud: "Club", linea: 2,
                     importeSolicitado: 66666).save(failOnError: true)
@@ -49,7 +49,7 @@ class BootStrap {
                     , l2campeonatosMundo: 0, l2indiceParticipacion: 0.75, l2indiceCorreccion: 0.2
                     , solicitud: 2, importeConcedido: 22222.22).save(failOnError: true)
 
-            new gobela21.Solicitud(codigo: "4r3f3f43", descSolicitud: "4r3f3f43",nombreSolicitante: "Jasulín de Ubrique", solicitanteId: "234112234223V", municipioSolicitante: "Getxo",
+            new gobela21.Solicitud(codigo: "4r3f3f43", descSolicitud: "4r3f3f43", nombreSolicitante: "Jasulín de Ubrique", solicitanteId: "234112234223V", municipioSolicitante: "Getxo",
                     cpSolicitante: 48991, emailSolicitante: "js@getxofutbol.com", direccionSolicitante: "Telletxe 9",
                     telefonoSolicitante1: 944676473, representante: true, nombreEntidad: "Getxo Futbol", tipoSolicitud: "Club", linea: 3,
                     importeSolicitado: 66666).save(failOnError: true)
@@ -58,7 +58,7 @@ class BootStrap {
                     , solicitud: 3, importeConcedido: 33333.33).save(failOnError: true)
 
 
-            new gobela21.Solicitud(codigo: "4r3fewrqwer3",descSolicitud: "4r3fewrqwer3", nombreSolicitante: "Joseba Solozabal", solicitanteId: "234112234223V", municipioSolicitante: "Getxo",
+            new gobela21.Solicitud(codigo: "4r3fewrqwer3", descSolicitud: "4r3fewrqwer3", nombreSolicitante: "Joseba Solozabal", solicitanteId: "234112234223V", municipioSolicitante: "Getxo",
                     cpSolicitante: 48991, emailSolicitante: "pacoporras@getxofutbol.com", direccionSolicitante: "Telletxe 9",
                     telefonoSolicitante1: 944676473, representante: true, nombreEntidad: "Getxo Waterpolo", tipoSolicitud: "Club", linea: 4,
                     importeSolicitado: 66666).save(failOnError: true)
@@ -88,7 +88,7 @@ class BootStrap {
                     , l6costeActividad: 4, l6mediosPropios: 2, l6patrcinioPrivado: 1
                     , solicitud: 6, importeConcedido: 66666.66).save(failOnError: true)
 
-            new gobela21.Solicitud(codigo: "4r45t56y",descSolicitud: "4r45t56y", nombreSolicitante: "Florentino Pérez", solicitanteId: "234112234223V", municipioSolicitante: "Getxo",
+            new gobela21.Solicitud(codigo: "4r45t56y", descSolicitud: "4r45t56y", nombreSolicitante: "Florentino Pérez", solicitanteId: "234112234223V", municipioSolicitante: "Getxo",
                     cpSolicitante: 48991, emailSolicitante: "pacoporras@getxofutbol.com", direccionSolicitante: "Telletxe 9",
                     telefonoSolicitante1: 944676473, representante: false, tipoSolicitud: "Club", linea: 7,
                     importeSolicitado: 66666).save(failOnError: true)
