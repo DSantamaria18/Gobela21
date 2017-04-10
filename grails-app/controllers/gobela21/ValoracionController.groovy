@@ -57,6 +57,11 @@ class ValoracionController {
         valoracionInstance.l6prensaRegional = (params?.l6prensaRegional) ? 15 : 0
         valoracionInstance.l6prensaEstatal = (params?.l6prensaEstatal) ? 20 : 0
 
+        valoracionInstance.l7prensaLocal = (params?.l7prensaLocal) ? 5 : 0
+        valoracionInstance.l7prensaComarcal = (params?.l7prensaComarcal) ? 10 : 0
+        valoracionInstance.l7prensaRegional = (params?.l7prensaRegional) ? 15 : 0
+        valoracionInstance.l7prensaEstatal = (params?.l7prensaEstatal) ? 20 : 0
+
         valoracionInstance.save flush: true
 
         request.withFormat {
@@ -110,11 +115,10 @@ class ValoracionController {
         valoracionInstance.l6prensaRegional = (params?.l6prensaRegional) ? 15 : 0
         valoracionInstance.l6prensaEstatal = (params?.l6prensaEstatal) ? 20 : 0
 
-        /*
-        valoracionInstance.l6prensaLocal = (params?.l5usoNuevasTecnologías) ? 5 : 0
-        valoracionInstance.l6prensaLocal = (params?.l5usoNuevasTecnologías) ? 5 : 0
-        valoracionInstance.l6prensaLocal = (params?.l5usoNuevasTecnologías) ? 5 : 0
-*/
+        valoracionInstance.l7prensaLocal = (params?.l7prensaLocal) ? 5 : 0
+        valoracionInstance.l7prensaComarcal = (params?.l7prensaComarcal) ? 10 : 0
+        valoracionInstance.l7prensaRegional = (params?.l7prensaRegional) ? 15 : 0
+        valoracionInstance.l7prensaEstatal = (params?.l7prensaEstatal) ? 20 : 0
 
         valoracionInstance.save flush: true
 
