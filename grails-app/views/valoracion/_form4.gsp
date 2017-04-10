@@ -7,7 +7,7 @@
         <g:message code="valoracion.l4propioClub.label" default="Propio club:"/>
     </label>
     <g:checkBox class="check-box" onchange="sumar();" data="suma" name="l4propioClub" value="10"
-                checked="${l4propioClubValue == 10}"/> 10 pts
+                checked="${valoracionInstance.l4propioClub == 10}"/> 10 pts
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l4otrosClubes', 'error')} required">
@@ -15,7 +15,7 @@
         <g:message code="valoracion.l4otrosClubes.label" default="Otros clubes:"/>
     </label>
     <g:checkBox class="check-box" onchange="sumar();" data="suma" name="l4otrosClubes" value="15"
-                checked="${l4otrosClubes == 15}"/> 15 pts
+                checked="${valoracionInstance.l4otrosClubes == 15}"/> 15 pts
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l4ampas', 'error')} required">
@@ -23,7 +23,7 @@
         <g:message code="valoracion.l4ampas.label" default="AMPAS:"/>
     </label>
     <g:checkBox class="check-box" onchange="sumar();" data="suma" name="l4ampas" value="5"
-                checked="${l4ampas == 5}"/> 5 pts
+                checked="${valoracionInstance.l4ampas == 5}"/> 5 pts
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l4categoriasEscolares', 'error')} required">
@@ -31,7 +31,7 @@
         <g:message code="valoracion.l4categoriasEscolares.label" default="Categorias escolares:"/>
     </label>
     <g:checkBox class="check-box" onchange="sumar();" data="suma" name="l4categoriasEscolares" value="15"
-                checked="${l4categoriasEscolares == 15}"/> 15 pts
+                checked="${valoracionInstance.l4categoriasEscolares == 15}"/> 15 pts
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l4categoriasFederadas', 'error')} required">
@@ -39,7 +39,7 @@
         <g:message code="valoracion.l4categoriasFederadas.label" default="Categorias federadas:"/>
     </label>
     <g:checkBox class="check-box" onchange="sumar();" data="suma" name="l4categoriasFederadas" value="10"
-                checked="${l4categoriasFederadas == 10}"/> 10 pts
+                checked="${valoracionInstance.l4categoriasFederadas == 10}"/> 10 pts
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l4veteranos', 'error')} required">
@@ -47,7 +47,7 @@
         <g:message code="valoracion.l4veteranos.label" default="Personas veteranas:"/>
     </label>
     <g:checkBox class="check-box" onchange="sumar();" data="suma" name="l4veteranos" value="5"
-                checked="${l4veteranos == 5}"/> 5 pts
+                checked="${valoracionInstance.l4veteranos == 5}"/> 5 pts
 </div>
 <br>
 
@@ -98,7 +98,7 @@
         <g:message code="valoracion.l4participacionEstimada.label" default="Participacion estimada:"/>
     </label>
     <g:checkBox class="check-box" onchange="sumar();" data="suma" name="l4participacionEstimada" value="2"
-                checked="${l4participacionEstimada == 2}"/> 2 pts
+                checked="${valoracionInstance.l4participacionEstimada == 2}"/> 2 pts
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l4comunicacionAMedios', 'error')} required">
@@ -106,7 +106,7 @@
         <g:message code="valoracion.l4comunicacionAMedios.label" default="Comunicación a medios:"/>
     </label>
     <g:checkBox class="check-box" onchange="sumar();" data="suma" name="l4comunicacionAMedios" value="4"
-                checked="${l4comunicacionAMedios == 4}"/> 4 pts
+                checked="${valoracionInstance.l4comunicacionAMedios == 4}"/> 4 pts
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l4usoNuevasTecnologías', 'error')} required">
@@ -114,7 +114,7 @@
         <g:message code="valoracion.l4usoNuevasTecnologías.label" default="Uso de nuevas tecnologías:"/>
     </label>
     <g:checkBox class="check-box" onchange="sumar();" data="suma" name="l4usoNuevasTecnologías" value="4"
-                checked="${l4usoNuevasTecnologías == 4}"/> 4 pts
+                checked="${valoracionInstance.l4usoNuevasTecnologías == 4}"/> 4 pts
 </div>
 <br>
 
