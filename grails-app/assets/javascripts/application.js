@@ -52,3 +52,13 @@ function recalcularImporteConcedido() {
     var concedido = solicitado * puntuacion / 100;
     $('[name="importeConcedido"]').val(concedido.toFixed(2).toString().replace(/\./, ','));
 }
+
+function actualizaL2Values(){
+    if($('[name="l2esClubFutbol"]').prop('checked')){
+        $('#residentes-no-futbol').hide();
+        $('#residentes-futbol').show();
+    }else{
+        $('#residentes-no-futbol').show();
+        $('#residentes-futbol').hide();
+    }
+}

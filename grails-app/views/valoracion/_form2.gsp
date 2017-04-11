@@ -204,11 +204,12 @@
     <label for="l2esClubFutbol">
         <g:message code="valoracion.l2esClubFutbol.label" default="Es club de fútbol:"/>
     </label>
-    <g:checkBox class="check-box" onchange="actualizaValues();" name="l2esClubFutbol"
+    <g:checkBox class="check-box" onchange="actualizaL2Values();" name="l2esClubFutbol"
                 checked="${valoracionInstance.l2esClubFutbol}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2residentes', 'error')} required">
+<div id="residentes-no-futbol"
+     class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2residentes', 'error')} required">
     <label for="l2residentes">
         <g:message code="valoracion.l2residentes.label" default="Residentes en Getxo:"/>
     </label>
@@ -233,6 +234,34 @@
                  checked="${valoracionInstance.l2residentes == 0}"/> Menos del 40% (0 pts)
     </div>
 </div>
+
+<div id="residentes-futbol"
+     class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2residentes', 'error')} required">
+    <label for="l2residentes">
+        <g:message code="valoracion.l2residentes.label" default="Residentes en Getxo:"/>
+    </label>
+    <g:radio name="l2residentes" value="7" onchange="sumarL2();" data="suma"
+             checked="${valoracionInstance.l2residentes == 7}"/> Más del 80% (7 pts)
+
+    <div class="fieldcontain">
+        <label for="l2residentes"></label>
+        <g:radio name="l2residentes" value="5" onchange="sumarL2();" data="suma"
+                 checked="${valoracionInstance.l2residentes == 5}"/> Más del 60% (5 pts)
+    </div>
+
+    <div class="fieldcontain">
+        <label for="l2residentes"></label>
+        <g:radio name="l2residentes" value="4" onchange="sumarL2();" data="suma"
+                 checked="${valoracionInstance.l2residentes == 4}"/> Más del 40% (4 pts)
+    </div>
+
+    <div class="fieldcontain">
+        <label for="l2residentes"></label>
+        <g:radio name="l2residentes" value="0" onchange="sumarL2();" data="suma"
+                 checked="${valoracionInstance.l2residentes == 0}"/> Menos del 40% (0 pts)
+    </div>
+</div>
+
 <br>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2jugadoresEquipoSenior', 'error')}">
@@ -382,6 +411,7 @@
 
 <h2>Asociaciones de pesca</h2>
 <br>
+
 <h3>Actividades realizadas y el volumen de participantes (max 5 pts):</h3>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2participantes', 'error')} required">
@@ -419,7 +449,9 @@
 
 <h2>Deportistas de alto rendimiento</h2>
 <br>
+
 <h3>TORNEOS / OPEN INTERNACIONALES:</h3>
+
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2puestoEnTorneosInternacionales', 'error')} required">
     <label for="l2puestoEnTorneosInternacionales">
         <g:message code="valoracion.l2puestoEnTorneosInternacionales.label"
@@ -431,7 +463,7 @@
     <div class="fieldcontain">
         <label for="l2puestoEnTorneosInternacionales"></label>
         <g:radio name="l2puestoEnTorneosInternacionales" value="6" onchange="sumarL2();" data="suma"
-             checked="${valoracionInstance.l2puestoEnTorneosInternacionales == 6}"/> Segundo puesto (6 pts)
+                 checked="${valoracionInstance.l2puestoEnTorneosInternacionales == 6}"/> Segundo puesto (6 pts)
     </div>
 
     <div class="fieldcontain">
@@ -449,6 +481,7 @@
 <br>
 
 <h3>CIRCUITOS DE COMPETICIÓN INTERNACIONAL:</h3>
+
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2puestoEnCircuitosInternacionales', 'error')} required">
     <label for="l2puestoEnCircuitosInternacionales">
         <g:message code="valoracion.l2puestoEnCircuitosInternacionales.label"
@@ -515,6 +548,7 @@
 <br>
 
 <h3>TORNEOS / OPEN ESTATALES:</h3>
+
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2puestoEnTorneosNacionales', 'error')} required">
     <label for="l2puestoEnTorneosNacionales">
         <g:message code="valoracion.l2puestoEnTorneosNacionales.label" default="Resultado:"/>
@@ -544,6 +578,7 @@
 <br>
 
 <h3>CIRCUITOS DE COMPETICIÓN ESTATAL:</h3>
+
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2puestoEnCircuitosNacionales', 'error')} required">
     <label for="l2puestoEnCircuitosNacionales">
         <g:message code="valoracion.l2puestoEnCircuitosNacionales.label" default="Resultado:"/>
@@ -590,6 +625,7 @@
 <br>
 
 <h3>PARTICIPACION EN TORNEOS / OPEN AUTONÓMICOS:</h3>
+
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2PrimerPuestoEnTorneosAutonomicos', 'error')} required">
     <label for="l2PrimerPuestoEnTorneosAutonomicos">
         <g:message code="valoracion.l2PrimerPuestoEnTorneosAutonomicos.label"
@@ -607,6 +643,7 @@
 <br>
 
 <h3>CAMPEONATOS DE EUSKADI:</h3>
+
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2campeonatosEuskadi', 'error')} required">
     <label for="l2campeonatosEuskadi">
         <g:message code="valoracion.l2campeonatosEuskadi.label" default="Resultado:"/>
@@ -635,6 +672,7 @@
 <br>
 
 <h3>CAMPEONATOS DE ESPAÑA:</h3>
+
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2campeonatosEspaña', 'error')} required">
     <label for="l2campeonatosEspaña">
         <g:message code="valoracion.l2campeonatosEspaña.label" default="Resultado:"/>
@@ -664,6 +702,7 @@
 <br>
 
 <h3>CAMPEONATOS DE EUROPA:</h3>
+
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2campeonatosEuropa', 'error')} required">
     <label for="l2campeonatosEuropa">
         <g:message code="valoracion.l2campeonatosEuropa.label" default="Resultado:"/>
@@ -711,6 +750,7 @@
 <br>
 
 <h3>CAMPEONATOS DEL MUNDO:</h3>
+
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2campeonatosMundo', 'error')} required">
     <label for="l2campeonatosMundo">
         <g:message code="valoracion.l2campeonatosMundo.label" default="Resultado:"/>
@@ -775,6 +815,7 @@
 <br>
 
 <h3>Factores de corrección:</h3>
+
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2indiceParticipacion', 'error')} required">
     <h6>Sólo individuales</h6>
     <label for="l2indiceParticipacion">

@@ -76,7 +76,8 @@
 <g:javascript>
     $(document).ready(function () {
         console.log("LINEA: " + ${valoracionInstance.linea});
-        sumar(${valoracionInstance.linea})
+        actualizaL2Values();
+        sumar(${valoracionInstance.linea});
     });
 </g:javascript>
 
