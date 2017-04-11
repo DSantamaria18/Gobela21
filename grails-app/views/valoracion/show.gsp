@@ -154,7 +154,6 @@
 				<li class="fieldcontain">
 					<span id="l1proyectoDeportivoCoherencia-label" class="property-label"><g:message code="valoracion.l1proyectoDeportivoCoherencia.label" default="L1proyecto Deportivo Coherencia" /></span>
 
-						%{--<span class="property-value" aria-labelledby="l1proyectoDeportivoCoherencia-label"><g:fieldValue bean="${valoracionInstance}" field="l1proyectoDeportivoCoherencia"/></span>--}%
 						<span class="property-value" aria-labelledby="l1proyectoDeportivoCoherencia-label">${valoracionInstance.l1proyectoDeportivoCoherencia.encodeAsHTML()}</span>
 
 				</li>
@@ -376,23 +375,86 @@
 				</li>
 				</g:if>
 
-				<g:if test="${valoracionInstance?.l2proyectoDeportivoCoherencia}">
+				%{--<g:if test="${valoracionInstance?.l2proyectoDeportivoCoherencia}">
 				<li class="fieldcontain">
 					<span id="l2proyectoDeportivoCoherencia-label" class="property-label"><g:message code="valoracion.l2proyectoDeportivoCoherencia.label" default="L2proyecto Deportivo Coherencia" /></span>
 
 						<span class="property-value" aria-labelledby="l2proyectoDeportivoCoherencia-label"><g:fieldValue bean="${valoracionInstance}" field="l2proyectoDeportivoCoherencia"/></span>
 
 				</li>
+				</g:if>--}%
+
+				<g:if test="${valoracionInstance?.l2viabilidad}">
+					<li class="fieldcontain">
+						<span id="l2viabilidad-label" class="property-label"><g:message code="valoracion.l2viabilidad.label" default="Viabilidad proyecto:" /></span>
+
+						<span class="property-value" aria-labelledby="l2viabilidad-label"><g:fieldValue bean="${valoracionInstance}" field="l2viabilidad"/></span>
+
+					</li>
 				</g:if>
 
-				<g:if test="${valoracionInstance?.l2proyectoDeportivoDiversidad}">
+				<g:if test="${valoracionInstance?.l2objetivosGK}">
+					<li class="fieldcontain">
+						<span id="l2objetivosGK-label" class="property-label"><g:message code="valoracion.l2objetivosGK.label" default="Objetivos GK:" /></span>
+
+						<span class="property-value" aria-labelledby="l2objetivosGK-label"><g:fieldValue bean="${valoracionInstance}" field="l2objetivosGK"/></span>
+
+					</li>
+				</g:if>
+
+				<g:if test="${valoracionInstance?.l2lenguajeNoSexista}">
+					<li class="fieldcontain">
+						<span id="l2lenguajeNoSexista-label" class="property-label"><g:message code="valoracion.l2lenguajeNoSexista.label" default="Lenguaje no sexista" /></span>
+
+						<span class="property-value" aria-labelledby="l2lenguajeNoSexista-label"><g:fieldValue bean="${valoracionInstance}" field="l2lenguajeNoSexista"/></span>
+
+					</li>
+				</g:if>
+
+				<g:if test="${valoracionInstance?.l2lenguajeDeGenero}">
+					<li class="fieldcontain">
+						<span id="l2lenguajeDeGenero-label" class="property-label"><g:message code="valoracion.l2lenguajeDeGenero.label" default="Lenguaje de género en publicaciones" /></span>
+
+						<span class="property-value" aria-labelledby="l2lenguajeDeGenero-label"><g:fieldValue bean="${valoracionInstance}" field="l2lenguajeDeGenero"/></span>
+
+					</li>
+				</g:if>
+
+				<g:if test="${valoracionInstance?.l2representacionFemeninaJunta}">
+					<li class="fieldcontain">
+						<span id="l2representacionFemeninaJunta-label" class="property-label"><g:message code="valoracion.l2representacionFemeninaJunta.label" default="Presencia femenina en la junta:" /></span>
+
+						<span class="property-value" aria-labelledby="l2representacionFemeninaJunta-label"><g:fieldValue bean="${valoracionInstance}" field="l2representacionFemeninaJunta"/></span>
+
+					</li>
+				</g:if>
+
+				<g:if test="${valoracionInstance?.l2inmigracion}">
+					<li class="fieldcontain">
+						<span id="l2inmigracion-label" class="property-label"><g:message code="valoracion.l2inmigracion.label" default="Integración inmigrantes:" /></span>
+
+						<span class="property-value" aria-labelledby="l2inmigracion-label"><g:fieldValue bean="${valoracionInstance}" field="l2inmigracion"/></span>
+
+					</li>
+				</g:if>
+
+				<g:if test="${valoracionInstance?.l2personasDiscapacidad}">
+					<li class="fieldcontain">
+						<span id="l2personasDiscapacidad-label" class="property-label"><g:message code="valoracion.l2personasDiscapacidad.label" default="Actividades para discapacitados:" /></span>
+
+						<span class="property-value" aria-labelledby="l2personasDiscapacidad-label"><g:fieldValue bean="${valoracionInstance}" field="l2personasDiscapacidad"/></span>
+
+					</li>
+				</g:if>
+
+				%{--<g:if test="${valoracionInstance?.l2proyectoDeportivoDiversidad}">
 				<li class="fieldcontain">
 					<span id="l2proyectoDeportivoDiversidad-label" class="property-label"><g:message code="valoracion.l2proyectoDeportivoDiversidad.label" default="L2proyecto Deportivo Diversidad" /></span>
 
 						<span class="property-value" aria-labelledby="l2proyectoDeportivoDiversidad-label"><g:fieldValue bean="${valoracionInstance}" field="l2proyectoDeportivoDiversidad"/></span>
 
 				</li>
-				</g:if>
+				</g:if>--}%
 
 				<g:if test="${valoracionInstance?.l2proyectoDeportivoEuskera}">
 				<li class="fieldcontain">
@@ -410,6 +472,24 @@
 						<span class="property-value" aria-labelledby="l2proyectoDeportivoParticipacionFemenina-label"><g:fieldValue bean="${valoracionInstance}" field="l2proyectoDeportivoParticipacionFemenina"/></span>
 
 				</li>
+				</g:if>
+
+				<g:if test="${valoracionInstance?.l2residentes}">
+					<li class="fieldcontain">
+						<span id="l2residentes-label" class="property-label"><g:message code="valoracion.l2residentes.label" default="Residentes en Getxo" /></span>
+
+						<span class="property-value" aria-labelledby="l2residentes-label"><g:fieldValue bean="${valoracionInstance}" field="l2residentes"/></span>
+
+					</li>
+				</g:if>
+
+				<g:if test="${valoracionInstance?.l2jugadoresEquipoSenior}">
+					<li class="fieldcontain">
+						<span id="l2jugadoresEquipoSenior-label" class="property-label"><g:message code="valoracion.l2jugadoresEquipoSenior.label" default="Jugadores jóvenes en equipo Senior:" /></span>
+
+						<span class="property-value" aria-labelledby="l2jugadoresEquipoSenior-label"><g:fieldValue bean="${valoracionInstance}" field="l2jugadoresEquipoSenior"/></span>
+
+					</li>
 				</g:if>
 
 				<g:if test="${valoracionInstance?.l2puestoEnCircuitosInternacionales}">

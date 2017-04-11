@@ -40,7 +40,11 @@ class BootStrap {
                     importeSolicitado: 66666).save(failOnError: true)
 
             new gobela21.Valoracion(linea: 2, l2costesActividadDe: 2, l2mediosPropios: 1, l2dificultadFinanciacion: 2
-                    , l2proyectoDeportivoCoherencia: '2,5', l2proyectoDeportivoDiversidad: 2, l2proyectoDeportivoEuskera: 4
+                    /*, l2proyectoDeportivoCoherencia: '2,5'*/
+                    , l2viabilidad: 2.5, l2objetivosGK: 2.5 /*
+                    , l2proyectoDeportivoDiversidad: 2*/
+                    , l2lenguajeNoSexista: 0.5, l2lenguajeDeGenero: 0.5, l2representacionFemeninaJunta: 2, l2inmigracion: 1
+                    , l2personasDiscapacidad: 1,l2proyectoDeportivoEuskera: 4
                     , l2proyectoDeportivoParticipacionFemenina: 2, l2residentes: 3, l2prensaLocal: 3, l2prensaComarcal: 2
                     , l2prensaRegional: 4, l2prensaEstatalInternacional: 0, l2deporteEscolar: 4, l2marcaGetxo: 4, l2getxoKirolak: 4
                     , l2centrosEscolares: 2, l2otrosClubes: 1, l2antiguedad: 1, l2participantes: 2, l2puestoEnTorneosInternacionales: 1

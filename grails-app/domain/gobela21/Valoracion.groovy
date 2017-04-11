@@ -53,12 +53,21 @@ class Valoracion {
     int l2dificultadFinanciacion
 
     // Proyecto deportivo
-    int l2proyectoDeportivoCoherencia
-    int l2proyectoDeportivoDiversidad
+//    int l2proyectoDeportivoCoherencia
+    float l2viabilidad
+    float l2objetivosGK
+//    int l2proyectoDeportivoDiversidad
+    float l2lenguajeNoSexista
+    float l2lenguajeDeGenero
+    int l2representacionFemeninaJunta
+    int l2inmigracion
+    int l2personasDiscapacidad
+
     int l2proyectoDeportivoEuskera
     int l2proyectoDeportivoParticipacionFemenina
 
     //  Incidencia de la actividad en la promoción del deporte entre quienes residen en Getxo
+    boolean l2esClubFutbol
     int l2residentes
 
     //Que el equipo senior disponga de jugadores entre los 18 y 23 años (sólo clubes de fútbol senior que militen por debajo de la 2ª B)

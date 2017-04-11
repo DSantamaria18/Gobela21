@@ -48,6 +48,25 @@ class ValoracionController {
         valoracionInstance.l1centrosEscolares = (params?.l1centrosEscolares) ? 1 : 0
         valoracionInstance.l1otrosClubes = (params?.l1otrosClubes) ? 1 : 0
 
+        valoracionInstance.l2viabilidad = (params?.l2viabilidad) ? 2.5 : 0
+        valoracionInstance.l2objetivosGK = (params?.l2objetivosGK) ? 2.5 : 0
+        valoracionInstance.l2lenguajeNoSexista = (params?.l2lenguajeNoSexista) ? 1 : 0
+        valoracionInstance.l2lenguajeDeGenero = (params?.l2lenguajeDeGenero) ? 1 : 0
+        valoracionInstance.l2representacionFemeninaJunta = (params?.l2representacionFemeninaJunta) ? 2 : 0
+        valoracionInstance.l2inmigracion = (params?.l2inmigracion) ? 1 : 0
+        valoracionInstance.l2personasDiscapacidad = (params?.l2personasDiscapacidad) ? 1 : 0
+        valoracionInstance.l2proyectoDeportivoEuskera = (params?.l2proyectoDeportivoEuskera) ? 10 : 0
+        valoracionInstance.l2esClubFutbol = (params?.l2esClubFutbol) ? true : false
+        valoracionInstance.l2prensaLocal = (params?.l2prensaLocal) ? 1 : 0
+        valoracionInstance.l2prensaComarcal = (params?.l2prensaComarcal) ? 1 : 0
+        valoracionInstance.l2prensaRegional = (params?.l2prensaRegional) ? 1 : 0
+        valoracionInstance.l2prensaEstatalInternacional = (params?.l2prensaEstatalInternacional) ? 2 : 0
+        valoracionInstance.l2deporteEscolar = (params?.l2deporteEscolar) ? 8 : 0
+        valoracionInstance.l2marcaGetxo = (params?.l2marcaGetxo) ? 7 : 0
+        valoracionInstance.l2getxoKirolak = (params?.l2getxoKirolak) ? 3 : 0
+        valoracionInstance.l2centrosEscolares = (params?.l2centrosEscolares) ? 1 : 0
+        valoracionInstance.l2otrosClubes = (params?.l2otrosClubes) ? 1 : 0
+
         valoracionInstance.l4propioClub = (params?.l4propioClub) ? 10 : 0
         valoracionInstance.l4otrosClubes = (params?.l4otrosClubes) ? 15 : 0
         valoracionInstance.l4ampas = (params?.l4ampas) ? 5 : 0
@@ -117,6 +136,24 @@ class ValoracionController {
         valoracionInstance.l1centrosEscolares = (params?.l1centrosEscolares) ? 1 : 0
         valoracionInstance.l1otrosClubes = (params?.l1otrosClubes) ? 1 : 0
 
+        valoracionInstance.l2viabilidad = (params?.l2viabilidad) ? 2.5 : 0
+        valoracionInstance.l2objetivosGK = (params?.l2objetivosGK) ? 2.5 : 0
+        valoracionInstance.l2lenguajeNoSexista = (params?.l2lenguajeNoSexista) ? 1 : 0
+        valoracionInstance.l2lenguajeDeGenero = (params?.l2lenguajeDeGenero) ? 1 : 0
+        valoracionInstance.l2representacionFemeninaJunta = (params?.l2representacionFemeninaJunta) ? 2 : 0
+        valoracionInstance.l2inmigracion = (params?.l2inmigracion) ? 1 : 0
+        valoracionInstance.l2personasDiscapacidad = (params?.l2personasDiscapacidad) ? 1 : 0
+        valoracionInstance.l2proyectoDeportivoEuskera = (params?.l2proyectoDeportivoEuskera) ? 10 : 0
+        valoracionInstance.l2esClubFutbol = (params?.l2esClubFutbol) ? true : false
+        valoracionInstance.l2prensaLocal = (params?.l2prensaLocal) ? 1 : 0
+        valoracionInstance.l2prensaComarcal = (params?.l2prensaComarcal) ? 1 : 0
+        valoracionInstance.l2prensaRegional = (params?.l2prensaRegional) ? 1 : 0
+        valoracionInstance.l2prensaEstatalInternacional = (params?.l2prensaEstatalInternacional) ? 2 : 0
+        valoracionInstance.l2deporteEscolar = (params?.l2deporteEscolar) ? 8 : 0
+        valoracionInstance.l2marcaGetxo = (params?.l2marcaGetxo) ? 7 : 0
+        valoracionInstance.l2getxoKirolak = (params?.l2getxoKirolak) ? 3 : 0
+        valoracionInstance.l2centrosEscolares = (params?.l2centrosEscolares) ? 1 : 0
+        valoracionInstance.l2otrosClubes = (params?.l2otrosClubes) ? 1 : 0
 
         valoracionInstance.l4propioClub = (params?.l4propioClub) ? 10 : 0
         valoracionInstance.l4otrosClubes = (params?.l4otrosClubes) ? 15 : 0
