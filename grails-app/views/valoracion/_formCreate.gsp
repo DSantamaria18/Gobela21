@@ -29,7 +29,8 @@
     </g:if>
     <g:if test="${params.linea == '2'}">
         <h4>AVISO:</h4>
-        <h5>Debido a las particularidades del cálculo de la línea 2, no se realizará el cálculo automático de puntuaciones</h5>
+        <h5>Debido a las particularidades del cálculo de la línea 2, los coeficientes de corrección no serán aplicados a la puntuación</h5>
+        <br>
         <g:render template="form2"/>
     </g:if>
     <g:if test="${params.linea == '3'}">

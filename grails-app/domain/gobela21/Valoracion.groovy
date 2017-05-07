@@ -17,11 +17,11 @@ class Valoracion {
     int l1dificultadFinanciacion
 
     // Proyecto deportivo
-    //String l1proyectoDeportivoCoherencia = '0'       //TODO: dividir en sus elementos
+    // Coherencia
     float l1viabilidad
     float l1objetivosGK
 
-    //int l1proyectoDeportivoDiversidad
+    //Diversidad
     int l1lenguajeNoSexista
     int l1lenguajeDeGenero
     int l1representacionFemeninaJunta
@@ -62,11 +62,9 @@ class Valoracion {
     int l2dificultadFinanciacion
 
     // Proyecto deportivo
-//    int l2proyectoDeportivoCoherencia
     float l2viabilidad
     float l2objetivosGK
 
-//    int l2proyectoDeportivoDiversidad
     float l2lenguajeNoSexista
     float l2lenguajeDeGenero
     int l2representacionFemeninaJunta
@@ -213,7 +211,6 @@ class Valoracion {
     int l7patrcinioPrivado
 
     static constraints = {
-        //l1proyectoDeportivoCoherencia(nullable: true, inList: ["0", "2.5", "5"])
         l2jugadoresEquipoSenior(nullable: true)
         importeConcedido(nullable: true)
         puntuacion(nullable: true)

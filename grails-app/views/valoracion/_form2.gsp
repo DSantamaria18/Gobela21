@@ -409,9 +409,6 @@
 </div>
 <br>
 
-<h2>Asociaciones de pesca</h2>
-<br>
-
 <h3>Actividades realizadas y el volumen de participantes (max 5 pts):</h3>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2participantes', 'error')} required">

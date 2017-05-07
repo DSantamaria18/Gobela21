@@ -94,68 +94,6 @@
 </div>
 <br>
 
-%{--<h3>Proyecto Deportivo y esfuerzo organizativo (max 25 pts):</h3>
-
-<div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l1proyectoDeportivoCoherencia', 'error')} required">
-    <label for="l1proyectoDeportivoCoherencia">
-        <g:message code="valoracion.l1proyectoDeportivoCoherencia.label" default="Coherencia del Proyecto Deportivo:"/>
-    </label>
-    <g:select name="l1proyectoDeportivoCoherencia"
-              from="${valoracionInstance.constraints.l1proyectoDeportivoCoherencia.inList}" required=""
-              value="${fieldValue(bean: valoracionInstance, field: 'l1proyectoDeportivoCoherencia')}"
-              valueMessagePrefix="valoracion.l1proyectoDeportivoCoherencia"
-              onchange="sumar();" id="select-coherencia" data="suma"/>
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l1proyectoDeportivoDiversidad', 'error')} required">
-    <label for="l1proyectoDeportivoDiversidad">
-        <g:message code="valoracion.l1proyectoDeportivoDiversidad.label" default="Atención a la Diversidad:"/>
-    </label>
-    <g:field data="suma" name="l1proyectoDeportivoDiversidad" type="number"
-             value="${valoracionInstance.l1proyectoDeportivoDiversidad}" required="" onchange="sumar();"/>
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l1proyectoDeportivoEuskera', 'error')} required">
-    <label for="l1proyectoDeportivoEuskera">
-        <g:message code="valoracion.l1proyectoDeportivoEuskera.label" default="Desarrollo en Euskera:"/>
-    </label>
-    <g:checkBox class="check-box" onchange="sumar();" data="suma" name="l1proyectoDeportivoEuskera" value="10"
-                checked="${valoracionInstance.l1proyectoDeportivoEuskera == 10}"/> 10 pts
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l1proyectoDeportivoParticipacionFemenina', 'error')} required">
-    <label for="l1proyectoDeportivoParticipacionFemenina">
-        <g:message code="valoracion.l1proyectoDeportivoParticipacionFemenina.label" default="Participacion Femenina:"/>
-    </label>
-    <g:radio name="l1proyectoDeportivoParticipacionFemenina" value="1" onchange="sumar();" data="suma"
-             checked="${valoracionInstance.l1proyectoDeportivoParticipacionFemenina == 1}"/> Menos del 20% (1 pt)
-
-    <div class="fieldcontain">
-        <label for="l1proyectoDeportivoParticipacionFemenina"></label>
-        <g:radio name="l1proyectoDeportivoParticipacionFemenina" value="2" onchange="sumar();" data="suma"
-                 checked="${valoracionInstance.l1proyectoDeportivoParticipacionFemenina == 2}"/> Entre el 20% y el 40% (2 pts)
-    </div>
-
-    <div class="fieldcontain">
-        <label for="l1proyectoDeportivoParticipacionFemenina"></label>
-        <g:radio name="l1proyectoDeportivoParticipacionFemenina" value="3" onchange="sumar();" data="suma"
-                 checked="${valoracionInstance.l1proyectoDeportivoParticipacionFemenina == 3}"/> Entre el 40% y el 60% (3 pts)
-    </div>
-
-    <div class="fieldcontain">
-        <label for="l1proyectoDeportivoParticipacionFemenina"></label>
-        <g:radio name="l1proyectoDeportivoParticipacionFemenina" value="4" onchange="sumar();" data="suma"
-                 checked="${valoracionInstance.l1proyectoDeportivoParticipacionFemenina == 4}"/> Entre el 60% y el 80% (4 pts)
-    </div>
-
-    <div class="fieldcontain">
-        <label for="l1proyectoDeportivoParticipacionFemenina"></label>
-        <g:radio name="l1proyectoDeportivoParticipacionFemenina" value="5" onchange="sumar();" data="suma"
-                 checked="${valoracionInstance.l1proyectoDeportivoParticipacionFemenina == 5}"/> Entre el 80% y el 100% (5 pts)
-    </div>
-</div>
-<br>--}%
-
 <h3>Proyecto deportivo y esfuerzo organizativo (max 5pts):</h3>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l1viabilidad', 'error')} required">

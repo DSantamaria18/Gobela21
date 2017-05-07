@@ -184,15 +184,6 @@
             </li>
         </g:if>
 
-    %{--<g:if test="${valoracionInstance?.l1proyectoDeportivoCoherencia && valoracionInstance.linea == 1}">
-    <li class="fieldcontain">
-        <span id="l1proyectoDeportivoCoherencia-label" class="property-label"><g:message code="valoracion.l1proyectoDeportivoCoherencia.label" default="L1proyecto Deportivo Coherencia" /></span>
-
-            <span class="property-value" aria-labelledby="l1proyectoDeportivoCoherencia-label">${valoracionInstance.l1proyectoDeportivoCoherencia.encodeAsHTML()}</span>
-
-    </li>
-    </g:if>--}%
-
         <g:if test="${valoracionInstance?.l1viabilidad}">
             <li class="fieldcontain">
                 <span id="l1viabilidad-label" class="property-label"><g:message code="valoracion.l1viabilidad.label"
@@ -272,18 +263,6 @@
 
             </li>
         </g:if>
-
-    %{--<g:if test="${valoracionInstance?.l1proyectoDeportivoDiversidad}">
-    <li class="fieldcontain">
-        <span id="l1proyectoDeportivoDiversidad-label" class="property-label"><g:message code="valoracion.l1proyectoDeportivoDiversidad.label" default="L1proyecto Deportivo Diversidad" /></span>
-
-            <span class="property-value" aria-labelledby="l1proyectoDeportivoDiversidad-label"><g:fieldValue bean="${valoracionInstance}" field="l1proyectoDeportivoDiversidad"/></span>
-
-    </li>
-    </g:if>--}%
-
-
-
 
         <g:if test="${valoracionInstance?.l1proyectoDeportivoEuskera}">
             <li class="fieldcontain">
