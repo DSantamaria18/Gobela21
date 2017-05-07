@@ -67,8 +67,8 @@ class Valoracion {
     float l2objetivosGK
 
 //    int l2proyectoDeportivoDiversidad
-    int l2lenguajeNoSexista
-    int l2lenguajeDeGenero
+    float l2lenguajeNoSexista
+    float l2lenguajeDeGenero
     int l2representacionFemeninaJunta
     int l2inmigracion
     int l2personasDiscapacidad

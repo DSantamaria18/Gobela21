@@ -41,7 +41,7 @@ class ValoracionController {
         valoracionInstance.l1objetivosGK = (params?.l1objetivosGK) ? 2.5 : 0
         valoracionInstance.l1lenguajeNoSexista = (params?.l1lenguajeNoSexista) ? 1 : 0
         valoracionInstance.l1lenguajeDeGenero = (params?.l1lenguajeDeGenero) ? 1 : 0
-        valoracionInstance.l1representacionFemeninaJunta = (params?.l1representacionFemeninaJunta) ? 2 : 0
+        valoracionInstance.l1representacionFemeninaJunta = (params?.l1representacionFemeninaJunta) ? 1 : 0
         valoracionInstance.l1inmigracion = (params?.l1inmigracion) ? 1 : 0
         valoracionInstance.l1personasDiscapacidad = (params?.l1personasDiscapacidad) ? 1 : 0
         valoracionInstance.l1proyectoDeportivoEuskera = (params?.l1proyectoDeportivoEuskera) ? 10 : 0
@@ -57,8 +57,8 @@ class ValoracionController {
 
         valoracionInstance.l2viabilidad = (params?.l2viabilidad) ? 2.5 : 0
         valoracionInstance.l2objetivosGK = (params?.l2objetivosGK) ? 2.5 : 0
-        valoracionInstance.l2lenguajeNoSexista = (params?.l2lenguajeNoSexista) ? 1 : 0
-        valoracionInstance.l2lenguajeDeGenero = (params?.l2lenguajeDeGenero) ? 1 : 0
+        valoracionInstance.l2lenguajeNoSexista = (params?.l2lenguajeNoSexista) ? 0.5 : 0
+        valoracionInstance.l2lenguajeDeGenero = (params?.l2lenguajeDeGenero) ? 0.5 : 0
         valoracionInstance.l2representacionFemeninaJunta = (params?.l2representacionFemeninaJunta) ? 2 : 0
         valoracionInstance.l2inmigracion = (params?.l2inmigracion) ? 1 : 0
         valoracionInstance.l2personasDiscapacidad = (params?.l2personasDiscapacidad) ? 1 : 0
@@ -153,8 +153,8 @@ class ValoracionController {
 
         valoracionInstance.l2viabilidad = (params?.l2viabilidad) ? 2.5 : 0
         valoracionInstance.l2objetivosGK = (params?.l2objetivosGK) ? 2.5 : 0
-        valoracionInstance.l2lenguajeNoSexista = (params?.l2lenguajeNoSexista) ? 1 : 0
-        valoracionInstance.l2lenguajeDeGenero = (params?.l2lenguajeDeGenero) ? 1 : 0
+        valoracionInstance.l2lenguajeNoSexista = (params?.l2lenguajeNoSexista) ? 0.5 : 0
+        valoracionInstance.l2lenguajeDeGenero = (params?.l2lenguajeDeGenero) ? 0.5 : 0
         valoracionInstance.l2representacionFemeninaJunta = (params?.l2representacionFemeninaJunta) ? 2 : 0
         valoracionInstance.l2inmigracion = (params?.l2inmigracion) ? 1 : 0
         valoracionInstance.l2personasDiscapacidad = (params?.l2personasDiscapacidad) ? 1 : 0

@@ -122,14 +122,14 @@
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2lenguajeNoSexista', 'error')} required">
     <label for="l2lenguajeNoSexista">Lenguaje no sexista:</label>
-    <g:checkBox class="check-box" onchange="sumar(2);" data="suma" name="l2lenguajeNoSexista" value="1"
-                checked="${valoracionInstance.l2lenguajeNoSexista == 1}"/> 1 pt
+    <g:checkBox class="check-box" onchange="sumar(2);" data="suma" name="l2lenguajeNoSexista" value="0.5"
+                checked="${valoracionInstance.l2lenguajeNoSexista == 0.5}"/> 0,5 pts
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2lenguajeDeGenero', 'error')} required">
     <label for="l2lenguajeDeGenero">Correcta utilización del lenguaje de género en las publicaciones:</label>
-    <g:checkBox class="check-box" onchange="sumar(2);" data="suma" name="l2lenguajeDeGenero" value="1"
-                checked="${valoracionInstance.l2lenguajeDeGenero == 1}"/> 1 pt
+    <g:checkBox class="check-box" onchange="sumar(2);" data="suma" name="l2lenguajeDeGenero" value="0.5"
+                checked="${valoracionInstance.l2lenguajeDeGenero == 0.5}"/> 0,5 pts
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l2representacionFemeninaJunta', 'error')} required">

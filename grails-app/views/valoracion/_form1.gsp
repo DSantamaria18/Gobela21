@@ -66,7 +66,7 @@
 
 <h3>Dificultad para acudir a otros medios de financiación (max 30 pts):</h3>
 
-<div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l1dificultadFinanciacion', 'error')} required">
+%{--<div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l1dificultadFinanciacion', 'error')} required">
     <label for="l1dificultadFinanciacion">
         <g:message code="valoracion.l1dificultadFinanciacion.label" default="Dificultad de Financiación:"/>
     </label>
@@ -89,6 +89,36 @@
         <label for="l1dificultadFinanciacion"></label>
         <g:radio name="l1dificultadFinanciacion" value="30" onchange="sumar();" data="suma"
                  checked="${valoracionInstance.l1dificultadFinanciacion == 30}"/> Menos de 4.000€ (30 pts)
+    </div>
+</div>
+<br>--}%
+
+<h3>Dificultad para acudir a otros medios de financiación (max 5 pts):</h3>
+
+<div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l1dificultadFinanciacion', 'error')} required">
+    <label for="l1dificultadFinanciacion">
+        <g:message code="valoracion.l1dificultadFinanciacion.label" default="Patrocinio privado:"/>
+        <span class="required-indicator">*</span>
+    </label>
+    <g:radio name="l1dificultadFinanciacion" value="1" onchange="sumar();" data="suma"
+             checked="${valoracionInstance.l1dificultadFinanciacion == 1}"/> Más de 10.000€ (1 pt)
+
+    <div class="fieldcontain">
+        <label for="l1dificultadFinanciacion"></label>
+        <g:radio name="l1dificultadFinanciacion" value="3" onchange="sumar();" data="suma"
+                 checked="${valoracionInstance.l1dificultadFinanciacion == 3}"/> Entre 7.000€ y 10.000€ (3 pts)
+    </div>
+
+    <div class="fieldcontain">
+        <label for="l1dificultadFinanciacion"></label>
+        <g:radio name="l1dificultadFinanciacion" value="4" onchange="sumar();" data="suma"
+                 checked="${valoracionInstance.l1dificultadFinanciacion == 4}"/> Entre 4.000€ y 7.000€ (4 pts)
+    </div>
+
+    <div class="fieldcontain">
+        <label for="l1dificultadFinanciacion"></label>
+        <g:radio name="l1dificultadFinanciacion" value="5" onchange="sumar();" data="suma"
+                 checked="${valoracionInstance.l1dificultadFinanciacion == 5}"/> Menos de 4.000€ (5 pts)
     </div>
 </div>
 <br>
@@ -190,8 +220,8 @@
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l1representacionFemeninaJunta', 'error')} required">
     <label for="l1representacionFemeninaJunta">Más del 20% de mujeres en la junta directiva:</label>
-    <g:checkBox class="check-box" onchange="sumar();" data="suma" name="l1representacionFemeninaJunta" value="2"
-                checked="${valoracionInstance.l1representacionFemeninaJunta == 2}"/> 2 pts
+    <g:checkBox class="check-box" onchange="sumar();" data="suma" name="l1representacionFemeninaJunta" value="1"
+                checked="${valoracionInstance.l1representacionFemeninaJunta == 1}"/> 1 pt
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l1inmigracion', 'error')} required">
@@ -200,6 +230,12 @@
                 checked="${valoracionInstance.l1inmigracion == 1}"/> 1 pt
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l1personasDiscapacidad', 'error')} required">
+    <label for="l1personasDiscapacidad">Actividades para personas con discapacidad:</label>
+    <g:checkBox class="check-box" onchange="sumar();" data="suma" name="l1personasDiscapacidad" value="1"
+                checked="${valoracionInstance.l1personasDiscapacidad == 1}"/> 1 pt
+</div>
+<br>
 
 <h3>Incidencia en la promoción del deporte entre la personas residentes en Getxo (max 15 pts):</h3>
 

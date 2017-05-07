@@ -114,6 +114,11 @@
 			${grailsApplication.metadata['app.buildDate']}
 			${grailsApplication.metadata['app.buildProfile']})</h2>
 			<div id="controller-list" role="navigation">
+				<h2>Modificaciones 07/05/2017 (2):</h2>
+				<ul>
+					<li>Corregida puntuación para apartado "Dificultades de financiación" para líneas 1 y 2</li>
+					<li>Corregida puntuación para "Atención a la diversidad" para Líneas 1 y 2</li>
+				</ul>
 				<h2>Modificaciones 07/05/2017:</h2>
 				<ul>
 					<li>Habilitado el cálculo automático de puntuaciones para valoraciones L2</li>
