@@ -64,35 +64,6 @@
 </div>
 <br>
 
-<h3>Dificultad para acudir a otros medios de financiación (max 30 pts):</h3>
-
-%{--<div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l1dificultadFinanciacion', 'error')} required">
-    <label for="l1dificultadFinanciacion">
-        <g:message code="valoracion.l1dificultadFinanciacion.label" default="Dificultad de Financiación:"/>
-    </label>
-    <g:radio name="l1dificultadFinanciacion" value="10" onchange="sumar();" data="suma"
-             checked="${valoracionInstance.l1dificultadFinanciacion == 10}"/> Más de 10.000€ (10 pts)
-
-    <div class="fieldcontain">
-        <label for="l1dificultadFinanciacion"></label>
-        <g:radio name="l1dificultadFinanciacion" value="15" onchange="sumar();" data="suma"
-                 checked="${valoracionInstance.l1dificultadFinanciacion == 15}"/> Entre 7.000€ y 10.000€ (15 pts)
-    </div>
-
-    <div class="fieldcontain">
-        <label for="l1dificultadFinanciacion"></label>
-        <g:radio name="l1dificultadFinanciacion" value="20" onchange="sumar();" data="suma"
-                 checked="${valoracionInstance.l1dificultadFinanciacion == 20}"/> Entre 4.000€ y 7.000€ (20 pts)
-    </div>
-
-    <div class="fieldcontain">
-        <label for="l1dificultadFinanciacion"></label>
-        <g:radio name="l1dificultadFinanciacion" value="30" onchange="sumar();" data="suma"
-                 checked="${valoracionInstance.l1dificultadFinanciacion == 30}"/> Menos de 4.000€ (30 pts)
-    </div>
-</div>
-<br>--}%
-
 <h3>Dificultad para acudir a otros medios de financiación (max 5 pts):</h3>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l1dificultadFinanciacion', 'error')} required">
