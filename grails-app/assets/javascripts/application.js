@@ -28,6 +28,7 @@ function sumar(linea) {
             var type = $(this).attr('type');
             if (type === "checkbox" || type === "radio") {
                 if (this.checked) {
+                    console.log("VALOR CHECK: " + $(this).val())
                     valor = parseFloat($(this).val());
                 }
             } else {

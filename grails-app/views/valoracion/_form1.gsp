@@ -93,7 +93,7 @@
 </div>
 <br>
 
-<h3>Proyecto Deportivo y esfuerzo organizativo (max 25 pts):</h3>
+%{--<h3>Proyecto Deportivo y esfuerzo organizativo (max 25 pts):</h3>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l1proyectoDeportivoCoherencia', 'error')} required">
     <label for="l1proyectoDeportivoCoherencia">
@@ -153,7 +153,53 @@
                  checked="${valoracionInstance.l1proyectoDeportivoParticipacionFemenina == 5}"/> Entre el 80% y el 100% (5 pts)
     </div>
 </div>
+<br>--}%
+
+<h3>Proyecto deportivo y esfuerzo organizativo (max 5pts):</h3>
+
+<div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l1viabilidad', 'error')} required">
+    <label for="l1viabilidad">
+        <g:message code="valoracion.l1viabilidad.label" default="Viabilidad del proyecto:"/>
+    </label>
+    <g:checkBox class="check-box" onchange="sumar();" data="suma" name="l1viabilidad" value="2.5"
+                checked="${valoracionInstance.l1viabilidad == 2.5}"/> 2,5 pts
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l1viabilidad', 'error')} required">
+    <label for="l1objetivosGK">
+        <g:message code="valoracion.l1objetivosGK.label" default="Objetivos GK:"/>
+    </label>
+    <g:checkBox class="check-box" onchange="sumar();" data="suma" name="l1objetivosGK" value="2.5"
+                checked="${valoracionInstance.l1objetivosGK == 2.5}"/> 2,5 pts
+</div>
 <br>
+
+<h3>Atención a la diversidad (max 5pts):</h3>
+
+<div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l1lenguajeNoSexista', 'error')} required">
+    <label for="l1lenguajeNoSexista">Lenguaje no sexista:</label>
+    <g:checkBox class="check-box" onchange="sumar();" data="suma" name="l1lenguajeNoSexista" value="1"
+                checked="${valoracionInstance.l1lenguajeNoSexista == 1}"/> 1 pt
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l1lenguajeDeGenero', 'error')} required">
+    <label for="l1lenguajeDeGenero">Correcta utilización del lenguaje de género en las publicaciones:</label>
+    <g:checkBox class="check-box" onchange="sumar();" data="suma" name="l1lenguajeDeGenero" value="1"
+                checked="${valoracionInstance.l1lenguajeDeGenero == 1}"/> 1 pt
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l1representacionFemeninaJunta', 'error')} required">
+    <label for="l1representacionFemeninaJunta">Más del 20% de mujeres en la junta directiva:</label>
+    <g:checkBox class="check-box" onchange="sumar();" data="suma" name="l1representacionFemeninaJunta" value="2"
+                checked="${valoracionInstance.l1representacionFemeninaJunta == 2}"/> 2 pts
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l1inmigracion', 'error')} required">
+    <label for="l1inmigracion">Integración a la inmigración:</label>
+    <g:checkBox class="check-box" onchange="sumar();" data="suma" name="l1inmigracion" value="1"
+                checked="${valoracionInstance.l1inmigracion == 1}"/> 1 pt
+</div>
+
 
 <h3>Incidencia en la promoción del deporte entre la personas residentes en Getxo (max 15 pts):</h3>
 

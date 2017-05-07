@@ -37,6 +37,13 @@ class ValoracionController {
             return
         }
 
+        valoracionInstance.l1viabilidad = (params?.l1viabilidad) ? 2.5 : 0
+        valoracionInstance.l1objetivosGK = (params?.l1objetivosGK) ? 2.5 : 0
+        valoracionInstance.l1lenguajeNoSexista = (params?.l1lenguajeNoSexista) ? 1 : 0
+        valoracionInstance.l1lenguajeDeGenero = (params?.l1lenguajeDeGenero) ? 1 : 0
+        valoracionInstance.l1representacionFemeninaJunta = (params?.l1representacionFemeninaJunta) ? 2 : 0
+        valoracionInstance.l1inmigracion = (params?.l1inmigracion) ? 1 : 0
+        valoracionInstance.l1personasDiscapacidad = (params?.l1personasDiscapacidad) ? 1 : 0
         valoracionInstance.l1proyectoDeportivoEuskera = (params?.l1proyectoDeportivoEuskera) ? 10 : 0
         valoracionInstance.l1prensaLocal = (params?.l1prensaLocal) ? 1 : 0
         valoracionInstance.l1prensaComarcal = (params?.l1prensaComarcal) ? 1 : 0
@@ -125,6 +132,14 @@ class ValoracionController {
             respond valoracionInstance.errors, view: 'edit'
             return
         }
+
+        valoracionInstance.l1viabilidad = (params?.l1viabilidad) ? 2.5 : 0
+        valoracionInstance.l1objetivosGK = (params?.l1objetivosGK) ? 2.5 : 0
+        valoracionInstance.l1lenguajeNoSexista = (params?.l1lenguajeNoSexista) ? 1 : 0
+        valoracionInstance.l1lenguajeDeGenero = (params?.l1lenguajeDeGenero) ? 1 : 0
+        valoracionInstance.l1representacionFemeninaJunta = (params?.l1representacionFemeninaJunta) ? 2 : 0
+        valoracionInstance.l1inmigracion = (params?.l1inmigracion) ? 1 : 0
+        valoracionInstance.l1personasDiscapacidad = (params?.l1personasDiscapacidad) ? 1 : 0
         valoracionInstance.l1proyectoDeportivoEuskera = (params?.l1proyectoDeportivoEuskera) ? 10 : 0
         valoracionInstance.l1prensaLocal = (params?.l1prensaLocal) ? 1 : 0
         valoracionInstance.l1prensaComarcal = (params?.l1prensaComarcal) ? 1 : 0

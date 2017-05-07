@@ -105,7 +105,7 @@
     <label for="l2viabilidad">
         <g:message code="valoracion.l2viabilidad.label" default="Viabilidad del proyecto:"/>
     </label>
-    <g:checkBox class="check-box" onchange="sumarL2();" data="suma" name="l2viabilidad" value="2,5"
+    <g:checkBox class="check-box" onchange="sumarL2();" data="suma" name="l2viabilidad" value="2.5"
                 checked="${valoracionInstance.l2viabilidad == 2.5}"/> 2,5 pts
 </div>
 
@@ -113,7 +113,7 @@
     <label for="l2objetivosGK">
         <g:message code="valoracion.l2objetivosGK.label" default="Objetivos GK:"/>
     </label>
-    <g:checkBox class="check-box" onchange="sumarL2();" data="suma" name="l2objetivosGK" value="2,5"
+    <g:checkBox class="check-box" onchange="sumarL2();" data="suma" name="l2objetivosGK" value="2.5"
                 checked="${valoracionInstance.l2objetivosGK == 2.5}"/> 2,5 pts
 </div>
 <br>
