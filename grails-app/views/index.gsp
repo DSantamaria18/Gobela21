@@ -114,6 +114,11 @@
 			${grailsApplication.metadata['app.buildDate']}
 			${grailsApplication.metadata['app.buildProfile']})</h2>
 			<div id="controller-list" role="navigation">
+				<h2>Modificaciones 07/05/2017:</h2>
+				<ul>
+					<li>Habilitado el cálculo automático de puntuaciones para valoraciones L2</li>
+					<li>Modificados los formularios de valoración para todas las líneas</li>
+				</ul>
 				<h2>Modificaciones 09/04/2017:</h2>
 				<ul>
 					<li>Arreglado límite de campos de MEMORIA</li>
