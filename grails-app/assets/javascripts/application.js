@@ -20,7 +20,6 @@ if (typeof jQuery !== 'undefined') {
 }
 
 function sumar(linea) {
-    if (linea != 2) {
         var total = 0.0;
         total = (total == null || total == undefined || total == "") ? 0.0 : total;
         $('[data="suma"]').each(function () {
@@ -28,7 +27,6 @@ function sumar(linea) {
             var type = $(this).attr('type');
             if (type === "checkbox" || type === "radio") {
                 if (this.checked) {
-                    console.log("VALOR CHECK: " + $(this).val())
                     valor = parseFloat($(this).val());
                 }
             } else {
@@ -38,7 +36,6 @@ function sumar(linea) {
         });
         $('[name="puntuacion"]').val(total.toFixed(2).toString().replace(/\./, ','));
         calcularImporteConcedido(total);
-    }
 }
 
 function calcularImporteConcedido(puntuacion){
