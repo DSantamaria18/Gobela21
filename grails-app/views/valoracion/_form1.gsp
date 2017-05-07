@@ -208,6 +208,52 @@
 </div>
 <br>
 
+<h3>Desarrollo de la actividad con utilización de ambas lenguas oficiales de la CAV (max 10 pts):</h3>
+
+<div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l1proyectoDeportivoEuskera', 'error')} required">
+    <label for="l1proyectoDeportivoEuskera">
+        <g:message code="valoracion.l1proyectoDeportivoEuskera.label" default="Uso del Euskera:"/>
+    </label>
+    <g:checkBox class="check-box" onchange="sumar();" data="suma" name="l1proyectoDeportivoEuskera" value="10"
+                checked="${valoracionInstance.l1proyectoDeportivoEuskera == 10}"/> 10 pts
+</div>
+<br>
+
+<h3>Incidencia y promoción en el deporte femenino (max 5 pts):</h3>
+
+<div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l1proyectoDeportivoParticipacionFemenina', 'error')} required">
+    <label for="l1proyectoDeportivoParticipacionFemenina">
+        <g:message code="valoracion.l1proyectoDeportivoParticipacionFemenina.label" default="Participacion femenina:"/>
+    </label>
+    <g:radio name="l1proyectoDeportivoParticipacionFemenina" value="1" onchange="sumar();" data="suma"
+             checked="${valoracionInstance.l1proyectoDeportivoParticipacionFemenina == 1}"/> Menos del 20% (1 pt)
+
+    <div class="fieldcontain">
+        <label for="l1proyectoDeportivoParticipacionFemenina"></label>
+        <g:radio name="l1proyectoDeportivoParticipacionFemenina" value="2" onchange="sumar();" data="suma"
+                 checked="${valoracionInstance.l1proyectoDeportivoParticipacionFemenina == 2}"/> Entre el 20% y el 40% (2 pts)
+    </div>
+
+    <div class="fieldcontain">
+        <label for="l1proyectoDeportivoParticipacionFemenina"></label>
+        <g:radio name="l1proyectoDeportivoParticipacionFemenina" value="3" onchange="sumar();" data="suma"
+                 checked="${valoracionInstance.l1proyectoDeportivoParticipacionFemenina == 3}"/> Entre el 40% y el 60% (3 pts)
+    </div>
+
+    <div class="fieldcontain">
+        <label for="l1proyectoDeportivoParticipacionFemenina"></label>
+        <g:radio name="l1proyectoDeportivoParticipacionFemenina" value="4" onchange="sumar();" data="suma"
+                 checked="${valoracionInstance.l1proyectoDeportivoParticipacionFemenina == 4}"/> Entre el 60% y el 80% (4 pts)
+    </div>
+
+    <div class="fieldcontain">
+        <label for="l1proyectoDeportivoParticipacionFemenina"></label>
+        <g:radio name="l1proyectoDeportivoParticipacionFemenina" value="5" onchange="sumar();" data="suma"
+                 checked="${valoracionInstance.l1proyectoDeportivoParticipacionFemenina == 5}"/> Entre el 80% y el 100% (5 pts)
+    </div>
+</div>
+<br>
+
 <h3>Incidencia en la promoción del deporte entre la personas residentes en Getxo (max 15 pts):</h3>
 
 <div class="fieldcontain ${hasErrors(bean: valoracionInstance, field: 'l1residentes', 'error')} required">
@@ -336,8 +382,8 @@
 
     <div class="fieldcontain">
         <label for="l1antiguedad"></label>
-        <g:radio name="l1antiguedad" value="4" onchange="sumar();" data="suma"
-                 checked="${valoracionInstance.l1antiguedad == 4}"/> 4 años (4 pts)
+        <g:radio name="l1antiguedad" value="5" onchange="sumar();" data="suma"
+                 checked="${valoracionInstance.l1antiguedad == 5}"/> 4 años (5 pts)
     </div>
 </div>
 <br>
