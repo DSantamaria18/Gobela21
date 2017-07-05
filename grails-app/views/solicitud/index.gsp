@@ -18,7 +18,7 @@
 		</div>
 		<div id="div-search" class="content scaffold-list">
 			<h1>Buscar solicitud:</h1>
-			<g:form action="list" method="post">
+			<g:form action="buscarSolicitud" method="post">
 				<g:textField id="mytext" class="input-xxlarge" name="q" placeholder="Número o descripción" value="${q}"/>
 				<button id="submit-values" class="btn btn-small btn-primary" type="submit">
 					<i class="icon-ok"></i>Buscar

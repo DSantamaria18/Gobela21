@@ -1,11 +1,10 @@
-<%@ page import="gobela21.Solicitud" %>
-<!DOCTYPE html>
+
+<%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
     <meta name="layout" content="main">
     <g:set var="entityName" value="${message(code: 'solicitud.label', default: 'Solicitud')}"/>
     <title>Estadísticas</title>
-    <export:resource/>
 </head>
 
 <body>

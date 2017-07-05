@@ -94,4 +94,9 @@ class SolicitudController {
         workbook.write()
         workbook.close()
     }
+
+    def buscarSolicitud(params){
+        def resultList = SolicitudesService.buscarSolicitudesPorNumeroOPorDescripcion(params).solicitudInstanceList
+        respond resultList
+    }
 }
