@@ -1,6 +1,5 @@
 package gobela21
 
-import jxl.*
 import jxl.Workbook
 import jxl.write.*
 import jxl.WorkbookSettings
@@ -10,6 +9,7 @@ class SolicitudController {
 
     def exportService
     def grailsApplication
+    def SolicitudesService
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)

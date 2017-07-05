@@ -1,6 +1,5 @@
 package gobela21
 
-import jxl.*
 import jxl.Workbook
 import jxl.write.*
 import jxl.WorkbookSettings
@@ -47,12 +46,6 @@ class EstadisticasController {
                         setBorder(Border.ALL, BorderLineStyle.THIN)
                         setWrap(true)
                     }
-
-                    /*WritableCellFormat currencyFormat = new WritableCellFormat(new NumberFormat(NumberFormat.))
-                    currencyFormat.with{
-                        setFont(cellFont)
-                        setBorder(Border.ALL, BorderLineStyle.THIN)
-                    }*/
 
                     sheet.addCell(new Label(0, 0, "SUBVENCIONES LINEA ${i + 1}", titleFormat))
                     def cabeceras = datosLinea[0].keySet()
