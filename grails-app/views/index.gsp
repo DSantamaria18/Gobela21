@@ -114,6 +114,10 @@
 			${grailsApplication.metadata['app.buildDate']}
 			${grailsApplication.metadata['app.buildProfile']})</h2>
 			<div id="controller-list" role="navigation">
+				<h2>Modificaciones 06/07/2017:</h2>
+				<ul>
+					<li>Añadido campo para búsqueda de solicitudes por número o descripción en página de solicitudes</li>
+				</ul>
 				<h2>Modificaciones 07/05/2017 (2):</h2>
 				<ul>
 					<li>Corregida puntuación para apartado "Dificultades de financiación" para líneas 1 y 2</li>
